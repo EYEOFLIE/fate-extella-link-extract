@@ -1,0 +1,28 @@
+﻿/*
+ * ボスロボのコリション設定
+
+ Tags:
+ 	1: Body
+ 	2: L-Arm
+ 	3: R-Arm
+ */
+[
+	{"node_name":"Reference",         "radius":12.0, "height":0.0,  "rot_follow_bone":false,"rot":{"x":0,"y":0,"z":0},    "offset":{"x":0.0,"y":0.25,"z":0.0}},
+	{"node_name":"Spine2",            "radius":3.8, "height":2.8,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":90},   "offset":{"x":-0.3,"y":0.0,"z":-0.3}, "tag":1},
+	{"node_name":"Hips",              "radius":2.6, "height":2.0,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},    "offset":{"x":0.0,"y":-0.6,"z":0.0},  "tag":1},
+	{"node_name":"Head",              "radius":1.9, "height":0.5,  "rot_follow_bone":true, "rot":{"x":-20,"y":0,"z":0},  "offset":{"x":0.0,"y":0.9,"z":0.0},   "tag":1},
+	{"node_name":"RightShoulder2",    "radius":1.4, "height":2.5,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},    "offset":{"x":0.0,"y":2.3,"z":0.0},   "tag":1},
+	{"node_name":"RightArm1",         "radius":1.8, "height":2.5,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},    "offset":{"x":0.0,"y":-1.2,"z":0.0},  "tag":3},
+	{"node_name":"RightForearm",      "radius":1.5, "height":2.2,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},    "offset":{"x":0.0,"y":-0.8,"z":0.0},  "tag":3},
+	{"node_name":"RightHand",         "radius":1.8, "height":0.0,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},    "offset":{"x":0.0,"y":-0.9,"z":0.0},  "tag":3},
+	{"node_name":"RightUpLeg1",       "radius":1.8, "height":0.0,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},    "offset":{"x":0.0,"y":-1.4,"z":0.0},  "tag":1},
+	{"node_name":"RightLeg",          "radius":1.3, "height":2.3,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},    "offset":{"x":0.0,"y":-1.2,"z":0.0},  "tag":1},
+	{"node_name":"LeftShoulder2",     "radius":1.4, "height":2.5,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},    "offset":{"x":0.0,"y":2.3,"z":0.0},   "tag":1},
+	{"node_name":"LeftArm1",          "radius":1.8, "height":2.5,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},    "offset":{"x":0.0,"y":-1.2,"z":0.0},  "tag":2},
+	{"node_name":"LeftForearm",       "radius":1.5, "height":2.2,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},    "offset":{"x":0.0,"y":-0.8,"z":0.0},  "tag":2},
+	{"node_name":"LeftHand",          "radius":1.8, "height":0.0,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},    "offset":{"x":0.0,"y":-0.9,"z":0.0},  "tag":2},
+	{"node_name":"LeftUpLeg1",        "radius":1.8, "height":0.0,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},    "offset":{"x":0.0,"y":-1.4,"z":0.0},  "tag":1},
+	{"node_name":"LeftLeg",           "radius":1.3, "height":2.3,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},    "offset":{"x":0.0,"y":-1.2,"z":0.0},  "tag":1},
+	{"node_name":"LeftForearm_break", "radius":1.5, "height":2.7,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},    "offset":{"x":0.0,"y":-2.0,"z":0.0},  "tag":1},
+	{"node_name":"RightForearm_break","radius":1.5, "height":2.7,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},    "offset":{"x":0.0,"y":-2.0,"z":0.0},  "tag":1},
+]

@@ -1,0 +1,132 @@
+﻿/*
+ *	ジェネレーター（旧クィーンドローン）パラメータ
+ */
+ [
+	 //----------------------------------
+
+	//----------------------------------------------------------------------
+	//----- ここから本番用データ -------------------------------------------	
+	//----------------------------------------------------------------------
+
+	//------------------------
+	// type:100
+	//	武器：
+	//	属性：無
+	//	攻撃：無
+	//	能力：標準
+	//	備考：
+	 {
+		"type":100				// パラメータインデックス
+		,"chr":"/resource/common/character/za0100.chr"					// CHRファイル
+		,"motion":"/resource/common/parameter/enemy/enemy_queen_drone/mcomlist_mb.json"	// モーションコマンド
+		,"damage_collision":"/resource/common/parameter/enemy/enemy_queen_drone/damage_collision_enemy_generator.json"	// ダメージコリジョン
+		,"move_collision":"/resource/common/parameter/enemy/enemy_queen_drone/move_collision_enemy_generator.json"		// 移動コリジョン
+		
+		,"EXP":300				//経験値
+		,"MOVE_SPEED": 5.0			// 移動速度（地上＆空中フェイズの移動速度として使う）
+		,"RUN_SPEED": 15.0			// 走る速度（復帰フェイズの移動速度として使う）
+		,"RISE_SPEED": 10.0			// 上昇速度（地上→空中途中用）
+		,"DOWN_SPEED": 5.0			// 降下速度（空中→地上途中用）
+		,"ROT_SPEED": 60.0			// 回転速度
+		,"TERRITORY_RADIUS_MAX": 1.0		// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 0.5		// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 1.0				// 重さ
+		,"DASH_BLOCK": false			// ダッシュブロック能力
+		,"REGEN":				// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			{"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0}
+
+		,"FLOATDAMAGE_GRAVITY":14.0		// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0		// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0		// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{			// 攻撃コマンドリスト
+			"GROUND":[	// 地上攻撃
+				{"COMMAND":"ATTACK_1","SHORTRANGE":{"min":0.0,"max":0.0},"LONGRANGE":{"min":0.0,"max":1000.0}, "PROBABILITY":100.0, "CHECK_ANGLE": false}
+			]
+			,"FLY": [	// 空中攻撃
+				{"COMMAND":"ATTACK_1","SHORTRANGE":{"min":0.0,"max":0.0},"LONGRANGE":{"min":0.0,"max":1000.0}, "PROBABILITY":100.0, "CHECK_ANGLE": false}
+			]
+		}
+	}
+	,
+	//------------------------
+	// type:110
+	//	武器：
+	//	属性：無
+	//	攻撃：無
+	//	能力：リジェネ
+	//	備考：
+	 {
+		"type":110				// パラメータインデックス
+		,"chr":"/resource/common/character/za0100.chr"					// CHRファイル
+		,"motion":"/resource/common/parameter/enemy/enemy_queen_drone/mcomlist_mb.json"	// モーションコマンド
+		,"damage_collision":"/resource/common/parameter/enemy/enemy_queen_drone/damage_collision_enemy_generator.json"	// ダメージコリジョン
+		,"move_collision":"/resource/common/parameter/enemy/enemy_queen_drone/move_collision_enemy_generator.json"		// 移動コリジョン
+		
+		,"EXP":300				//経験値
+		,"MOVE_SPEED": 5.0			// 移動速度（地上＆空中フェイズの移動速度として使う）
+		,"RUN_SPEED": 15.0			// 走る速度（復帰フェイズの移動速度として使う）
+		,"RISE_SPEED": 10.0			// 上昇速度（地上→空中途中用）
+		,"DOWN_SPEED": 5.0			// 降下速度（空中→地上途中用）
+		,"ROT_SPEED": 60.0			// 回転速度
+		,"TERRITORY_RADIUS_MAX": 1.0		// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 0.5		// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 1.0				// 重さ
+		,"DASH_BLOCK": false			// ダッシュブロック能力
+		,"REGEN":				// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			{"ACTIVE":true, "START_TIME":5.0, "SEC_SPEED":5.0}
+
+		,"FLOATDAMAGE_GRAVITY":14.0		// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0		// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0		// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{			// 攻撃コマンドリスト
+			"GROUND":[	// 地上攻撃
+				{"COMMAND":"ATTACK_1","SHORTRANGE":{"min":0.0,"max":0.0},"LONGRANGE":{"min":0.0,"max":1000.0}, "PROBABILITY":100.0, "CHECK_ANGLE": false}
+			]
+			,"FLY": [	// 空中攻撃
+				{"COMMAND":"ATTACK_1","SHORTRANGE":{"min":0.0,"max":0.0},"LONGRANGE":{"min":0.0,"max":1000.0}, "PROBABILITY":100.0, "CHECK_ANGLE": false}
+			]
+		}
+	}
+	,
+	//------------------------
+	// type:120
+	//	武器：
+	//	属性：無
+	//	攻撃：無
+	//	能力：標準
+	//	備考：破壊の軍勢
+	 {
+		"type":120				// パラメータインデックス
+		,"chr":"/resource/common/character/za0100.chr"					// CHRファイル
+		,"motion":"/resource/common/parameter/enemy/enemy_queen_drone/mcomlist_mb.json"	// モーションコマンド
+		,"damage_collision":"/resource/common/parameter/enemy/enemy_queen_drone/damage_collision_enemy_generator.json"	// ダメージコリジョン
+		,"move_collision":"/resource/common/parameter/enemy/enemy_queen_drone/move_collision_enemy_generator.json"		// 移動コリジョン
+		
+		,"EXP":300				//経験値
+		,"MOVE_SPEED": 5.0			// 移動速度（地上＆空中フェイズの移動速度として使う）
+		,"RUN_SPEED": 15.0			// 走る速度（復帰フェイズの移動速度として使う）
+		,"RISE_SPEED": 10.0			// 上昇速度（地上→空中途中用）
+		,"DOWN_SPEED": 5.0			// 降下速度（空中→地上途中用）
+		,"ROT_SPEED": 60.0			// 回転速度
+		,"TERRITORY_RADIUS_MAX": 1.0		// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 0.5		// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 1.0				// 重さ
+		,"DASH_BLOCK": false			// ダッシュブロック能力
+		,"REGEN":				// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			{"ACTIVE":true, "START_TIME":5.0, "SEC_SPEED":5.0}
+
+		,"FLOATDAMAGE_GRAVITY":14.0		// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0		// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0		// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{			// 攻撃コマンドリスト
+			"GROUND":[	// 地上攻撃
+				{"COMMAND":"ATTACK_1","SHORTRANGE":{"min":0.0,"max":0.0},"LONGRANGE":{"min":0.0,"max":1000.0}, "PROBABILITY":100.0, "CHECK_ANGLE": false}
+			]
+			,"FLY": [	// 空中攻撃
+				{"COMMAND":"ATTACK_1","SHORTRANGE":{"min":0.0,"max":0.0},"LONGRANGE":{"min":0.0,"max":1000.0}, "PROBABILITY":100.0, "CHECK_ANGLE": false}
+			]
+		}
+	}
+
+
+]

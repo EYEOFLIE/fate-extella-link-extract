@@ -1,0 +1,11 @@
+﻿/*
+ *	ソウルソードの移動コリジョン設定
+ */
+[
+	{"node_name":"Reference","radius":0.8,"height":0.0,"rot_follow_bone":false,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.25,"z":0.0}}
+	,{"node_name":"Core","radius":1.4,"height":0.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.0,"z":0.0}}
+	,{"node_name":"LeftFoot","radius":0.3,"height":2.5,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":-1.0,"z":0.0}}
+	,{"node_name":"RightFoot","radius":0.3,"height":2.5,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":-1.0,"z":0.0}}
+	,{"node_name":"Null_L","radius":0.5,"height":3.5,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":-1.5,"z":0.0}}
+	,{"node_name":"Null_R","radius":0.5,"height":3.5,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":-1.5,"z":0.0}}
+]

@@ -1,0 +1,7 @@
+﻿/*
+ *	ラスボスコア(ダイヤ)の移動コリジョン設定
+ */
+[
+	{"node_name":"N_ALL","radius":0.1,"height":0.0,"rot_follow_bone":false,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.0,"z":0.0}}
+	,{"node_name":"core1_joint","radius":2.0,"height":0.0,"rot_follow_bone":false,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.0,"z":0.0}}
+]

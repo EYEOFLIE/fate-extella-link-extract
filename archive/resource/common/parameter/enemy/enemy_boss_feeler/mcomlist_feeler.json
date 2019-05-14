@@ -1,0 +1,275 @@
+{
+// 待機用
+"WAIT_1" : [
+	"BLEND", 0.3,
+	"MOTION", "ZK_BS_IDL", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// 地面に隠れて待機
+"HIDE" : [
+	"BLEND", 0.3,
+	"MOTION", "ZK_BS_IV1", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// 地面から現れる(小型)
+"THREAT_SMALL" : [
+	"BLEND", 0.3,
+	"MOTION", "ZK_BS_DIS", false, 0, -1,
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_START",
+	"WAIT",
+	"END"
+],
+// 地面から現れる(大型)
+"THREAT_BIG" : [
+	"BLEND", 0.3,
+	"MOTION", "ZK_BS_DIS", false, 0, -1,
+	"EFFECT", 0, "xb_warm_01_act_01_00", "SWORD", 0,
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_B_START",
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_B_WHOOSH",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 3, "Head", "KNOCKBACK_1", "FLOAT_2", "NORMAL", 0, 0, 0.5, 100, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 1, 3, "Spine0", "KNOCKBACK_1", "FLOAT_2", "NORMAL", 0, 0, 0.5, 100, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 2, 3, "Spine1", "KNOCKBACK_1", "FLOAT_2", "NORMAL", 0, 0, 0.5, 100, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 3, 3, "Spine2", "KNOCKBACK_1", "FLOAT_2", "NORMAL", 0, 0, 0.5, 100, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 4, 3, "Spine3", "KNOCKBACK_1", "FLOAT_2", "NORMAL", 0, 0, 0.5, 100, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+	"COMMENT", "攻撃終了",
+	"ATTACKEND", 0, 10,
+	"ATTACKEND", 1, 10,
+	"ATTACKEND", 2, 10,
+	"ATTACKEND", 3, 10,
+	"ATTACKEND", 4, 10,
+	"WAIT",
+	"END"
+],
+// 地下に戻ります
+"RETURN" : [
+	"BLEND", 0.3,
+	"MOTION", "ZK_BS_WAB", false, 75, -1,
+	"PLAY3D", 75, "BANK_ENM_WARM", "WARM_A_START",
+	"PLAY3D", 75, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"WAIT",
+	"END"
+],
+// 薙ぎ払い
+"ATTACK_1" : [
+	"BLEND", 0.3,
+	"MOTION", "ZK_AC_AT1", false, 0, -1,
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 32, "Head", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 0.65, 100, 2, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 1, 32, "Spine0", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 0.65, 100, 2, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 2, 32, "Spine1", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 0.65, 100, 2, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 3, 32, "Spine2", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 0.65, 100, 2, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 4, 32, "Spine3", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 0.65, 100, 2, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	"PLAY3D", 32, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"PLAY3D", 33, "BANK_ENM_WARM", "WARM_A_START",
+	"PLAY3D", 33, "BANK_ENM_WARM", "WARM_A_HIT",
+	"COMMENT", "攻撃終了",
+	"ATTACKEND", 0, 48,
+	"ATTACKEND", 1, 48,
+	"ATTACKEND", 2, 48,
+	"ATTACKEND", 3, 48,
+	"ATTACKEND", 4, 48,
+	"WAIT",
+	"END"
+],
+// 
+"ATTACK_1_2" : [
+	"BLEND", 0.3,
+	"MOTION", "ZK_AC_AT1", false, 0, -1,
+	"EFFECT", 0, "xb_warm_01_act_02_00", "SWORD", 0,
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 32, "Head", "SMASH_2", "SMASH_2", "NORMAL", 0, 0, 1.5, 100, 2, 1, 0, 0, 0, 3, 0, 10, 15, 0, 0, 10, 15, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 1, 32, "Spine0", "SMASH_2", "SMASH_2", "NORMAL", 0, 0, 1.5, 100, 2, 1, 0, 0, 0, 3, 0, 10, 15, 0, 0, 10, 15, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 2, 32, "Spine1", "SMASH_2", "SMASH_2", "NORMAL", 0, 0, 1.5, 100, 2, 1, 0, 0, 0, 3, 0, 10, 15, 0, 0, 10, 15, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 3, 32, "Spine2", "SMASH_2", "SMASH_2", "NORMAL", 0, 0, 1.5, 100, 2, 1, 0, 0, 0, 3, 0, 10, 15, 0, 0, 10, 15, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 4, 32, "Spine3", "SMASH_2", "SMASH_2", "NORMAL", 0, 0, 1.5, 100, 2, 1, 0, 0, 0, 3, 0, 10, 15, 0, 0, 10, 15, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+	"PLAY3D", 32, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"PLAY3D", 33, "BANK_ENM_WARM", "WARM_A_START",
+	"PLAY3D", 33, "BANK_ENM_WARM", "WARM_A_HIT",
+	"COMMENT", "攻撃終了",
+	"ATTACKEND", 0, 48,
+	"ATTACKEND", 1, 48,
+	"ATTACKEND", 2, 48,
+	"ATTACKEND", 3, 48,
+	"ATTACKEND", 4, 48,
+	"WAIT",
+	"END"
+],
+// 叩きつけ
+"ATTACK_2" : [
+	"BLEND", 0.3,
+	"MOTION", "ZK_AC_ATC", false, 0, -1,
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"PLAY3D", 28, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"PLAY3D", 29, "BANK_ENM_WARM", "WARM_A_START",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 35, "Head", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 0.65, 100, 2, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 1, 35, "Spine0", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 0.65, 100, 2, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 2, 35, "Spine1", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 0.65, 100, 2, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 3, 35, "Spine2", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 0.65, 100, 2, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 4, 35, "Spine3", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 0.65, 100, 2, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	"PLAY3D", 36, "BANK_ENM_WARM", "WARM_A_HIT",
+	"COMMENT", "攻撃終了",
+	"ATTACKEND", 0, 37,
+	"ATTACKEND", 1, 37,
+	"ATTACKEND", 2, 37,
+	"ATTACKEND", 3, 37,
+	"ATTACKEND", 4, 37,
+	"PLAY3D", 60, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"WAIT",
+	"END"
+],
+// 
+"ATTACK_2_2" : [
+	"BLEND", 0.3,
+	"MOTION", "ZK_AC_ATC", false, 0, -1,
+	"EFFECT", 0, "xb_warm_01_act_03_00", "SWORD", 0,
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"PLAY3D", 28, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"PLAY3D", 29, "BANK_ENM_WARM", "WARM_A_START",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 35, "Head", "SMASH_2", "SMASH_2", "NORMAL", 0, 0, 1.5, 100, 2, 1, 0, 0, 0, 3, 0, 10, 15, 0, 0, 10, 15, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 1, 35, "Spine0", "SMASH_2", "SMASH_2", "NORMAL", 0, 0, 1.5, 100, 2, 1, 0, 0, 0, 3, 0, 10, 15, 0, 0, 10, 15, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 2, 35, "Spine1", "SMASH_2", "SMASH_2", "NORMAL", 0, 0, 1.5, 100, 2, 1, 0, 0, 0, 3, 0, 10, 15, 0, 0, 10, 15, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 3, 35, "Spine2", "SMASH_2", "SMASH_2", "NORMAL", 0, 0, 1.5, 100, 2, 1, 0, 0, 0, 3, 0, 10, 15, 0, 0, 10, 15, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+	"ATK_START", 4, 35, "Spine3", "SMASH_2", "SMASH_2", "NORMAL", 0, 0, 1.5, 100, 2, 1, 0, 0, 0, 3, 0, 10, 15, 0, 0, 10, 15, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+	"PLAY3D", 36, "BANK_ENM_WARM", "WARM_A_HIT",
+	"COMMENT", "攻撃終了",
+	"ATTACKEND", 0, 37,
+	"ATTACKEND", 1, 37,
+	"ATTACKEND", 2, 37,
+	"ATTACKEND", 3, 37,
+	"ATTACKEND", 4, 37,
+	"PLAY3D", 60, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"WAIT",
+	"END"
+],
+// ダメージ右
+"NORMAL_DAMAGER" : [
+	"BLEND", 0.3,
+	"MOTION", "ZK_RC_SGR", false, 0, -1,
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_HIT",
+	"WAIT",
+	"END"
+],
+// ダメージ左
+"NORMAL_DAMAGEL" : [
+	"BLEND", 0.3,
+	"MOTION", "ZK_RC_SGR", false, 0, -1,
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_HIT",
+	"WAIT",
+	"END"
+],
+// ダメージ後
+"NORMAL_DAMAGEB" : [
+	"BLEND", 0.3,
+	"MOTION", "ZK_RC_SGR", false, 0, -1,
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_HIT",
+	"WAIT",
+	"END"
+],
+// 吹っ飛び死亡
+"SMASH_DEATH" : [
+	"BLEND", 0.3,
+	"MOTION", "ZK_RC_STR_L", true, 0, -1,
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"WAIT",
+	"END"
+],
+// 死亡
+"DEATH" : [
+	"BLEND", 0.3,
+	"MOTION", "ZK_BS_WAB", false, 0, -1,
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_START",
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_HIT",
+	"WAIT",
+	"END"
+],
+// イベント用待機
+"EVT_IDLE1" : [
+	"MOTION", "ZK_BS_IDL", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// イベント用右前ダメージ
+"EVENT_DAMAGER" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_SGR", false, 0, 20,
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_HIT",
+	"WAIT",
+	"END"
+],
+// イベント用左前ダメージ
+"EVENT_DAMAGEL" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_SGR", false, 0, 20,
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_HIT",
+	"WAIT",
+	"END"
+],
+// ダメージ(LA斬られ)
+"FLOATDAMAGE_LA_R" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_SGR", false, 0, -1,
+	"MSPEED_RANDOM", -1, 0.8, 1.2,
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_HIT",
+	"WAIT",
+	"END"
+],
+// ダメージ(LA斬られ)
+"FLOATDAMAGE_LA_L" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_SGR", false, 0, -1,
+	"MSPEED_RANDOM", -1, 0.8, 1.2,
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_HIT",
+	"WAIT",
+	"END"
+],
+// LAフィニッシュダメージ
+"LAFINISH_HITDAMAGE" : [
+	"BLEND", 0.3,
+	"LABEL", 0,
+	"MOTION", "ZK_RC_SGR", false, 0, -1,
+	"MSPEED_RANDOM", -1, 0.7, 1.2,
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_WHOOSH",
+	"PLAY3D", 1, "BANK_ENM_WARM", "WARM_A_HIT",
+	"WAIT",
+	"GOTO", 0,
+	"STOP",
+	"END"
+],
+"comlist" : [
+{"comment":"待機用", "name":"WAIT_1"}
+,{"comment":"地面に隠れて待機", "name":"HIDE"}
+,{"comment":"地面から現れる(小型)", "name":"THREAT_SMALL"}
+,{"comment":"地面から現れる(大型)", "name":"THREAT_BIG"}
+,{"comment":"地下に戻ります", "name":"RETURN"}
+,{"comment":"薙ぎ払い", "name":"ATTACK_1"}
+,{"comment":"", "name":"ATTACK_1_2"}
+,{"comment":"叩きつけ", "name":"ATTACK_2"}
+,{"comment":"", "name":"ATTACK_2_2"}
+,{"comment":"ダメージ右", "name":"NORMAL_DAMAGER"}
+,{"comment":"ダメージ左", "name":"NORMAL_DAMAGEL"}
+,{"comment":"ダメージ後", "name":"NORMAL_DAMAGEB"}
+,{"comment":"吹っ飛び死亡", "name":"SMASH_DEATH"}
+,{"comment":"死亡", "name":"DEATH"}
+,{"comment":"イベント用待機", "name":"EVT_IDLE1"}
+,{"comment":"イベント用右前ダメージ", "name":"EVENT_DAMAGER"}
+,{"comment":"イベント用左前ダメージ", "name":"EVENT_DAMAGEL"}
+,{"comment":"ダメージ(LA斬られ)", "name":"FLOATDAMAGE_LA_R"}
+,{"comment":"ダメージ(LA斬られ)", "name":"FLOATDAMAGE_LA_L"}
+,{"comment":"LAフィニッシュダメージ", "name":"LAFINISH_HITDAMAGE"}
+]
+}

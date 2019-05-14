@@ -1,0 +1,97 @@
+﻿/*
+ *	CORE　ラスボスコア
+ */
+[
+	// ボスコアのtypeはリストに載ってないから勝手にtype値を変更しないで
+	// type:100		菱形コア
+	{
+		"type":100			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/lb0000.chr"					// CHRファイル
+		,"damage_collision":"/resource/common/parameter/enemy/enemy_boss_core/damage_collision_enemy_mb.json"	// ダメージコリジョン
+		,"move_collision":"/resource/common/parameter/enemy/enemy_boss_core/move_collision_enemy_mb.json"	// 移動コリジョン
+		,"effect":"last_boss"
+
+		,"EXP": 10			// 経験値。エネミーは無意味？
+		,"MOVE_SPEED": 6.0		// 移動速度
+		,"RUN_SPEED": 5.0		// 走る速度
+		,"ROT_SPEED": 60.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX": 3.0	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 2.0	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 1.0			// 重さ
+		,"RELAX_TYPE": 0		// リラックスモーション種類
+		,"DASH_BLOCK": false	// ダッシュブロック能力
+		,"REGEN":{"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0}		//	リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+		,"DROP_STOP": true
+		,"FLASH_LOOP_EFFECT_TIME": 2.0	// 爆発前ループエフェクトの持続時間（秒）
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"FLY":[		// 空中攻撃
+			]
+		}
+	}
+	// type:101		スフィアコア
+	,{
+		"type":101			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/lb0001.chr"					// CHRファイル
+		,"damage_collision":"/resource/common/parameter/enemy/enemy_boss_core/damage_collision_enemy_mb2.json"	// ダメージコリジョン
+		,"move_collision":"/resource/common/parameter/enemy/enemy_boss_core/move_collision_enemy_mb2.json"	// 移動コリジョン
+		,"effect":"last_boss"
+
+		,"EXP": 10			// 経験値。エネミーは無意味？
+		,"MOVE_SPEED": 6.0		// 移動速度
+		,"RUN_SPEED": 5.0		// 走る速度
+		,"ROT_SPEED": 60.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX": 3.0	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 2.0	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 1.0			// 重さ
+		,"RELAX_TYPE": 0		// リラックスモーション種類
+		,"DASH_BLOCK": false	// ダッシュブロック能力
+		,"REGEN":{"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0}		//	リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+		,"DROP_STOP": true
+		,"FLASH_LOOP_EFFECT_TIME": 2.0	// 爆発前ループエフェクトの持続時間（秒）
+
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"FLY":[		// 空中攻撃
+			]
+		}
+	}
+	// type:102		イベント演出用灰色スフィアコア
+	,{
+		"type":102			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/lb0011.chr"					// CHRファイル
+		,"damage_collision":"/resource/common/parameter/enemy/enemy_boss_core/damage_collision_enemy_mb2.json"	// ダメージコリジョン
+		,"move_collision":"/resource/common/parameter/enemy/enemy_boss_core/move_collision_enemy_mb2.json"	// 移動コリジョン
+		,"effect":"last_boss"
+
+		,"EXP": 10			// 経験値。エネミーは無意味？
+		,"MOVE_SPEED": 6.0		// 移動速度
+		,"RUN_SPEED": 5.0		// 走る速度
+		,"ROT_SPEED": 60.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX": 3.0	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 2.0	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 1.0			// 重さ
+		,"RELAX_TYPE": 0		// リラックスモーション種類
+		,"DASH_BLOCK": false	// ダッシュブロック能力
+		,"REGEN":{"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0}		//	リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+		,"DROP_STOP": true
+		,"COLLISION_OFF":true	//	コリジョンオフ
+		,"FLASH_LOOP_EFFECT_TIME": 2.0	// 爆発前ループエフェクトの持続時間（秒）
+
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"FLY":[		// 空中攻撃
+			]
+		}
+	}
+]

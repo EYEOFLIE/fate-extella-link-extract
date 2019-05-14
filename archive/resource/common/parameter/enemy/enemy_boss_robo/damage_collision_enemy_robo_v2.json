@@ -1,0 +1,12 @@
+/*
+ * ボスロボのコリション設定
+
+	marks:
+		head:       0
+		head core:  6
+ */
+[
+	{"node_name":"Head",         "radius":2.3, "height":0.0,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},  "offset":{"x":0.0,"y":0.6,"z":-0.2}, "damage_lv":0, "mark": 0 },
+
+	{"node_name":"HeadCore",     "radius":1.0, "height":0.0,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},  "offset":{"x":0.0,"y":0.0,"z":0.0}, "damage_lv":0, "mark": 6 },
+]

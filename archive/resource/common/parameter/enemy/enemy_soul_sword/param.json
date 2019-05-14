@@ -1,0 +1,377 @@
+﻿/*
+ *	MB　ソウルソード
+ */
+[
+	//------------------------
+
+	//----------------------------------------------------------------------
+	//----- ここから本番用データ -------------------------------------------	
+	//----------------------------------------------------------------------
+
+	//------------------------
+	// type:100
+	//	武器：剣
+	//	属性：無
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":100			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/mb0200.chr"								// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_soul_sword/mcomlist_mb.json"				// モーションコマンド
+		,"damage_collision":"/resource/common/parameter/enemy/enemy_soul_sword/damage_collision_enemy_mb.json"	// ダメージコリジョン
+		,"move_collision":"/resource/common/parameter/enemy/enemy_soul_sword/move_collision_enemy_mb.json"	// 移動コリジョン
+
+		,"EXP":320			//経験値
+		,"MOVE_SPEED": 6.0		// 移動速度
+		,"RUN_SPEED": 5.0		// 走る速度
+		,"ROT_SPEED": 360.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX": 3.0	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 2.0	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 1.0			// 重さ
+		,"RELAX_TYPE": 0		// リラックスモーション種類
+		,"DASH_BLOCK": false		// ダッシュブロック能力
+		,"REGEN":			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			{"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0}
+		,"FORCE_COUNTER":
+			{"TRIGGER_TIME":3.0, "TRIGGER_PERCENT_EASY":100.0, "TRIGGER_PERCENT_NORMAL":30.0, "TRIGGER_PERCENT_HARD":15.0, "TRIGGER_PERCENT_VERYHARD":5.0}	//	TRIGGER_PERCENTの数値はパーセント
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1",
+					"SHORTRANGE":{"min":0.0,"max":8.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":10.0,
+					"CHECK_ANGLE":true,
+					"LOOK_TARGET_MOTION":["MB02_AC_ATA_1"],
+					"LOOK_TARGET_ROT_RATE":0.1
+				}
+				,
+				{"COMMAND":
+					"ATTACK_2",
+					"SHORTRANGE":{"min":0.0,"max":8.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":10.0,
+					"CHECK_ANGLE":true,
+					"LOOK_TARGET_MOTION":["MB02_AC_ATB1_1"],
+					"LOOK_TARGET_ROT_RATE":0.1
+				}
+				,
+				{"COMMAND":
+					"ATTACK_4_S",
+					"SHORTRANGE":{"min":0.0,"max":20.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":80.0,
+					"HOMING_ATTACK":true,
+					"HOMING_BY_ANGLE":true,
+					"CHECK_ANGLE":true,
+					"FORCE_COUNTER": true,
+					"MOVE_TIME":1.3,
+					"HOMING_RATE":0.1,
+					"COMMAND2":"ATTACK_4_L",
+					"COMMAND3":"ATTACK_4_E",
+					"LOOK_TARGET_MOTION":["MB02_AC_ATC_1"],
+					"LOOK_TARGET_ROT_RATE":0.1
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Core" } ]
+	}
+	,
+	//------------------------
+	// type:101
+	//	武器：剣
+	//	属性：炎
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":101			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/mb0220.chr"								// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_soul_sword/mcomlist_mb.json"				// モーションコマンド
+		,"damage_collision":"/resource/common/parameter/enemy/enemy_soul_sword/damage_collision_enemy_mb.json"	// ダメージコリジョン
+		,"move_collision":"/resource/common/parameter/enemy/enemy_soul_sword/move_collision_enemy_mb.json"	// 移動コリジョン
+
+		,"EXP":320			//経験値
+		,"MOVE_SPEED": 6.0		// 移動速度
+		,"RUN_SPEED": 5.0		// 走る速度
+		,"ROT_SPEED": 360.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX": 3.0	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 2.0	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 1.0			// 重さ
+		,"RELAX_TYPE": 0		// リラックスモーション種類
+		,"DASH_BLOCK": false		// ダッシュブロック能力
+		,"REGEN":			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			{"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0}
+		, "ATTRIBUTE":"FIRE"		//	属性火
+		,"FORCE_COUNTER":
+			{"TRIGGER_TIME":3.0, "TRIGGER_PERCENT_EASY":100.0, "TRIGGER_PERCENT_NORMAL":30.0, "TRIGGER_PERCENT_HARD":15.0, "TRIGGER_PERCENT_VERYHARD":5.0}	//	TRIGGER_PERCENTの数値はパーセント
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1_F",
+					"SHORTRANGE":{"min":0.0,"max":8.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":10.0,
+					"CHECK_ANGLE":true,
+					"LOOK_TARGET_MOTION":["MB02_AC_ATA_1"],
+					"LOOK_TARGET_ROT_RATE":0.1
+				}
+				,
+				{"COMMAND":
+					"ATTACK_4_F_S",
+					"SHORTRANGE":{"min":0.0,"max":20.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":45.0,
+					"HOMING_ATTACK":true,
+					"HOMING_BY_ANGLE":true,
+					"CHECK_ANGLE":true,
+					"FORCE_COUNTER": true,
+					"MOVE_TIME":1.3,
+					"HOMING_RATE":0.1,
+					"COMMAND2":"ATTACK_4_F_L",
+					"COMMAND3":"ATTACK_4_F_E",
+					"LOOK_TARGET_MOTION":["MB02_AC_ATC_1"],
+					"LOOK_TARGET_ROT_RATE":0.1
+				}
+				,
+				{"COMMAND":
+					"ATTACK_5_F",
+					"SHORTRANGE":{"min":0.0,"max":6.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":45.0,
+					"CHECK_ANGLE":false
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Core" } ]
+	}
+	,
+	//------------------------
+	// type:102
+	//	武器：剣
+	//	属性：氷
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":102			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/mb0210.chr"								// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_soul_sword/mcomlist_mb.json"				// モーションコマンド
+		,"damage_collision":"/resource/common/parameter/enemy/enemy_soul_sword/damage_collision_enemy_mb.json"	// ダメージコリジョン
+		,"move_collision":"/resource/common/parameter/enemy/enemy_soul_sword/move_collision_enemy_mb.json"	// 移動コリジョン
+
+		,"EXP":320			//経験値
+		,"MOVE_SPEED": 6.0		// 移動速度
+		,"RUN_SPEED": 5.0		// 走る速度
+		,"ROT_SPEED": 360.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX": 3.0	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 2.0	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 1.0			// 重さ
+		,"RELAX_TYPE": 0		// リラックスモーション種類
+		,"DASH_BLOCK": false		// ダッシュブロック能力
+		,"REGEN":			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			{"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0}
+		, "ATTRIBUTE":"ICE"		//	属性水
+		,"FORCE_COUNTER":
+			{"TRIGGER_TIME":3.0, "TRIGGER_PERCENT_EASY":100.0, "TRIGGER_PERCENT_NORMAL":30.0, "TRIGGER_PERCENT_HARD":15.0, "TRIGGER_PERCENT_VERYHARD":5.0}	//	TRIGGER_PERCENTの数値はパーセント
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1_I",
+					"SHORTRANGE":{"min":0.0,"max":8.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":10.0,
+					"CHECK_ANGLE":true,
+					"LOOK_TARGET_MOTION":["MB02_AC_ATA_1"],
+					"LOOK_TARGET_ROT_RATE":0.1
+				}
+				,
+				{"COMMAND":
+					"ATTACK_3",
+					"SHORTRANGE":{"min":5.0,"max":7.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":45.0,
+					"CHECK_ANGLE":true,
+					"LOOK_TARGET_MOTION":["MB02_AC_ATB2_1"],
+					"LOOK_TARGET_ROT_RATE":0.1
+				}
+				,
+				{"COMMAND":
+					"ATTACK_4_I_S",
+					"SHORTRANGE":{"min":0.0,"max":20.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":45.0,
+					"HOMING_ATTACK":true,
+					"HOMING_BY_ANGLE":true,
+					"CHECK_ANGLE":true,
+					"FORCE_COUNTER": true,
+					"MOVE_TIME":1.3,
+					"HOMING_RATE":0.1,
+					"COMMAND2":"ATTACK_4_I_L",
+					"COMMAND3":"ATTACK_4_I_E",
+					"LOOK_TARGET_MOTION":["MB02_AC_ATC_1"],
+					"LOOK_TARGET_ROT_RATE":0.1
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Core" } ]
+	}
+	,
+	//------------------------
+	// type:110
+	//	武器：剣
+	//	属性：無
+	//	攻撃：通常斬り
+	//	能力：リジェネ
+	//	備考：
+	{
+		"type":110			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/mb0200.chr"								// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_soul_sword/mcomlist_mb.json"				// モーションコマンド
+		,"damage_collision":"/resource/common/parameter/enemy/enemy_soul_sword/damage_collision_enemy_mb.json"	// ダメージコリジョン
+		,"move_collision":"/resource/common/parameter/enemy/enemy_soul_sword/move_collision_enemy_mb.json"	// 移動コリジョン
+
+		,"EXP":320			//経験値
+		,"MOVE_SPEED": 6.0		// 移動速度
+		,"RUN_SPEED": 5.0		// 走る速度
+		,"ROT_SPEED": 360.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX": 3.0	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 2.0	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 1.0			// 重さ
+		,"RELAX_TYPE": 0		// リラックスモーション種類
+		,"DASH_BLOCK": false		// ダッシュブロック能力
+		,"REGEN":			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			{"ACTIVE":true, "START_TIME":5.0, "SEC_SPEED":5.0}
+		,"FORCE_COUNTER":
+			{"TRIGGER_TIME":3.0, "TRIGGER_PERCENT_EASY":100.0, "TRIGGER_PERCENT_NORMAL":30.0, "TRIGGER_PERCENT_HARD":15.0, "TRIGGER_PERCENT_VERYHARD":5.0}	//	TRIGGER_PERCENTの数値はパーセント
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1",
+					"SHORTRANGE":{"min":0.0,"max":8.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":15.0,
+					"CHECK_ANGLE":true,
+					"LOOK_TARGET_MOTION":["MB02_AC_ATA_1"],
+					"LOOK_TARGET_ROT_RATE":0.1
+				}
+				,
+				{"COMMAND":
+					"ATTACK_4_S",
+					"SHORTRANGE":{"min":0.0,"max":20.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":85.0,
+					"HOMING_ATTACK":true,
+					"HOMING_BY_ANGLE":true,
+					"CHECK_ANGLE":true,
+					"FORCE_COUNTER": true,
+					"MOVE_TIME":1.3,
+					"HOMING_RATE":0.1,
+					"COMMAND2":"ATTACK_4_L",
+					"COMMAND3":"ATTACK_4_E",
+					"LOOK_TARGET_MOTION":["MB02_AC_ATC_1"],
+					"LOOK_TARGET_ROT_RATE":0.1
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Core" } ]
+	}
+	,
+	//------------------------
+	// type:120
+	//	武器：剣
+	//	属性：無
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：破壊の軍勢
+	{
+		"type":120			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/mb0200.chr"								// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_soul_sword/mcomlist_mb.json"				// モーションコマンド
+		,"damage_collision":"/resource/common/parameter/enemy/enemy_soul_sword/damage_collision_enemy_mb.json"	// ダメージコリジョン
+		,"move_collision":"/resource/common/parameter/enemy/enemy_soul_sword/move_collision_enemy_mb.json"	// 移動コリジョン
+
+		,"EXP":320			//経験値
+		,"MOVE_SPEED": 6.0		// 移動速度
+		,"RUN_SPEED": 5.0		// 走る速度
+		,"ROT_SPEED": 360.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX": 3.0	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 2.0	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 1.0			// 重さ
+		,"RELAX_TYPE": 0		// リラックスモーション種類
+		,"DASH_BLOCK": false		// ダッシュブロック能力
+		,"REGEN":			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			{"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0}
+		,"FORCE_COUNTER":
+			{"TRIGGER_TIME":3.0, "TRIGGER_PERCENT_EASY":100.0, "TRIGGER_PERCENT_NORMAL":30.0, "TRIGGER_PERCENT_HARD":15.0, "TRIGGER_PERCENT_VERYHARD":5.0}	//	TRIGGER_PERCENTの数値はパーセント
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1",
+					"SHORTRANGE":{"min":0.0,"max":8.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":10.0,
+					"CHECK_ANGLE":true,
+					"LOOK_TARGET_MOTION":["MB02_AC_ATA_1"],
+					"LOOK_TARGET_ROT_RATE":0.1
+				}
+				,
+				{"COMMAND":
+					"ATTACK_2",
+					"SHORTRANGE":{"min":3.0,"max":4.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true,
+					"LOOK_TARGET_MOTION":["MB02_AC_ATB1_1"],
+					"LOOK_TARGET_ROT_RATE":0.1
+				}
+				,
+				{"COMMAND":
+					"ATTACK_4_S",
+					"SHORTRANGE":{"min":0.0,"max":20.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":40.0,
+					"HOMING_ATTACK":true,
+					"HOMING_BY_ANGLE":true,
+					"CHECK_ANGLE":true,
+					"FORCE_COUNTER": true,
+					"MOVE_TIME":1.5,
+					"HOMING_RATE":0.2,
+					"COMMAND2":"ATTACK_4_L",
+					"COMMAND3":"ATTACK_4_E",
+					"LOOK_TARGET_MOTION":["MB02_AC_ATC_1"],
+					"LOOK_TARGET_ROT_RATE":0.1
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Core" } ]
+	}
+
+
+]

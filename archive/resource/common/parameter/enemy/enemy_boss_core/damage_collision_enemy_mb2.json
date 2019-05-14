@@ -1,0 +1,7 @@
+﻿/*
+ *	ラスボスコア(スフィア)のダメージコリジョン設定
+ */
+[
+	//	markは識別用数値。左手：0、右手：1、コア：2
+	{"node_name":"core2_joint","radius":2.0,"height":0.0,"rot_follow_bone":false,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.0,"z":0.0},"damage_lv":0,"mark":0}
+]

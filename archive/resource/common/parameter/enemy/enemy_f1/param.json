@@ -1,0 +1,110 @@
+﻿/*
+ *	F-1　スナイパー
+ */
+[
+	//------------------------
+	
+	//----------------------------------------------------------------------
+	//----- ここから本番用データ -------------------------------------------	
+	//----------------------------------------------------------------------
+
+	//------------------------
+	// type:100
+	//	武器：弓矢
+	//	属性：無
+	//	攻撃：射撃
+	//	能力：標準
+	//	備考：
+	{
+		"type":100			// パラメータインデックス
+		,"chr":"/resource/common/character/zk0100.chr"					// CHRファイル
+		,"motion":"/resource/common/parameter/enemy/enemy_f1/mcomlist_zk_f1.json"	// モーションコマンド
+		
+		,"EXP":5			//経験値
+		,"MOVE_SPEED": 2.0		// 移動速度
+		,"RUN_SPEED": 4.0		// 走る速度
+		,"ROT_SPEED": 360.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX": 0.65	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 0.32	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 0.95			// 重さ
+		,"RELAX_TYPE": 3		// リラックスモーション種類
+		,"DASH_BLOCK": false		// ダッシュブロック能力
+		,"REGEN":			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			{"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0}
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":50.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_ST",
+					"SHORTRANGE":{"min":0.0, "max":0.0},
+					"LONGRANGE":{"min":1.0, "max":30.0},
+					"PROBABILITY":100.0,
+					"CHECK_ANGLE": true,
+					"RANGE_ATTACK":true,
+					"COMMAND2":"ATTACK_LOOP",
+					"COMMAND3":"ATTACK_ED"
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+
+		,"SNIPER_PARAM":[		// スナイパー専用パラメータ
+			 {"SHOT_ALLIGNMENT":"NORMAL"}	// 射出する弾の種類
+		]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:101
+	//	武器：弓矢
+	//	属性：毒
+	//	攻撃：射撃
+	//	能力：標準
+	//	備考：
+	{
+		"type":101			// パラメータインデックス
+		,"chr":"/resource/common/character/zk0110.chr"					// CHRファイル
+		,"motion":"/resource/common/parameter/enemy/enemy_f1/mcomlist_zk_f1.json"	// モーションコマンド
+		
+		,"EXP":5			//経験値
+		,"MOVE_SPEED": 2.0		// 移動速度
+		,"RUN_SPEED": 4.0		// 走る速度
+		,"ROT_SPEED": 360.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX": 0.65	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 0.32	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 0.95			// 重さ
+		,"RELAX_TYPE": 3		// リラックスモーション種類
+		,"DASH_BLOCK": false		// ダッシュブロック能力
+		,"REGEN":			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			{"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0}
+		, "ATTRIBUTE":"POISON"		//	属性毒
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":50.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_P_ST",
+					"SHORTRANGE":{"min":0.0, "max":0.0},
+					"LONGRANGE":{"min":1.0, "max":30.0},
+					"PROBABILITY":100.0,
+					"CHECK_ANGLE": true,
+					"RANGE_ATTACK":true,
+					"COMMAND2":"ATTACK_P_LOOP",
+					"COMMAND3":"ATTACK_ED"
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+		
+		,"SNIPER_PARAM":[		// スナイパー専用パラメータ
+			 {"SHOT_ALLIGNMENT":"POISON"}	// 射出する弾の種類
+		]
+	}
+	//------------------------
+	
+]

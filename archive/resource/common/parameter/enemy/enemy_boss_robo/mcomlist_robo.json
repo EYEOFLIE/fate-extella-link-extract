@@ -1,0 +1,132 @@
+{
+	"WAIT_1" : [
+		"MOTION", "MOT_0001", true, 0, -1,
+		"WAIT",
+		"END"
+	],
+
+	"NORMAL_DAMAGEL" : [
+		"MOTION", "DUMMY", false, 0, -1,
+		"BLEND", 0,
+		"WAIT",
+		"END"
+	],
+	"NORMAL_DAMAGER" : [
+		"MOTION", "DUMMY", false, 0, -1,
+		"BLEND", 0,
+		"WAIT",
+		"END"
+	],
+	"NORMAL_DAMAGEB" : [
+		"MOTION", "DUMMY", false, 0, -1,
+		"BLEND", 0,
+		"WAIT",
+		"END"
+	],
+
+	//【地上】咆哮
+	"ATTACK_1"  : [
+		"MOTION", "MOT_1001", false, 0, -1,
+		"WAIT",
+		"END"
+	],
+	//【地上】近接コンボ1
+	"ATTACK_2"  : [
+		"MOTION", "MOT_1011", false, 0, -1,
+		"WAIT",
+		"END"
+	],
+	//【地上】近接コンボ2
+	"ATTACK_3" : [
+		"MOTION", "MOT_1021", false, 0, -1, //【地上】近接コンボ2-1
+		"WAIT",
+		"MOTION", "MOT_1022", false, 0, -1, //【地上】近接コンボ2-2
+		"WAIT",
+		"END"
+	],
+	//【地上】近接コンボ3
+	"ATTACK_4" : [
+		"MOTION", "MOT_1031", false, 0, -1, //【地上】近接コンボ3-1
+		"WAIT",
+		"MOTION", "MOT_1032", false, 0, -1, //【地上】近接コンボ3-2
+		"WAIT",
+		"MOTION", "MOT_1033", false, 0, -1, //【地上】近接コンボ3-3
+		"WAIT",
+		"END"
+	],
+	//【地上】周囲攻撃1
+	"ATTACK_5": [
+		"MOTION", "MOT_1041", false, 0, -1, //【地上】周囲攻撃1
+		"WAIT",
+		"END"
+	],
+	//【地上】周囲攻撃2
+	"ATTACK_6": [
+		"MOTION", "MOT_1051", false, 0, -1, //【地上】周囲攻撃2
+		"WAIT",
+		"END"
+	],
+	//【地上】遠距離攻撃1
+	"ATTACK_7": [
+		"MOTION", "MOT_1061", false, 0, -1, //【地上】遠距離攻撃1
+		"WAIT",
+		"END"
+	],
+	//【地上】遠距離攻撃2
+	"ATTACK_8": [
+		"MOTION", "MOT_1071", false, 0, -1, //【地上】遠距離攻撃2
+		"WAIT",
+		"END"
+	],
+
+	/***************************************************************************
+	motion list:
+		//●0000基本
+		MOTION	ch701_m01_0001.mtb	MOT_0001	//MOT_0001	戦闘待機
+		MOTION	ch701_m01_0031.mtb	MOT_0031	//MOT_0031	ジャンプ_開始
+		MOTION	ch701_m01_0032.mtb	MOT_0032	//MOT_0032	ジャンプ_ループ
+		MOTION	ch701_m01_0034.mtb	MOT_0034	//MOT_0034	ジャンプ_着地
+		//●1000地上攻撃			
+		MOTION	ch701_m01_1001.mtb	MOT_1001	//MOT_1001	【地上】咆哮
+		MOTION	ch701_m01_1011.mtb	MOT_1011	//MOT_1011	【地上】近接コンボ1
+		MOTION	ch701_m01_1021.mtb	MOT_1021	//MOT_1021	【地上】近接コンボ2-1
+		MOTION	ch701_m01_1022.mtb	MOT_1022	//MOT_1022	【地上】近接コンボ2-2
+		MOTION	ch701_m01_1031.mtb	MOT_1031	//MOT_1031	【地上】近接コンボ3-1
+		MOTION	ch701_m01_1032.mtb	MOT_1032	//MOT_1032	【地上】近接コンボ3-2
+		MOTION	ch701_m01_1033.mtb	MOT_1033	//MOT_1033	【地上】近接コンボ3-3
+		MOTION	ch701_m01_1041.mtb	MOT_1041	//MOT_1041	【地上】周囲攻撃1
+		MOTION	ch701_m01_1051.mtb	MOT_1051	//MOT_1051	【地上】周囲攻撃2
+		MOTION	ch701_m01_1061.mtb	MOT_1061	//MOT_1061	【地上】遠距離攻撃1
+		MOTION	ch701_m01_1071.mtb	MOT_1071	//MOT_1071	【地上】遠距離攻撃2
+		MOTION	ch701_m01_1081.mtb	MOT_1081	//MOT_1081	【地上】突進+180旋回＿スタート
+		MOTION	ch701_m01_1082.mtb	MOT_1082	//MOT_1082	【地上】突進+180旋回＿ループ
+		MOTION	ch701_m01_1083.mtb	MOT_1083	//MOT_1083	【地上】突進+180旋回＿エンド
+		MOTION	ch701_m01_1091.mtb	MOT_1091	//MOT_1091	【地上】大技1
+		MOTION	ch701_m01_1101.mtb	MOT_1101	//MOT_1101	【地上】大技2
+		//●2000空中攻撃
+		//●3000ダメージ
+		MOTION	ch701_m01_3001.mtb	MOT_3001	//MOT_3001	右腕破壊ダウン（開始）
+		MOTION	ch701_m01_3002.mtb	MOT_3002	//MOT_3002	右腕破壊ダウン（ダウン中）
+		MOTION	ch701_m01_3003.mtb	MOT_3003	//MOT_3003	右腕破壊ダウン（復帰）
+		MOTION	ch701_m01_3004.mtb	MOT_3004	//MOT_3004	左破壊ダウン（開始）
+		MOTION	ch701_m01_3005.mtb	MOT_3005	//MOT_3005	左腕破壊ダウン（ダウン中）
+		MOTION	ch701_m01_3006.mtb	MOT_3006	//MOT_3006	左腕破壊ダウン（復帰）
+		//●9000バトルフェイシャル
+	***************************************************************************/
+
+	////////////////////////////////////////////////////////////////////////////
+	"comlist": [
+		 { "comment": "待機用", "name": "WAIT_1" }
+		,{ "comment": "damagel", "name": "NORMAL_DAMAGEL" }
+		,{ "comment": "damager", "name": "NORMAL_DAMAGER" }
+		,{ "comment": "damageb", "name": "NORMAL_DAMAGEB" }
+		,{ "comment": "【地上】咆哮", "name": "ATTACK_1" }
+		,{ "comment": "【地上】近接コンボ1", "name": "ATTACK_2" }
+		,{ "comment": "【地上】近接コンボ2", "name": "ATTACK_3" }
+		,{ "comment": "【地上】近接コンボ3", "name": "ATTACK_4" }
+		,{ "comment": "【地上】周囲攻撃1", "name": "ATTACK_5" }
+		,{ "comment": "【地上】周囲攻撃2", "name": "ATTACK_6" }
+		,{ "comment": "【地上】遠距離攻撃1", "name": "ATTACK_7" }
+		,{ "comment": "【地上】遠距離攻撃2", "name": "ATTACK_8" }
+	]
+}

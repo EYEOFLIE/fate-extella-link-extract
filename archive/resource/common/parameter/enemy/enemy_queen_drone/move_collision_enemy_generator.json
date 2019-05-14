@@ -1,0 +1,10 @@
+﻿/*
+ *	ジェネレーターの移動コリジョン設定
+ */
+[
+	//	着地用コリジョン
+	{"node_name":"Reference","radius":0.3,"height":0.0,"rot_follow_bone":false,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.25,"z":0.0}}
+	
+	//	体コリジョン
+	,{"node_name":"Hips","radius":1.5,"height":0.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.0,"z":0.0}}
+]

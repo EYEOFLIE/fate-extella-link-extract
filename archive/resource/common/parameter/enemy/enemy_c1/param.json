@@ -1,0 +1,99 @@
+﻿/*
+ *	C-1　ドローン
+ */
+ [
+	//------------------------
+
+	//----------------------------------------------------------------------
+	//----- ここから本番用データ -------------------------------------------	
+	//----------------------------------------------------------------------
+
+	//------------------------
+	// type:100
+	//	武器：
+	//	属性：無
+	//	攻撃：砲撃
+	//	能力：標準
+	//	備考：
+ 	 {
+		"type":100			// パラメータインデックス
+
+		,"chr":"/resource/common/character/za0000.chr"					// CHRファイル
+		,"motion":"/resource/common/parameter/enemy/enemy_c1/mcomlist_zk_c1.json"	// モーションコマンド
+		
+		,"EXP":2			//経験値
+		,"MOVE_SPEED": 15.0		// 移動速度
+		,"RUN_SPEED": 10.0		// 走る速度
+		,"ROT_SPEED": 360.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX": 1.0	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 0.5	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 1.0			// 重さ
+		,"DASH_BLOCK": false		// ダッシュブロック能力
+		,"REGEN":			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			{"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0}
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+			]
+			,"FLY":[		// 空中攻撃
+				{"COMMAND":
+					"ATTACK_1",
+					"SHORTRANGE":{"min":0.0,"max":20.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":100.0,
+					"CHECK_ANGLE":true
+				}
+			]
+		}
+	}
+	,
+	//------------------------
+
+	//------------------------
+	// type:200
+	//	武器：
+	//	属性：雷
+	//	攻撃：雷撃
+	//	能力：標準
+	//	備考：
+ 	 {
+		"type":200			// パラメータインデックス
+
+		,"chr":"/resource/common/character/za0000.chr"					// CHRファイル
+		,"motion":"/resource/common/parameter/enemy/enemy_c1/mcomlist_zk_c1.json"	// モーションコマンド
+		
+		,"EXP":2			//経験値
+		,"MOVE_SPEED":20.0		// 移動速度
+		,"RUN_SPEED": 10.0		// 走る速度
+		,"ROT_SPEED": 360.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX": 1.0	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 0.5	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 1.0			// 重さ
+		,"DASH_BLOCK": false		// ダッシュブロック能力
+		,"REGEN":			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			{"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0}
+		,"ATTRIBUTE":"THUNDER"		//	属性雷
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+			]
+			,"FLY":[		// 空中攻撃
+				{"COMMAND":
+					"ATTACK_2",
+					"SHORTRANGE":{"min":0.0,"max":10.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":100.0,
+					"CHECK_ANGLE":true
+				}
+			]
+		}
+	}
+
+ 
+ ]

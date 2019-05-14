@@ -1,0 +1,1260 @@
+{
+// 待機用
+"WAIT_1" : [
+//	"MOTION", "ZK_BS_IDL", true, 0, -1,
+	"MOTION", "ZK_BS_IV2", true, 0, -1,
+
+	"WAIT",
+	"END"
+],
+// 待機用2（8と入れ替え）
+"WAIT_8" : [
+	"MOTION", "ZK_BS_IV1", false, 0, -1,
+	"WAIT",
+	"END"
+],
+// 待機用3（4と入れ替え）
+"WAIT_4" : [
+	"MOTION", "ZK_BS_IV2", false, 0, -1,
+	"WAIT",
+	"END"
+],
+// 待機用4（3と入れ替え）
+"WAIT_3" : [
+	"MOTION", "ZK_BS_IV3", false, 0, -1,
+	"WAIT",
+	"END"
+],
+// 待機用5
+"WAIT_5" : [
+	"MOTION", "ZK_BS_IV4", false, 0, -1,
+	"WAIT",
+	"END"
+],
+// 待機用6
+"WAIT_6" : [
+	"MOTION", "ZK_BS_IV5", false, 0, -1,
+	"WAIT",
+	"END"
+],
+// 待機用7
+"WAIT_7" : [
+	"MOTION", "ZK_BS_IV6", false, 0, -1,
+	"WAIT",
+	"END"
+],
+// 待機用8（2と入れ替え）
+"WAIT_2" : [
+	"MOTION", "ZK_BS_IV7", false, 0, -1,
+	"WAIT",
+	"END"
+],
+// 威嚇
+"THREAT" : [
+	"MOTION", "ZK_BS_DIS", false, 0, -1,
+	"WAIT",
+	"END"
+],
+// 歩き用
+"WALK_1" : [
+	"MOTION", "ZK_BS_WA_", true, 0, -1,
+	"LABEL", 0,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"BREAK",
+	"PLAY3D", 15, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"BREAK",
+	"GOTO", 0,
+	"WAIT",
+	"END"
+],
+// 後ろ歩き用
+"WALK_BACK" : [
+	"MOTION", "ZK_BS_WAB", true, 0, -1,
+	"LABEL", 0,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"BREAK",
+	"PLAY3D", 16, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"BREAK",
+	"GOTO", 0,
+	"WAIT",
+	"END"
+],
+// 左歩き用
+"WALK_LEFT" : [
+	"MOTION", "ZK_BS_WAL", true, 0, -1,
+	"LABEL", 0,
+	"COMMENT", "SE再生",
+	"PLAY3D", 5, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"BREAK",
+	"PLAY3D", 19, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"BREAK",
+	"GOTO", 0,
+	"WAIT",
+	"END"
+],
+// 右歩き用
+"WALK_RIGHT" : [
+	"MOTION", "ZK_BS_WAR", true, 0, -1,
+	"LABEL", 0,
+	"COMMENT", "SE再生",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"BREAK",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"BREAK",
+	"GOTO", 0,
+	"WAIT",
+	"END"
+],
+// 走り
+"RUN" : [
+	"MOTION", "ZK_BS_DAS_L", true, 0, -1,
+	"LABEL", 0,
+	"COMMENT", "SE再生",
+	"PLAY3D", 2, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"BREAK",
+	"PLAY3D", 10, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"BREAK",
+	"GOTO", 0,
+	"WAIT",
+	"END"
+],
+// 左回転用
+"TURN_LEFT_1" : [
+	"MOTION", "ZK_BS_TUL", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 7, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 17, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"WAIT",
+	"END"
+],
+// 右回転用
+"TURN_RIGHT_1" : [
+	"MOTION", "ZK_BS_TUR", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 6, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 17, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"WAIT",
+	"END"
+],
+// 薙ぎ払い攻撃
+"ATTACK_1" : [
+	"MOTION", "ZK_AC_AT1", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0000_act_001_00", "SWORD", 0,
+	"COMMENT", "HIT時、相手がのけぞらない属性指定",
+	"ATK_EXTENSION", "IGNORE_KNOCKBACK",
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 19, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "攻撃 攻撃コリジョンの大きさを1.0→0.6に　20161012",
+	"ATK_START", 0, 21, "Reference", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 0.6, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0.08, 0, 0, 0, 0, 0,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"ATTACKEND", 0, 24,
+	"COMMENT", "SE再生",
+	"PLAY3D", 42, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 薙ぎ払い攻撃
+"ATTACK_1_F" : [
+	"MOTION", "ZK_AC_AT1", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0000_act_001_10", "SWORD", 0,
+	"COMMENT", "HIT時、相手がのけぞらない属性指定",
+	"ATK_EXTENSION", "IGNORE_KNOCKBACK",
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 19, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 21, "Reference", "KNOCKBACK_1", "FLOAT_1", "FIRE", 0, 0, 1, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0.08, 0, 0, 0, 1, 0.2,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"ATTACKEND", 0, 24,
+	"COMMENT", "SE再生",
+	"PLAY3D", 42, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 薙ぎ払い攻撃
+"ATTACK_1_I" : [
+	"MOTION", "ZK_AC_AT1", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0000_act_001_20", "SWORD", 0,
+	"COMMENT", "HIT時、相手がのけぞらない属性指定",
+	"ATK_EXTENSION", "IGNORE_KNOCKBACK",
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 19, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 21, "Reference", "KNOCKBACK_1", "FLOAT_1", "ICE", 0, 0, 1, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0.08, 0, 0, 0, 1, 0.2,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"ATTACKEND", 0, 24,
+	"COMMENT", "SE再生",
+	"PLAY3D", 42, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 薙ぎ払い攻撃
+"ATTACK_1_P" : [
+	"MOTION", "ZK_AC_AT1", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0000_act_001_30", "SWORD", 0,
+	"COMMENT", "HIT時、相手がのけぞらない属性指定",
+	"ATK_EXTENSION", "IGNORE_KNOCKBACK",
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 19, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 21, "Reference", "KNOCKBACK_1", "FLOAT_1", "POISON", 0, 0, 1, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0.08, 0, 0, 0, 1, 0.2,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"ATTACKEND", 0, 24,
+	"COMMENT", "SE再生",
+	"PLAY3D", 42, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 薙ぎ払い攻撃
+"ATTACK_1_T" : [
+	"MOTION", "ZK_AC_AT1", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0000_act_001_40", "SWORD", 0,
+	"COMMENT", "HIT時、相手がのけぞらない属性指定",
+	"ATK_EXTENSION", "IGNORE_KNOCKBACK",
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 19, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 21, "Reference", "KNOCKBACK_1", "FLOAT_1", "THUNDER", 0, 0, 1, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0.08, 0, 0, 0, 1, 0.2,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"ATTACKEND", 0, 24,
+	"COMMENT", "SE再生",
+	"PLAY3D", 42, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 薙ぎ払い攻撃
+"ATTACK_1a" : [
+	"MOTION", "ZK_AC_AT1", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0020_act_001_00", "SWORD", 0,
+	"COMMENT", "HIT時、相手がのけぞらない属性指定",
+	"ATK_EXTENSION", "IGNORE_KNOCKBACK",
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 19, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 21, "Reference", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 1, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"ATTACKEND", 0, 24,
+	"COMMENT", "SE再生",
+	"PLAY3D", 42, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 薙ぎ払い攻撃
+"ATTACK_1a_F" : [
+	"MOTION", "ZK_AC_AT1", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0020_act_001_10", "SWORD", 0,
+	"COMMENT", "HIT時、相手がのけぞらない属性指定",
+	"ATK_EXTENSION", "IGNORE_KNOCKBACK",
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 19, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 21, "Reference", "KNOCKBACK_1", "FLOAT_1", "FIRE", 0, 0, 1, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"ATTACKEND", 0, 24,
+	"COMMENT", "SE再生",
+	"PLAY3D", 42, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 薙ぎ払い攻撃
+"ATTACK_1a_I" : [
+	"MOTION", "ZK_AC_AT1", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0020_act_001_20", "SWORD", 0,
+	"COMMENT", "HIT時、相手がのけぞらない属性指定",
+	"ATK_EXTENSION", "IGNORE_KNOCKBACK",
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 19, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 21, "Reference", "KNOCKBACK_1", "FLOAT_1", "ICE", 0, 0, 1, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"ATTACKEND", 0, 24,
+	"COMMENT", "SE再生",
+	"PLAY3D", 42, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 薙ぎ払い攻撃
+"ATTACK_1a_P" : [
+	"MOTION", "ZK_AC_AT1", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0020_act_001_30", "SWORD", 0,
+	"COMMENT", "HIT時、相手がのけぞらない属性指定",
+	"ATK_EXTENSION", "IGNORE_KNOCKBACK",
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 19, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 21, "Reference", "KNOCKBACK_1", "FLOAT_1", "POISON", 0, 0, 1, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"ATTACKEND", 0, 24,
+	"COMMENT", "SE再生",
+	"PLAY3D", 42, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 薙ぎ払い攻撃
+"ATTACK_1a_T" : [
+	"MOTION", "ZK_AC_AT1", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0020_act_001_40", "SWORD", 0,
+	"COMMENT", "HIT時、相手がのけぞらない属性指定",
+	"ATK_EXTENSION", "IGNORE_KNOCKBACK",
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 19, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 21, "Reference", "KNOCKBACK_1", "FLOAT_1", "THUNDER", 0, 0, 1, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"ATTACKEND", 0, 24,
+	"COMMENT", "SE再生",
+	"PLAY3D", 42, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 攻撃(コマンダー用)
+"ATTACK_2" : [
+	"MOTION", "ZK_AC_ATC", false, 0, -1,
+	"COMMENT", "アグレッサー専用予兆エフェクト",
+	"EFFECT", 0, "xb_common_enm_011_00", "SWORD2", 0,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0200_act_002_00", "SWORD", 0,
+	"COMMENT", "モーション速度変更",
+	"MSPEED", 0, 0.75,
+	"EFFECTSPEED", "SWORD", 0.75,
+	"MSPEED", 18, 1,
+	"EFFECTSPEED", "SWORD", 1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "前進",
+	"MOVE", 18, 3, 0.5, 0.4, true,
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 20, "Reference", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 1.5, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 6, 0, 0, 2, 6, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 23,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 40, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 攻撃(コマンダー用)
+"ATTACK_2_F" : [
+	"MOTION", "ZK_AC_ATC", false, 0, -1,
+	"COMMENT", "アグレッサー専用予兆エフェクト",
+	"EFFECT", 0, "xb_common_enm_011_00", "SWORD2", 0,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0200_act_002_10", "SWORD", 0,
+	"COMMENT", "モーション速度変更",
+	"MSPEED", 0, 0.75,
+	"EFFECTSPEED", "SWORD", 0.75,
+	"MSPEED", 18, 1,
+	"EFFECTSPEED", "SWORD", 1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "前進",
+	"MOVE", 18, 3, 0.5, 0.4, true,
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 20, "Reference", "KNOCKBACK_1", "FLOAT_1", "FIRE", 0, 0, 1.5, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 6, 0, 0, 2, 6, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 23,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 40, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 攻撃(コマンダー用)
+"ATTACK_2_I" : [
+	"MOTION", "ZK_AC_ATC", false, 0, -1,
+	"COMMENT", "アグレッサー専用予兆エフェクト",
+	"EFFECT", 0, "xb_common_enm_011_00", "SWORD2", 0,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0200_act_002_20", "SWORD", 0,
+	"COMMENT", "モーション速度変更",
+	"MSPEED", 0, 0.75,
+	"EFFECTSPEED", "SWORD", 0.75,
+	"MSPEED", 18, 1,
+	"EFFECTSPEED", "SWORD", 1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "前進",
+	"MOVE", 18, 3, 0.5, 0.4, true,
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 20, "Reference", "KNOCKBACK_1", "FLOAT_1", "ICE", 0, 0, 1.5, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 6, 0, 0, 2, 6, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 23,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 40, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 攻撃(コマンダー用)
+"ATTACK_2_P" : [
+	"MOTION", "ZK_AC_ATC", false, 0, -1,
+	"COMMENT", "アグレッサー専用予兆エフェクト",
+	"EFFECT", 0, "xb_common_enm_011_00", "SWORD2", 0,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0200_act_002_30", "SWORD", 0,
+	"COMMENT", "モーション速度変更",
+	"MSPEED", 0, 0.75,
+	"EFFECTSPEED", "SWORD", 0.75,
+	"MSPEED", 18, 1,
+	"EFFECTSPEED", "SWORD", 1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "前進",
+	"MOVE", 18, 3, 0.5, 0.4, true,
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 20, "Reference", "KNOCKBACK_1", "FLOAT_1", "POISON", 0, 0, 1.5, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 6, 0, 0, 2, 6, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 23,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 40, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 攻撃(コマンダー用)
+"ATTACK_2_T" : [
+	"MOTION", "ZK_AC_ATC", false, 0, -1,
+	"COMMENT", "アグレッサー専用予兆エフェクト",
+	"EFFECT", 0, "xb_common_enm_011_00", "SWORD2", 0,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0200_act_002_40", "SWORD", 0,
+	"COMMENT", "モーション速度変更",
+	"MSPEED", 0, 0.75,
+	"EFFECTSPEED", "SWORD", 0.75,
+	"MSPEED", 18, 1,
+	"EFFECTSPEED", "SWORD", 1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "前進",
+	"MOVE", 18, 3, 0.5, 0.4, true,
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 20, "Reference", "KNOCKBACK_1", "FLOAT_1", "THUNDER", 0, 0, 1.5, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 6, 0, 0, 2, 6, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 23,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 40, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 攻撃(自軍コマンダー用)
+"ATTACK_2own" : [
+	"MOTION", "ZK_AC_ATC", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0200_act_002_00", "SWORD", 0,
+	"COMMENT", "モーション速度変更",
+	"MSPEED", 0, 0.75,
+	"EFFECTSPEED", "SWORD", 0.75,
+	"MSPEED", 18, 1,
+	"EFFECTSPEED", "SWORD", 1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "前進",
+	"MOVE", 18, 3, 0.5, 0.4, true,
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 20, "Reference", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 1.5, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 6, 0, 0, 2, 6, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 23,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 40, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 【未使用】攻撃(連打)
+"ATTACK_12" : [
+	"MOTION", "ZK_AC_AT1", false, 0, 30,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0000_act_001_00", "SWORD", 0,
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 19, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 21, "Reference", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 1, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"ATTACKEND", 0, 24,
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"MOTION", "ZK_AC_ATC", false, 19, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0000_act_002_00", "SWORD", 0,
+	"COMMENT", "SE再生",
+	"PLAY3D", 19, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 19, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "前進",
+	"MOVE", 19, 8, 0.3, 0.2, true,
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 20, "Reference", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 1, 100, 2, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 23,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 40, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// ジャンプ攻撃開始(開始)
+"JUMP_ATTACK_ST" : [
+	"MOTION", "ZK_AC_ANT", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 8, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"WAIT",
+	"END"
+],
+// ジャンプ攻撃開始(ループ)
+"JUMP_ATTACK_LOOP" : [
+	"MOTION", "ZK_AC_FAL_S", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 2, "BANK_ENM_SOLDIER", "ZK0000_JUMP",
+	"WAIT",
+	"MOTION", "ZK_AC_FAL_L", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// ジャンプ攻撃途中(上昇→落下)
+"JUMP_ATTACK_MID" : [
+	"MOTION", "ZK_AC_FAL_L", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// ジャンプ攻撃終了(落下→終了)
+"JUMP_ATTACK_ED" : [
+	"MOTION", "ZK_AC_FAL_E", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0020_act_003_00", "SWORD", 0,
+	"COMMENT", "HIT時、相手がのけぞらない属性指定",
+	"ATK_EXTENSION", "IGNORE_KNOCKBACK",
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 3, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 5, "Reference", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 1, 100, 1, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0.08, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 8,
+	"COMMENT", "SE再生",
+	"PLAY3D", 38, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// ジャンプ攻撃終了(落下→終了)
+"JUMP_ATTACK_ED_F" : [
+	"MOTION", "ZK_AC_FAL_E", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0020_act_003_10", "SWORD", 0,
+	"COMMENT", "HIT時、相手がのけぞらない属性指定",
+	"ATK_EXTENSION", "IGNORE_KNOCKBACK",
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 3, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 5, "Reference", "KNOCKBACK_1", "FLOAT_1", "FIRE", 0, 0, 1, 100, 1, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0.08, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 8,
+	"COMMENT", "SE再生",
+	"PLAY3D", 38, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// ジャンプ攻撃終了(落下→終了)
+"JUMP_ATTACK_ED_I" : [
+	"MOTION", "ZK_AC_FAL_E", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0020_act_003_20", "SWORD", 0,
+	"COMMENT", "HIT時、相手がのけぞらない属性指定",
+	"ATK_EXTENSION", "IGNORE_KNOCKBACK",
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 3, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 5, "Reference", "KNOCKBACK_1", "FLOAT_1", "ICE", 0, 0, 1, 100, 1, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0.08, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 8,
+	"COMMENT", "SE再生",
+	"PLAY3D", 38, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// ジャンプ攻撃終了(落下→終了)
+"JUMP_ATTACK_ED_P" : [
+	"MOTION", "ZK_AC_FAL_E", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0000_act_003_30", "SWORD", 0,
+	"COMMENT", "HIT時、相手がのけぞらない属性指定",
+	"ATK_EXTENSION", "IGNORE_KNOCKBACK",
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 3, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 5, "Reference", "KNOCKBACK_1", "FLOAT_1", "POISON", 0, 0, 1, 100, 1, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0.08, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 8,
+	"COMMENT", "SE再生",
+	"PLAY3D", 38, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// ジャンプ攻撃終了(落下→終了)
+"JUMP_ATTACK_ED_T" : [
+	"MOTION", "ZK_AC_FAL_E", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0020_act_003_40", "SWORD", 0,
+	"COMMENT", "HIT時、相手がのけぞらない属性指定",
+	"ATK_EXTENSION", "IGNORE_KNOCKBACK",
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 3, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 5, "Reference", "KNOCKBACK_1", "FLOAT_1", "THUNDER", 0, 0, 1, 100, 1, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0.08, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 8,
+	"COMMENT", "SE再生",
+	"PLAY3D", 38, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// ジャンプ攻撃終了(落下→終了)
+"JUMP_ATTACK_ED_cmd" : [
+	"MOTION", "ZK_AC_FAL_E", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0200_act_003_00", "SWORD", 0,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 3, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 5, "Reference", "KNOCKBACK_1", "FLOAT_1", "NORMAL", 0, 0, 1, 100, 1, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 8,
+	"COMMENT", "SE再生",
+	"PLAY3D", 38, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// ジャンプ攻撃終了(落下→終了)
+"JUMP_ATTACK_ED_F_cmd" : [
+	"MOTION", "ZK_AC_FAL_E", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0200_act_003_10", "SWORD", 0,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 3, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 5, "Reference", "KNOCKBACK_1", "FLOAT_1", "FIRE", 0, 0, 1, 100, 1, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 8,
+	"COMMENT", "SE再生",
+	"PLAY3D", 38, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// ジャンプ攻撃終了(落下→終了)
+"JUMP_ATTACK_ED_I_cmd" : [
+	"MOTION", "ZK_AC_FAL_E", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0200_act_003_20", "SWORD", 0,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 3, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 5, "Reference", "KNOCKBACK_1", "FLOAT_1", "ICE", 0, 0, 1, 100, 1, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 8,
+	"COMMENT", "SE再生",
+	"PLAY3D", 38, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// ジャンプ攻撃終了(落下→終了)
+"JUMP_ATTACK_ED_P_cmd" : [
+	"MOTION", "ZK_AC_FAL_E", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0200_act_003_30", "SWORD", 0,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 3, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 5, "Reference", "KNOCKBACK_1", "FLOAT_1", "POISON", 0, 0, 1, 100, 1, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 8,
+	"COMMENT", "SE再生",
+	"PLAY3D", 38, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// ジャンプ攻撃終了(落下→終了)
+"JUMP_ATTACK_ED_T_cmd" : [
+	"MOTION", "ZK_AC_FAL_E", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0200_act_003_40", "SWORD", 0,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 3, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 5, "Reference", "KNOCKBACK_1", "FLOAT_1", "THUNDER", 0, 0, 1, 100, 1, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 1, 0.2,
+	"ATTACKEND", 0, 8,
+	"COMMENT", "SE再生",
+	"PLAY3D", 38, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 反撃
+"COUNTER_ATTACK" : [
+	"MOTION", "ZK_AC_AT1", false, 0, -1,
+	"COMMENT", "エフェクト指定",
+	"EFFECT", 0, "xb_zk0000_act_001_00", "SWORD", 0,
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_VOICE_ATTACK",
+	"PLAY3D", 19, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"COMMENT", "攻撃",
+	"ATK_START", 0, 21, "Reference", "KNOCKBACK_1", "KNOCKBACK_1", "NORMAL", 0, 0, 1, 100, 5, 0, 0, 0.5, 2, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	"COMMENT", "SE再生",
+	"PLAY3D", 23, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"ATTACKEND", 0, 24,
+	"COMMENT", "SE再生",
+	"PLAY3D", 42, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"COMMENT", "モーション終了待ち",
+	"WAIT",
+	"END"
+],
+// 右前ダメージ
+"NORMAL_DAMAGER" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_SGR", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_DAMAGE",
+	"PLAY3D", 2, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 16, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"WAIT",
+	"END"
+],
+// 左前ダメージ
+"NORMAL_DAMAGEL" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_SGL", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_DAMAGE",
+	"PLAY3D", 2, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 16, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"WAIT",
+	"END"
+],
+// 後方ダメージ
+"NORMAL_DAMAGEB" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_SGB", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_DAMAGE",
+	"PLAY3D", 2, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 16, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"WAIT",
+	"END"
+],
+// 右前ダメージ（ショートVer.）
+"DAMAGE_FR_SHORT" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_SGR", false, 0, 10,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_DAMAGE",
+	"PLAY3D", 2, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"WAIT",
+	"END"
+],
+// 左前ダメージ（ショートVer.）
+"DAMAGE_FL_SHORT" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_SGL", false, 0, 10,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_DAMAGE",
+	"PLAY3D", 2, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"WAIT",
+	"END"
+],
+// 後方ダメージ（ショートVer.）
+"DAMAGE_BA_SHORT" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_SGB", false, 0, 10,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_DAMAGE",
+	"PLAY3D", 2, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"WAIT",
+	"END"
+],
+// ダウンにつながるダメージ
+"DOWNDAMAGE_1" : [
+	"MOTION", "ZK_RC_DOW_S", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_DAMAGE",
+	"PLAY3D", 18, "BANK_ENM_SOLDIER", "ZK0000_DOWN",
+	"WAIT",
+	"END"
+],
+// 浮きダメージ
+"FLOATDAMAGE_START" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_LU1_L", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// 浮きダメージ→落下
+"FLOATDAMAGE_DOWN_START" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_LU1", false, 0, -1,
+	"MSPEED", 0, 1.6,
+	"COMMENT", "SE再生",
+	"PLAY3D", 2, "BANK_ENM_SOLDIER", "ZK0000_JUMP",
+	"WAIT",
+	"MOTION", "ZK_RC_LD1_L", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// 浮きダメージ(激しい)
+"FLOATDAMAGE_P_START" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_LU2_L", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// 浮きダメージ→落下(激しい)
+"FLOATDAMAGE_P_DOWN_START" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_LU2", false, 0, -1,
+	"MSPEED", 0, 1.6,
+	"COMMENT", "SE再生",
+	"PLAY3D", 7, "BANK_ENM_SOLDIER", "ZK0000_JUMP",
+	"WAIT",
+	"MOTION", "ZK_RC_LD2_L", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// 浮きダメージ(回転)
+"FLOATDAMAGE_T_START" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_LU3_L", true, 0, -1,
+	"MSPEED", 0, 2,
+	"WAIT",
+	"END"
+],
+// 浮きダメージ→落下(回転)
+"FLOATDAMAGE_T_DOWN_START" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_LU3", false, 0, -1,
+	"MSPEED", 0, 2,
+	"COMMENT", "SE再生",
+	"PLAY3D", 2, "BANK_ENM_SOLDIER", "ZK0000_JUMP",
+	"WAIT",
+	"MOTION", "ZK_RC_LD3_L", true, 0, -1,
+	"MSPEED", 0, 2,
+	"WAIT",
+	"END"
+],
+// 浮きダメージ(LA斬られ)
+"FLOATDAMAGE_LA_R" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_SGR", false, 0, 5,
+	"MSPEED_RANDOM", -1, 0.8, 1.2,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_DAMAGE",
+	"WAIT",
+	"MOTION", "ZK_RC_LU2_L", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// 浮きダメージ(LA斬られ)
+"FLOATDAMAGE_LA_L" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_SGL", false, 0, 8,
+	"MSPEED_RANDOM", -1, 0.8, 1.2,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_DAMAGE",
+	"WAIT",
+	"MOTION", "ZK_RC_LU2_L", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// 浮きダメージ着地
+"FLOATDAMAGE_LANDING" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_LD1_E", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 2, "BANK_ENM_SOLDIER", "ZK0000_DOWN",
+	"PLAY3D", 15, "BANK_ENM_SOLDIER", "ZK0000_DOWN",
+	"WAIT",
+	"END"
+],
+// スマッシュ攻撃を食らうループ
+"SMASHDAMAGE" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_STR_L", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// スマッシュ飛び中障害物にヒット
+"SMASHWALL" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_STR_E", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_DAMAGE",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_DOWN",
+	"WAIT",
+	"MOTION", "ZK_RC_STF_S", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 8, "BANK_ENM_SOLDIER", "ZK0000_JUMP",
+	"WAIT",
+	"MOTION", "ZK_RC_LD1_L", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// 死亡
+"DEATH" : [
+	"MOTION", "ZK_RC_DOW_L", false, 0, 10,
+	"WAIT",
+	"END"
+],
+// ダウン
+"DOWN_1" : [
+	"MOTION", "ZK_RC_DOW_L", false, 0, 20,
+	"PLAY3D", 0, "BANK_SE", "EVT0122",
+	"EFFECT2", 0, "proto_DOWN_SMOKE", "SMOKE", 0, "Reference", 1, 0, 0, 0, 0, 0, 0,
+	"WAIT",
+	"END"
+],
+// 起き上る
+"GETUP_1" : [
+	"MOTION", "ZK_RC_DOW_E", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 25, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 33, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 45, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"WAIT",
+	"END"
+],
+// バウンド
+"BOUND_1" : [
+	"MOTION", "ZK_RC_DOW_L", false, 0, 20,
+	"PLAY3D", 0, "BANK_SE", "EVT0122",
+	"EFFECT2", 0, "proto_DOWN_SMOKE", "SMOKE", 0, "Reference", 1, 0, 0, 0, 0, 0, 0,
+	"WAIT",
+	"END"
+],
+// スポーン敵生成
+"SPAWN_BORN_1" : [
+	"MOTION", "ZK_RC_DOW_L", false, 0, 20,
+	"PLAY3D", 0, "BANK_SE", "EVT0122",
+	"EFFECT2", 0, "proto_DOWN_SMOKE", "SMOKE", 0, "Reference", 1, 0, 0, 0, 0, 0, 0,
+	"WAIT",
+	"END"
+],
+// スポーン敵起き上がり
+"SPAWN_GETUP_1" : [
+	"MOTION", "ZK_RC_DOW_E", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 25, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 33, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 45, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"WAIT",
+	"END"
+],
+// 落下開始
+"FALLDOWN_ST" : [
+	"MOTION", "ZK_BS_FAL_S", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 25, "BANK_ENM_SOLDIER", "ZK0000_JUMP",
+	"WAIT",
+	"MOTION", "ZK_BS_FAL_L", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// 落下終了
+"FALLDOWN_ED" : [
+	"MOTION", "ZK_BS_FAL_E", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 2, "BANK_ENM_SOLDIER", "ZK0000_DOWN",
+	"WAIT",
+	"END"
+],
+// 武器はじかれる
+"REPELLED" : [
+	"MOTION", "ZK_RC_REF", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_JUMP",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 13, "BANK_ENM_SOLDIER", "ZK0000_SWISH",
+	"WAIT",
+	"END"
+],
+// イベント用薙ぎ払い攻撃
+"EVT_022_ATTACK_1" : [
+	"MOTION", "ZK_AC_AT1", false, 0, -1,
+	"WAIT",
+	"END"
+],
+// イベント用薙ぎ払い攻撃(ループ)
+"EVT_022_ATTACK_1_LP" : [
+	"MOTION", "ZK_AC_AT1", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// イベント用ジャンプ
+"EVT_022_JUMP" : [
+	"MOTION", "ZK_BS_STB", false, 0, -1,
+	"WAIT",
+	"END"
+],
+// イベント用ジャンプ(ループ)
+"EVT_022_JUMP_LP" : [
+	"MOTION", "ZK_BS_STB", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// イベント用待機・気迫(左腕を上空に掲げる)
+"EVT_022_IDLE0" : [
+	"MOTION", "ZK_BS_IV3", false, 0, -1,
+	"WAIT",
+	"END"
+],
+// イベント用待機・気迫(左腕を上空に掲げる、ループ)
+"EVT_022_IDLE0_LP" : [
+	"MOTION", "ZK_BS_IV3", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// イベント用待機・威嚇
+"EVT_022_IDLE1" : [
+	"MOTION", "ZK_BS_IV5", false, 0, -1,
+	"WAIT",
+	"END"
+],
+// イベント用待機・威嚇(ループ)
+"EVT_022_IDLE1_LP" : [
+	"MOTION", "ZK_BS_IV5", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// イベント用待機・気合い
+"EVT_022_IDLE2" : [
+	"MOTION", "ZK_BS_IV6", false, 0, -1,
+	"WAIT",
+	"END"
+],
+// イベント用待機・気合い(ループ)
+"EVT_022_IDLE2_LP" : [
+	"MOTION", "ZK_BS_IV6", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// イベント用待機・構え
+"EVT_022_IDLE3" : [
+	"MOTION", "ZK_BS_IV7", false, 0, -1,
+	"WAIT",
+	"END"
+],
+// イベント用待機・ふらふら(ループ)
+"EVT_022_IDLE4" : [
+	"MOTION", "ZK_BS_IV4", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// イベント用待機
+"EVT_IDLE1" : [
+	"MOTION", "ZK_BS_IDL", true, 0, -1,
+	"WAIT",
+	"END"
+],
+// イベント用右前ダメージ
+"EVENT_DAMAGER" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_SGR", false, 0, 11,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_DAMAGE",
+	"PLAY3D", 2, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"WAIT",
+	"END"
+],
+// イベント用左前ダメージ
+"EVENT_DAMAGEL" : [
+	"BLEND", 0,
+	"MOTION", "ZK_RC_SGL", false, 0, 11,
+	"COMMENT", "SE再生",
+	"PLAY3D", 1, "BANK_ENM_SOLDIER", "ZK0000_VOICE_DAMAGE",
+	"PLAY3D", 2, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"PLAY3D", 4, "BANK_ENM_SOLDIER", "ZK0000_WALK",
+	"WAIT",
+	"END"
+],
+// イベント用左前ダメージ
+"EVT_DOWN" : [
+	"MOTION", "ZK_RC_DOW_S", false, 0, -1,
+	"COMMENT", "SE再生",
+	"PLAY3D", 18, "BANK_ACTION", "EVENT_DOWN",
+	"WAIT",
+	"MOTION", "ZK_RC_DOW_L", true, 0, 0,
+	"WAIT",
+	"STOP",
+	"END"
+],
+// イベント用左前ダメージ
+"EVT_DOWN_L" : [
+	"MOTION", "ZK_RC_DOW_L", true, 20, 20,
+	"WAIT",
+	"STOP",
+	"END"
+],
+"comlist" : [
+{"comment":"待機用", "name":"WAIT_1"}
+,{"comment":"待機用2", "name":"WAIT_2"}
+,{"comment":"待機用3", "name":"WAIT_3"}
+,{"comment":"待機用4", "name":"WAIT_4"}
+,{"comment":"待機用5", "name":"WAIT_5"}
+,{"comment":"待機用6", "name":"WAIT_6"}
+,{"comment":"待機用7", "name":"WAIT_7"}
+,{"comment":"待機用8", "name":"WAIT_8"}
+,{"comment":"威嚇", "name":"THREAT"}
+,{"comment":"歩き用", "name":"WALK_1"}
+,{"comment":"後ろ歩き用", "name":"WALK_BACK"}
+,{"comment":"左歩き用", "name":"WALK_LEFT"}
+,{"comment":"右歩き用", "name":"WALK_RIGHT"}
+,{"comment":"走り", "name":"RUN"}
+,{"comment":"左回転用", "name":"TURN_LEFT_1"}
+,{"comment":"右回転用", "name":"TURN_RIGHT_1"}
+,{"comment":"薙ぎ払い攻撃", "name":"ATTACK_1"}
+,{"comment":"薙ぎ払い攻撃", "name":"ATTACK_1_F"}
+,{"comment":"薙ぎ払い攻撃", "name":"ATTACK_1_I"}
+,{"comment":"薙ぎ払い攻撃", "name":"ATTACK_1_P"}
+,{"comment":"薙ぎ払い攻撃", "name":"ATTACK_1_T"}
+,{"comment":"薙ぎ払い攻撃", "name":"ATTACK_1a"}
+,{"comment":"薙ぎ払い攻撃", "name":"ATTACK_1a_F"}
+,{"comment":"薙ぎ払い攻撃", "name":"ATTACK_1a_I"}
+,{"comment":"薙ぎ払い攻撃", "name":"ATTACK_1a_P"}
+,{"comment":"薙ぎ払い攻撃", "name":"ATTACK_1a_T"}
+,{"comment":"攻撃(コマンダー用)", "name":"ATTACK_2"}
+,{"comment":"攻撃(コマンダー用)", "name":"ATTACK_2_F"}
+,{"comment":"攻撃(コマンダー用)", "name":"ATTACK_2_I"}
+,{"comment":"攻撃(コマンダー用)", "name":"ATTACK_2_P"}
+,{"comment":"攻撃(コマンダー用)", "name":"ATTACK_2_T"}
+,{"comment":"攻撃(自軍コマンダー用)", "name":"ATTACK_2own"}
+,{"comment":"【未使用】攻撃(連打)", "name":"ATTACK_12"}
+,{"comment":"ジャンプ攻撃開始(開始)", "name":"JUMP_ATTACK_ST"}
+,{"comment":"ジャンプ攻撃開始(ループ)", "name":"JUMP_ATTACK_LOOP"}
+,{"comment":"ジャンプ攻撃途中(上昇→落下)", "name":"JUMP_ATTACK_MID"}
+,{"comment":"ジャンプ攻撃終了(落下→終了)", "name":"JUMP_ATTACK_ED"}
+,{"comment":"ジャンプ攻撃終了(落下→終了)", "name":"JUMP_ATTACK_ED_F"}
+,{"comment":"ジャンプ攻撃終了(落下→終了)", "name":"JUMP_ATTACK_ED_I"}
+,{"comment":"ジャンプ攻撃終了(落下→終了)", "name":"JUMP_ATTACK_ED_P"}
+,{"comment":"ジャンプ攻撃終了(落下→終了)", "name":"JUMP_ATTACK_ED_T"}
+,{"comment":"ジャンプ攻撃終了(落下→終了)", "name":"JUMP_ATTACK_ED_cmd"}
+,{"comment":"ジャンプ攻撃終了(落下→終了)", "name":"JUMP_ATTACK_ED_F_cmd"}
+,{"comment":"ジャンプ攻撃終了(落下→終了)", "name":"JUMP_ATTACK_ED_I_cmd"}
+,{"comment":"ジャンプ攻撃終了(落下→終了)", "name":"JUMP_ATTACK_ED_P_cmd"}
+,{"comment":"ジャンプ攻撃終了(落下→終了)", "name":"JUMP_ATTACK_ED_T_cmd"}
+,{"comment":"反撃", "name":"COUNTER_ATTACK"}
+,{"comment":"右前ダメージ", "name":"NORMAL_DAMAGER"}
+,{"comment":"左前ダメージ", "name":"NORMAL_DAMAGEL"}
+,{"comment":"後方ダメージ", "name":"NORMAL_DAMAGEB"}
+,{"comment":"右前ダメージ（ショートVer.）", "name":"DAMAGE_FR_SHORT"}
+,{"comment":"左前ダメージ（ショートVer.）", "name":"DAMAGE_FL_SHORT"}
+,{"comment":"後方ダメージ（ショートVer.）", "name":"DAMAGE_BA_SHORT"}
+,{"comment":"ダウンにつながるダメージ", "name":"DOWNDAMAGE_1"}
+,{"comment":"浮きダメージ", "name":"FLOATDAMAGE_START"}
+,{"comment":"浮きダメージ→落下", "name":"FLOATDAMAGE_DOWN_START"}
+,{"comment":"浮きダメージ(激しい)", "name":"FLOATDAMAGE_P_START"}
+,{"comment":"浮きダメージ→落下(激しい)", "name":"FLOATDAMAGE_P_DOWN_START"}
+,{"comment":"浮きダメージ(回転)", "name":"FLOATDAMAGE_T_START"}
+,{"comment":"浮きダメージ→落下(回転)", "name":"FLOATDAMAGE_T_DOWN_START"}
+,{"comment":"浮きダメージ(LA斬られ)", "name":"FLOATDAMAGE_LA_R"}
+,{"comment":"浮きダメージ(LA斬られ)", "name":"FLOATDAMAGE_LA_L"}
+,{"comment":"浮きダメージ着地", "name":"FLOATDAMAGE_LANDING"}
+,{"comment":"スマッシュ攻撃を食らうループ", "name":"SMASHDAMAGE"}
+,{"comment":"スマッシュ飛び中障害物にヒット", "name":"SMASHWALL"}
+,{"comment":"死亡", "name":"DEATH"}
+,{"comment":"ダウン", "name":"DOWN_1"}
+,{"comment":"起き上る", "name":"GETUP_1"}
+,{"comment":"バウンド", "name":"BOUND_1"}
+,{"comment":"スポーン敵生成", "name":"SPAWN_BORN_1"}
+,{"comment":"スポーン敵起き上がり", "name":"SPAWN_GETUP_1"}
+,{"comment":"落下開始", "name":"FALLDOWN_ST"}
+,{"comment":"落下終了", "name":"FALLDOWN_ED"}
+,{"comment":"武器はじかれる", "name":"REPELLED"}
+,{"comment":"イベント用薙ぎ払い攻撃", "name":"EVT_022_ATTACK_1"}
+,{"comment":"イベント用薙ぎ払い攻撃(ループ)", "name":"EVT_022_ATTACK_1_LP"}
+,{"comment":"イベント用ジャンプ", "name":"EVT_022_JUMP"}
+,{"comment":"イベント用ジャンプ(ループ)", "name":"EVT_022_JUMP_LP"}
+,{"comment":"イベント用待機・気迫(左腕を上空に掲げる)", "name":"EVT_022_IDLE0"}
+,{"comment":"イベント用待機・気迫(左腕を上空に掲げる、ループ)", "name":"EVT_022_IDLE0_LP"}
+,{"comment":"イベント用待機・威嚇", "name":"EVT_022_IDLE1"}
+,{"comment":"イベント用待機・威嚇(ループ)", "name":"EVT_022_IDLE1_LP"}
+,{"comment":"イベント用待機・気合い", "name":"EVT_022_IDLE2"}
+,{"comment":"イベント用待機・気合い(ループ)", "name":"EVT_022_IDLE2_LP"}
+,{"comment":"イベント用待機・構え", "name":"EVT_022_IDLE3"}
+,{"comment":"イベント用待機・ふらふら(ループ)", "name":"EVT_022_IDLE4"}
+,{"comment":"イベント用待機", "name":"EVT_IDLE1"}
+,{"comment":"イベント用右前ダメージ", "name":"EVENT_DAMAGER"}
+,{"comment":"イベント用左前ダメージ", "name":"EVENT_DAMAGEL"}
+,{"comment":"イベント用左前ダメージ", "name":"EVT_DOWN"}
+,{"comment":"イベント用左前ダメージ", "name":"EVT_DOWN_L"}
+]
+}

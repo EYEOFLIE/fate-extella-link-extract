@@ -1,0 +1,100 @@
+﻿/*
+ *	A-2　ソルジャー
+ */
+[
+	//-----------------------
+	
+	//----------------------------------------------------------------------
+	//----- ここから本番用データ -------------------------------------------	
+	//----------------------------------------------------------------------
+
+	//------------------------
+	// type:100
+	//	武器：槍
+	//	属性：無
+	//	攻撃：突進
+	//	能力：標準
+	//	備考：
+	{
+		"type":100			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zl0000.chr"					// CHRファイル
+		,"motion":"/resource/common/parameter/enemy/enemy_a2/mcomlist_zk_a2.json"	// モーションコマンド
+
+		,"EXP":8			//経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.64	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.32	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7			// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0
+		}
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_2",
+					"SHORTRANGE":{"min":0.0, "max":5.0},
+					"LONGRANGE":{"min":5.0, "max":26.0},
+					"PROBABILITY":100.0,
+					"CHECK_ANGLE": true,
+					"LOOK_TARGET_MOTION":["ZL_AC_ATB_S"], "LOOK_TARGET_ROT_RATE":1.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:110
+	//	武器：槍
+	//	属性：無
+	//	攻撃：突進
+	//	能力：標準
+	//	備考：アンチダッシュ
+	{
+		"type":110			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zl0000.chr"					// CHRファイル
+		,"motion":"/resource/common/parameter/enemy/enemy_a2/mcomlist_zk_a2.json"	// モーションコマンド
+
+		,"EXP":8			//経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.64	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.32	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7			// リラックスモーション種類
+		,"DASH_BLOCK":true		// ダッシュブロック能力
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0
+		}
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_2",
+					"SHORTRANGE":{"min":0.0, "max":5.0},
+					"LONGRANGE":{"min":5.0, "max":26.0},
+					"PROBABILITY":100.0,
+					"CHECK_ANGLE": true,
+					"LOOK_TARGET_MOTION":["ZL_AC_ATB_S"], "LOOK_TARGET_ROT_RATE":1.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	
+]

@@ -1,0 +1,1080 @@
+﻿/*
+ *	A-1　ソルジャー
+ */
+[
+	//----------------------------------------------------------------------
+	//----- ここから本番用データ -------------------------------------------	
+	//----------------------------------------------------------------------
+
+	//-----< 自軍制圧兵 >---------------------------------------------------
+	// type:0
+	//	武器：剣
+	//	属性：無
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：コマンダー
+	{
+		"type":0			// パラメータインデックス
+
+		,"chr":"/resource/common/character/zk0200.chr"					// CHRファイル
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+		
+		,"EXP": 100			// 倒す時もらえる経験値
+		,"MOVE_SPEED": 3.5		// 移動速度
+		,"RUN_SPEED": 10.0		// 走る速度
+		,"ROT_SPEED": 540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX": 0.32	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 0.16	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 0.95			// 重さ
+		,"RELAX_TYPE": 0		// リラックスモーション種類
+		,"DASH_BLOCK": false	// ダッシュブロック能力
+		,"ACCENT": true			// 重要兵（A1兵はこの属性を持つとコマンダー扱い）
+		,"REGEN":{"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0}		//	リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_2own",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true
+				},
+				{"COMMAND":
+					"JUMP_ATTACK_ST",
+					"SHORTRANGE":{"min":4.0,"max":5.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true,
+					"JUMP_ATTACK":true,
+					"COMMAND2":"JUMP_ATTACK_LOOP",
+					"COMMAND3":"JUMP_ATTACK_MID",
+					"COMMAND4":"JUMP_ATTACK_ED_cmd",
+					"ADV_SPEED":5.0,
+					"UP_SPEED":20.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:1
+	//	武器：剣
+	//	属性：無
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：ソルジャー
+	{
+		"type":1			// パラメータインデックス
+
+		,"chr":"/resource/common/character/zk0000.chr"					// CHRファイル
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+		
+		,"EXP": 100			// 倒す時もらえる経験値
+		,"MOVE_SPEED": 3.5		// 移動速度
+		,"RUN_SPEED": 10.0		// 走る速度
+		,"ROT_SPEED": 540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX": 0.32	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN": 0.16	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT": 0.95			// 重さ
+		,"RELAX_TYPE": 0		// リラックスモーション種類
+		,"DASH_BLOCK": false	// ダッシュブロック能力
+		,"REGEN":{"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0}		//	リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1",
+					"SHORTRANGE":{"min":0.0, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":100.0,
+					"CHECK_ANGLE":true
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+
+	//-----< ソルジャー >---------------------------------------------------
+
+	//------------------------
+	// type:100
+	//	武器：剣
+	//	属性：無
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":100			// パラメータインデックス
+							// FLAT_MAP_2 で調整している
+		
+		,"chr":"/resource/common/character/zk0000.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":1				// 経験値
+		,"MOVE_SPEED":3.5		// 移動速度
+		,"RUN_SPEED":20.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.8		//0.32	// エネミー単体の領域（平時用　0.75～1.00ぐらいで調整したい）
+		,"TERRITORY_RADIUS_MIN":0.16	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":2			// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0
+		}
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1",
+					"SHORTRANGE":{"min":1.0, "max":3.0},	//min1.5 max2.5
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":100.0,
+					"CHECK_ANGLE":true
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:101
+	//	武器：剣
+	//	属性：炎
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":101			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0000.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":1			// 経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.32	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.16	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7			// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0
+		}
+		, "ATTRIBUTE":"FIRE"		//	属性火
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1_F",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":100.0,
+					"CHECK_ANGLE":true
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:102
+	//	武器：剣
+	//	属性：氷
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":102			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0000.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":1			// 経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.32	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.16	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7		// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":10.0, "SEC_SPEED":1.0
+		}
+		, "ATTRIBUTE":"ICE"		//	属性水
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1_I",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":100.0,
+					"CHECK_ANGLE":true
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:103
+	//	武器：剣
+	//	属性：毒
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":103			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0000.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":1			// 経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.32	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.16	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7		// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":10.0, "SEC_SPEED":1.0
+		}
+		, "ATTRIBUTE":"POISON"		//	属性毒
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1_P",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":100.0,
+					"CHECK_ANGLE":true
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:104
+	//	武器：剣
+	//	属性：雷
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":104			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0000.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":1			// 経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.32	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.16	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7		// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":10.0, "SEC_SPEED":1.0
+		}
+		, "ATTRIBUTE":"THUNDER"		//	属性雷
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1_T",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":100.0,
+					"CHECK_ANGLE":true
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:110
+	//	武器：剣
+	//	属性：無
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：破壊の軍勢
+	{
+		"type":110			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0000.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":1			// 経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.32	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.16	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7		// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":10.0, "SEC_SPEED":1.0
+		}
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":100.0,
+					"CHECK_ANGLE":true
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+
+	//------------------------
+	// type:200
+	//	武器：斧
+	//	属性：無
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":200			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0020.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":1			//経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.32	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.16	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7			// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0
+		}
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1a",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true
+				},
+				{"COMMAND":
+					"JUMP_ATTACK_ST",
+					"SHORTRANGE":{"min":3.0,"max":4.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true,
+					"JUMP_ATTACK":true,
+					"COMMAND2":"JUMP_ATTACK_LOOP",
+					"COMMAND3":"JUMP_ATTACK_MID",
+					"COMMAND4":"JUMP_ATTACK_ED",
+					"ADV_SPEED":5.0,
+					"UP_SPEED":20.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:201
+	//	武器：斧
+	//	属性：炎
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":201			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0020.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":1			//経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.32	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.16	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7			// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0
+		}
+		, "ATTRIBUTE":"FIRE"		//	属性火
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1a_F",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true
+				},
+				{"COMMAND":
+					"JUMP_ATTACK_ST",
+					"SHORTRANGE":{"min":4.0,"max":5.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true,
+					"JUMP_ATTACK":true,
+					"COMMAND2":"JUMP_ATTACK_LOOP",
+					"COMMAND3":"JUMP_ATTACK_MID",
+					"COMMAND4":"JUMP_ATTACK_ED_F",
+					"ADV_SPEED":5.0,
+					"UP_SPEED":20.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:202
+	//	武器：斧
+	//	属性：氷
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":202			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0020.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":1			//経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.32	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.16	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7		// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":10.0, "SEC_SPEED":1.0
+		}
+		, "ATTRIBUTE":"ICE"		//	属性水
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1a_I",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true
+				},
+				{"COMMAND":
+					"JUMP_ATTACK_ST",
+					"SHORTRANGE":{"min":4.0,"max":5.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true,
+					"JUMP_ATTACK":true,
+					"COMMAND2":"JUMP_ATTACK_LOOP",
+					"COMMAND3":"JUMP_ATTACK_MID",
+					"COMMAND4":"JUMP_ATTACK_ED_I",
+					"ADV_SPEED":5.0,
+					"UP_SPEED":20.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:203
+	//	武器：斧
+	//	属性：毒
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":203			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0020.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":1			//経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.32	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.16	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7		// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":10.0, "SEC_SPEED":1.0
+		}
+		, "ATTRIBUTE":"POISON"		//	属性毒
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1a_P",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true
+				},
+				{"COMMAND":
+					"JUMP_ATTACK_ST",
+					"SHORTRANGE":{"min":4.0,"max":5.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true,
+					"JUMP_ATTACK":true,
+					"COMMAND2":"JUMP_ATTACK_LOOP",
+					"COMMAND3":"JUMP_ATTACK_MID",
+					"COMMAND4":"JUMP_ATTACK_ED_P",
+					"ADV_SPEED":5.0,
+					"UP_SPEED":20.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:204
+	//	武器：斧
+	//	属性：雷
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":204			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0020.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":1			//経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.32	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.16	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7		// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":10.0, "SEC_SPEED":1.0
+		}
+		, "ATTRIBUTE":"THUNDER"		//	属性雷
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1a_T",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true
+				},
+				{"COMMAND":
+					"JUMP_ATTACK_ST",
+					"SHORTRANGE":{"min":4.0,"max":5.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true,
+					"JUMP_ATTACK":true,
+					"COMMAND2":"JUMP_ATTACK_LOOP",
+					"COMMAND3":"JUMP_ATTACK_MID",
+					"COMMAND4":"JUMP_ATTACK_ED_T",
+					"ADV_SPEED":5.0,
+					"UP_SPEED":20.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:210
+	//	武器：斧
+	//	属性：無
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：破壊の軍勢
+	{
+		"type":210			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0020.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":1			//経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.32	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.16	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7		// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":10.0, "SEC_SPEED":1.0
+		}
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1a",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true
+				},
+				{"COMMAND":
+					"JUMP_ATTACK_ST",
+					"SHORTRANGE":{"min":4.0,"max":5.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true,
+					"JUMP_ATTACK":true,
+					"COMMAND2":"JUMP_ATTACK_LOOP",
+					"COMMAND3":"JUMP_ATTACK_MID",
+					"COMMAND4":"JUMP_ATTACK_ED",
+					"ADV_SPEED":5.0,
+					"UP_SPEED":20.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+
+	//-----< コマンダー >---------------------------------------------------
+
+	//------------------------
+	// type:300
+	//	武器：剣
+	//	属性：無
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":300			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0200.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":250					//経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.7	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.4	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7			// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"ACCENT": true			// 重要兵（A1兵はこの属性を持つとコマンダー扱い）
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0
+		}
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_2",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true
+				},
+				{"COMMAND":
+					"JUMP_ATTACK_ST",
+					"SHORTRANGE":{"min":4.0,"max":5.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true,
+					"JUMP_ATTACK":true,
+					"COMMAND2":"JUMP_ATTACK_LOOP",
+					"COMMAND3":"JUMP_ATTACK_MID",
+					"COMMAND4":"JUMP_ATTACK_ED_cmd",
+					"ADV_SPEED":5.0,
+					"UP_SPEED":20.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:301
+	//	武器：剣
+	//	属性：炎
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":301			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0200.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":250					//経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.7	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.4	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7			// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"ACCENT": true			// 重要兵（A1兵はこの属性を持つとコマンダー扱い）
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0
+		}
+		, "ATTRIBUTE":"FIRE"		//	属性火
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_2_F",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true
+				},
+				{"COMMAND":
+					"JUMP_ATTACK_ST",
+					"SHORTRANGE":{"min":4.0,"max":5.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true,
+					"JUMP_ATTACK":true,
+					"COMMAND2":"JUMP_ATTACK_LOOP",
+					"COMMAND3":"JUMP_ATTACK_MID",
+					"COMMAND4":"JUMP_ATTACK_ED_F_cmd",
+					"ADV_SPEED":5.0,
+					"UP_SPEED":20.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:302
+	//	武器：剣
+	//	属性：氷
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":302			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0200.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":250					//経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.7	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.4	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7			// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"ACCENT": true			// 重要兵（A1兵はこの属性を持つとコマンダー扱い）
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":10.0, "SEC_SPEED":1.0
+		}
+		, "ATTRIBUTE":"ICE"		//	属性水
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_2_I",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true
+				},
+				{"COMMAND":
+					"JUMP_ATTACK_ST",
+					"SHORTRANGE":{"min":4.0,"max":5.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true,
+					"JUMP_ATTACK":true,
+					"COMMAND2":"JUMP_ATTACK_LOOP",
+					"COMMAND3":"JUMP_ATTACK_MID",
+					"COMMAND4":"JUMP_ATTACK_ED_I_cmd",
+					"ADV_SPEED":5.0,
+					"UP_SPEED":20.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:303
+	//	武器：剣
+	//	属性：毒
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":303			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0200.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":250					//経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.7	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.4	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7		// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"ACCENT": true			// 重要兵（A1兵はこの属性を持つとコマンダー扱い）
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":10.0, "SEC_SPEED":1.0
+		}
+		, "ATTRIBUTE":"POISON"		//	属性毒
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_2_P",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true
+				},
+				{"COMMAND":
+					"JUMP_ATTACK_ST",
+					"SHORTRANGE":{"min":4.0,"max":5.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true,
+					"JUMP_ATTACK":true,
+					"COMMAND2":"JUMP_ATTACK_LOOP",
+					"COMMAND3":"JUMP_ATTACK_MID",
+					"COMMAND4":"JUMP_ATTACK_ED_P_cmd",
+					"ADV_SPEED":5.0,
+					"UP_SPEED":20.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:304
+	//	武器：剣
+	//	属性：雷
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：
+	{
+		"type":304			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0200.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":250					//経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.7	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.4	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7		// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"ACCENT": true			// 重要兵（A1兵はこの属性を持つとコマンダー扱い）
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":10.0, "SEC_SPEED":1.0
+		}
+		, "ATTRIBUTE":"THUNDER"		//	属性雷
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_2_T",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true
+				},
+				{"COMMAND":
+					"JUMP_ATTACK_ST",
+					"SHORTRANGE":{"min":4.0,"max":5.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true,
+					"JUMP_ATTACK":true,
+					"COMMAND2":"JUMP_ATTACK_LOOP",
+					"COMMAND3":"JUMP_ATTACK_MID",
+					"COMMAND4":"JUMP_ATTACK_ED_T_cmd",
+					"ADV_SPEED":5.0,
+					"UP_SPEED":20.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:310
+	//	武器：剣
+	//	属性：無
+	//	攻撃：通常斬り
+	//	能力：標準
+	//	備考：破壊の軍勢
+	{
+		"type":310			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zk0200.chr"					// CHRファイル（青）
+		,"motion":"/resource/common/parameter/enemy/enemy_a1/mcomlist_zk_a1.json"	// モーションコマンド
+
+		,"EXP":250					//経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.7	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.4	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7		// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"ACCENT": true			// 重要兵（A1兵はこの属性を持つとコマンダー扱い）
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":10.0, "SEC_SPEED":1.0
+		}
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_2",
+					"SHORTRANGE":{"min":1.5, "max":2.5},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true
+				},
+				{"COMMAND":
+					"JUMP_ATTACK_ST",
+					"SHORTRANGE":{"min":4.0,"max":5.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":50.0,
+					"CHECK_ANGLE":true,
+					"JUMP_ATTACK":true,
+					"COMMAND2":"JUMP_ATTACK_LOOP",
+					"COMMAND3":"JUMP_ATTACK_MID",
+					"COMMAND4":"JUMP_ATTACK_ED_cmd",
+					"ADV_SPEED":5.0,
+					"UP_SPEED":20.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	
+]

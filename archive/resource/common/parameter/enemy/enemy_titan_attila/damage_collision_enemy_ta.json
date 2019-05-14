@@ -1,0 +1,28 @@
+﻿/*
+ *	巨神アルテラのダメージコリジョン設定
+ */
+[
+	//	markは識別用数値。左手：0、右手：1、コア：2
+	//	左手と指コリジョン
+	
+	{"node_name":"Null_L","radius":3.4,"height":2.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":90},"offset":{"x":0.0,"y":-3.2,"z":0.5},"damage_lv":0,"mark":0}
+	,{"node_name":"Null_L","radius":3.6,"height":0.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":6.2,"y":0.0,"z":0.5},"damage_lv":0,"mark":0}
+	,{"node_name":"LeftFinger1_3","radius":0.7,"height":3.5,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":60},"offset":{"x":0.0,"y":-0.5,"z":0.0},"damage_lv":0,"mark":0}
+	,{"node_name":"LeftFinger2_3","radius":0.7,"height":4.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":90},"offset":{"x":0.0,"y":-1.5,"z":0.0},"damage_lv":0,"mark":0}
+	,{"node_name":"LeftFinger3_3","radius":0.7,"height":5.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":90},"offset":{"x":0.0,"y":-1.5,"z":0.0},"damage_lv":0,"mark":0}
+	,{"node_name":"LeftFinger4_3","radius":0.7,"height":4.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":90},"offset":{"x":0.0,"y":-1.5,"z":0.0},"damage_lv":0,"mark":0}
+	,{"node_name":"LeftFinger5_3","radius":0.7,"height":4.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":90},"offset":{"x":0.0,"y":-1.5,"z":0.0},"damage_lv":0,"mark":0}
+	
+	//	右手と指コリジョン
+	,{"node_name":"Null_R","radius":3.4,"height":2.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":90},"offset":{"x":0.0,"y":3.2,"z":0.5},"damage_lv":0,"mark":1}
+	,{"node_name":"Null_R","radius":3.6,"height":0.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":-6.2,"y":0.0,"z":0.5},"damage_lv":0,"mark":1}
+	,{"node_name":"RightFinger1_3","radius":0.7,"height":3.5,"rot_follow_bone":true,"rot":{"x":0,"y":50,"z":120},"offset":{"x":0.0,"y":0.5,"z":0.0},"damage_lv":0,"mark":1}
+	,{"node_name":"RightFinger2_3","radius":0.7,"height":4.0,"rot_follow_bone":true,"rot":{"x":0,"y":30,"z":90},"offset":{"x":0.0,"y":1.5,"z":0.0},"damage_lv":0,"mark":1}
+	,{"node_name":"RightFinger3_3","radius":0.7,"height":5.0,"rot_follow_bone":true,"rot":{"x":0,"y":10,"z":90},"offset":{"x":0.0,"y":1.5,"z":0.0},"damage_lv":0,"mark":1}
+	,{"node_name":"RightFinger4_3","radius":0.7,"height":4.0,"rot_follow_bone":true,"rot":{"x":0,"y":-25,"z":90},"offset":{"x":0.0,"y":1.5,"z":0.0},"damage_lv":0,"mark":1}
+	,{"node_name":"RightFinger5_3","radius":0.7,"height":4.0,"rot_follow_bone":true,"rot":{"x":0,"y":-45,"z":90},"offset":{"x":0.0,"y":1.5,"z":0.0},"damage_lv":0,"mark":1}
+	
+	//	胸コア
+	,{"node_name":"WeakPiont_C","radius":1.15,"height":0.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.0,"z":0.0},"damage_lv":0,"mark":2}
+	
+]

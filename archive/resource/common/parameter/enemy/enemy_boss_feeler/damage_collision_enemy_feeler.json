@@ -1,0 +1,14 @@
+﻿/*
+ *	巨神アルテラのダメージコリジョン設定
+ */
+[
+	//	体コリジョン
+	{"node_name":"Hips","radius":0.7,"height":1.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.0,"z":0.0},"damage_lv":0}
+	,{"node_name":"Spine0","radius":0.7,"height":1.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.0,"z":0.0},"damage_lv":0}
+	,{"node_name":"Spine1","radius":0.7,"height":1.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.0,"z":0.0},"damage_lv":0}
+	,{"node_name":"Spine2","radius":0.7,"height":1.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.0,"z":0.0},"damage_lv":0}
+	,{"node_name":"Spine3","radius":0.7,"height":1.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.0,"z":0.0},"damage_lv":0}
+	
+	//	頭コリジョン
+	,{"node_name":"Head","radius":1.5,"height":0.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":2.0,"z":0.0},"damage_lv":0}
+]

@@ -1,0 +1,22 @@
+/*
+ * ボスロボのコリション設定
+
+	marks:
+		head:       0
+		right hand: 1
+		right arm:  2
+		left hand:  3
+		left arm:   4
+		belly:      5
+ */
+[
+	{"node_name":"Head",         "radius":2.3, "height":0.0,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},  "offset":{"x":0.0,"y":0.6,"z":-0.2}, "damage_lv":0, "mark": 0 },
+	
+	{"node_name":"RightHand",    "radius":1.9, "height":0.0,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},  "offset":{"x":0.0,"y":-0.9,"z":0.0}, "damage_lv":0, "mark": 1 },
+	{"node_name":"RightForearm", "radius":1.6, "height":2.2,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},  "offset":{"x":0.0,"y":-0.8,"z":0.0}, "damage_lv":0, "mark": 2 },
+
+	{"node_name":"LeftHand",     "radius":1.9, "height":0.0,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},  "offset":{"x":0.0,"y":-0.9,"z":0.0}, "damage_lv":0, "mark": 3},
+	{"node_name":"LeftForearm",  "radius":1.6, "height":2.2,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0},  "offset":{"x":0.0,"y":-0.8,"z":0.0}, "damage_lv":0, "mark": 4},
+
+	{"node_name":"BeltCore",     "radius":1.6, "height":0.0,  "rot_follow_bone":true, "rot":{"x":0,"y":0,"z":0}, "offset":{"x":0.0,"y":0.0,"z":0.0}, "damage_lv":0, "mark": 5},
+]

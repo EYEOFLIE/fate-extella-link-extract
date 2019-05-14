@@ -1,0 +1,17 @@
+﻿/*
+ *	ボス触手の移動コリジョン設定
+ */
+[
+	//	着地用コリジョン
+	{"node_name":"Reference","radius":0.05,"height":0.0,"rot_follow_bone":false,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":-0.25,"z":0.0}}
+	
+	//	体コリジョン
+	,{"node_name":"Hips","radius":0.7,"height":1.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.0,"z":0.0}}
+	,{"node_name":"Spine0","radius":0.7,"height":1.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.0,"z":0.0}}
+	,{"node_name":"Spine1","radius":0.7,"height":1.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.0,"z":0.0}}
+	,{"node_name":"Spine2","radius":0.7,"height":1.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.0,"z":0.0}}
+	,{"node_name":"Spine3","radius":0.7,"height":1.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":0.0,"z":0.0}}
+	
+	//	頭コリジョン
+	,{"node_name":"Head","radius":1.5,"height":0.0,"rot_follow_bone":true,"rot":{"x":0,"y":0,"z":0},"offset":{"x":0.0,"y":2.0,"z":0.0}}
+]

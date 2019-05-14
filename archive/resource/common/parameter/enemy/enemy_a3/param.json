@@ -1,0 +1,122 @@
+﻿/*
+ *	A-3　ソルジャー
+ */
+[
+	//------------------------
+
+	//----------------------------------------------------------------------
+	//----- ここから本番用データ -------------------------------------------	
+	//----------------------------------------------------------------------
+
+	//------------------------
+	// type:100
+	//	武器：手斧
+	//	属性：無
+	//	攻撃：投擲
+	//	能力：標準
+	//	備考：
+	{
+		"type":100			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zs0000.chr"					// CHRファイル
+		,"motion":"/resource/common/parameter/enemy/enemy_a3/mcomlist_zk_a3.json"	// モーションコマンド
+
+		,"EXP":6			//経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.64	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.32	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7			// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0
+		}
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_1",
+					"SHORTRANGE":{"min":9.0, "max":10.0},
+					"LONGRANGE":{"min":0.0, "max":0.0},
+					"PROBABILITY":100.0,
+					"CHECK_ANGLE":true,
+					"LOOK_TARGET_MOTION":["ZS_AC_ATA_S"],
+					"LOOK_TARGET_ROT_RATE":1.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+	//------------------------
+	,
+	//------------------------
+	// type:200
+	//	武器：爆弾
+	//	属性：炎
+	//	攻撃：投擲
+	//	能力：標準
+	//	備考：
+	{
+		"type":200			// パラメータインデックス
+		
+		,"chr":"/resource/common/character/zs0020.chr"					// CHRファイル
+		,"motion":"/resource/common/parameter/enemy/enemy_a3/mcomlist_zk_a3.json"	// モーションコマンド
+
+		,"EXP":6			//経験値
+		,"MOVE_SPEED":2.5		// 移動速度
+		,"RUN_SPEED":10.0		// 走る速度
+		,"ROT_SPEED":540.0		// 回転速度
+		,"TERRITORY_RADIUS_MAX":0.64	// エネミー単体の領域（平時用）
+		,"TERRITORY_RADIUS_MIN":0.32	// エネミー単体の領域（ダメージ中用）
+		,"WEIGHT":0.95			// 重さ
+		,"RELAX_TYPE":7			// リラックスモーション種類
+		,"DASH_BLOCK":false		// ダッシュブロック能力
+		,"REGEN":{			// リジェネ能力（能力スイッチ、ダメージから能力発動までの時間、回復速度(%/sec)）
+			"ACTIVE":false, "START_TIME":0.0, "SEC_SPEED":0.0
+		}
+		, "ATTRIBUTE":"FIRE"		//	属性火
+		
+		,"FLOATDAMAGE_GRAVITY":14.0	// 吹っ飛びダメージ時の重力
+		,"NORMALDAMAGE_GRAVITY":14.0	// 普通ダメージ時の重力
+		,"JUMP_ATTACK_GRAVITY":80.0	// ジャンプ攻撃発動中の重力
+		,"ATTACK_COMMAND":{		// 攻撃コマンドリスト
+			"GROUND":[		// 地上攻撃
+				{"COMMAND":
+					"ATTACK_2",
+					"SHORTRANGE":{"min":8.0,"max":9.0},
+					"LONGRANGE":{"min":0.0,"max":0.0},
+					"PROBABILITY":10.0,
+					"CHECK_ANGLE":true,
+					"LOOK_TARGET_MOTION":["ZS_AC_ATA_S"],
+					"LOOK_TARGET_ROT_RATE":1.0
+				},
+				{"COMMAND":
+					"JUMP_ATTACK_ST",
+					"SHORTRANGE":{"min":0.0,"max":0.0},
+					"LONGRANGE":{"min":10.0,"max":12.0},
+					"PROBABILITY":90.0,
+					"CHECK_ANGLE":true,
+					"JUMP_ATTACK":true,
+					"COMMAND2":"JUMP_ATTACK_LOOP",
+					"COMMAND3":"JUMP_ATTACK2_MID",
+					"COMMAND4":"JUMP_ATTACK_ED",
+					"ADV_SPEED":0.0,
+					"UP_SPEED":15.0,
+					"LOOK_TARGET_MOTION":["ZS_AC_ANT"],
+					"LOOK_TARGET_ROT_RATE":1.0,
+					"LOOK_TARGET_MOTION":["ZS_AC_JUM"],
+					"LOOK_TARGET_ROT_RATE":1.0,
+					"LOOK_TARGET_MOTION":["ZS_AC_FAL_S"],
+					"LOOK_TARGET_ROT_RATE":1.0
+				}
+			]
+		}
+		, "LOCKON_PART" : [ { "PART_NAME" : "Spine0" } ]
+	}
+
+]
