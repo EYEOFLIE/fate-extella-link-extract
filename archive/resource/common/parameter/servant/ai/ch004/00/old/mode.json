@@ -1,0 +1,21 @@
+﻿/*
+ *	プロトサーヴァントAI行動モード
+ */
+//	注意：HP残率高いの順で上から書いてください、そうしないと残率低いモードは先に発動する可能性ある
+//	my_hp_lower_limit:このモードを発動する為の自身ＨＰ残率
+//	target_hp_lower_limit:このモードを発動する為の目標ＨＰ残率
+//	victory_hp_percent:現状勝負を決めるための自分の残りＨＰと目標残りＨＰとの差率
+//	battle_state:戦況（ＡＩ優勢：win 引き分け：draw ＡＩ劣勢：lose 戦況無視：all）
+//	その後は発動可能性あるのモードと発動確率を書ければ良い、例えば："normal":50, "careful":50
+//	行動モード種類：normal平均　careful慎重　crazy発狂　defenseless無防備　mere_show見かけ倒し　special特殊
+
+[
+
+// サーヴァントの残りHPが30～100
+// normal 100%
+	 {"my_hp_lower_limit":0, "target_hp_lower_limit":0, "victory_hp_percent":10, "battle_state":"all", "normal":100, "guard_time_after_getup":0.4}
+
+// サーヴァントの残りHPが0～30
+//	,{"my_hp_lower_limit":0, "target_hp_lower_limit":0, "victory_hp_percent":10, "battle_state":"all", "normal":50, "careful":50, "guard_time_after_getup":0.4}
+
+]
