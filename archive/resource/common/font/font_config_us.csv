@@ -1,0 +1,29 @@
+;Font,番号（仮）,フォント名,アウトラインフォントフラグ（0 or 1）,ファイル（4つまでOK）
+Font,0,デバッグ用(メイリオ),0,link_font_25_debug_jp0
+Font,1,link_outline_アウトラインメイン（ロダンNTLG）,1,FOT-RodinNTLGPro-DB.otf
+Font,2,link_outline_アウトライント書き（テロップ明朝）,1,FOT-TelopMinPro-B.otf
+Font,3,■no use■,0,link_font_25_debug_jp0
+Font,4,■no use■,0,link_font_25_debug_jp0
+Font,5,■no use■,0,link_font_25_debug_jp0
+Font,6,■blank■,0,link_font_1_blank_com0
+Font,7,link_メインフォント（ロダンNTLG）,0,link_font_theater_34_us0
+Font,8,■no use■,0,link_font_25_debug_jp0
+Font,9,link_ト書き（テロップ明朝B）,0,link_font_togaki_46_us0
+Font,10,■no use■,0,link_font_25_debug_jp0
+Font,11,link_日本語見出し（華康明朝）,0,link_font_headline_40_us0
+Font,12,link_英字見出し（華藝）,0,link_font_mainmenu_alphanum_40_jp0
+Font,13,■no use■,0,link_font_25_debug_jp0
+Font,14,link_HUD数字_斜体（花風テクノ）,0,link_font_48_num_italic0
+Font,15,link_HUD重要info（花風テクノ）,0,link_font_principal_72_us0
+Font,16,link_メイン英数字（zerksie）,0,link_font_tech_alphanum_50_jp0
+Font,17,link_メイン英数字_斜体（zerksie_italic）,0,link_font_tech_alphanum_italic_50_jp0
+Font,18,link_登場イベントSVTネーム(corina_bold_italic、花風テクノ_斜体),0,link_font_servant_name_126_us0
+Font,19,link＿登場イベントその他(corina_bold_italicロダンB_斜体),0,link_font_servant_class_48_us0
+,,,,
+;FontWRate,番号,ファイル番号,W値のレート,
+,,,,
+,,,,
+,,,,
+;OutlineFontOption,番号,フォントサイズ(pt),キャッシュテクスチャの一辺のサイズ,キャッシュ枚数
+OutlineFontOption,1,40,512,3
+OutlineFontOption,2,46,256,1

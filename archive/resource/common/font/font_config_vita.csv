@@ -1,0 +1,11 @@
+;Font,番号（仮）,フォント名,アウトラインフォントフラグ（0 or 1）,ファイル（4つまでOK）
+Font,0,デバッグ用(メイリオ),0,cosmos_font1
+Font,1,cosmos_本文用,0,cosmos_font1
+Font,2,cosmos_見出し用,0,cosmos_font2
+Font,3,cosmos_本文用,0,cosmos_font1
+Font,4,未使用,
+Font,5,未使用,
+,,,
+,,,
+,,,
+;FontWRate,番号,ファイル番号,W値のレート
