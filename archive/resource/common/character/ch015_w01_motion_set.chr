@@ -1,0 +1,72 @@
+//ch015　ジャンヌ（w01武器　旗）
+
+//●0000基本（旗）
+MOTION	ch015_w01_0001_r1.mtb	WEP_0001	//WP_R_IDL_	戦闘待機
+MOTION	ch015_w01_0002_r1.mtb	WEP_0002	//WP_R_IDL_BLK	戦闘待機おかず
+MOTION	ch015_w01_0011_r1.mtb	WEP_0011	//WP_R_WAL_	走り
+MOTION	ch015_w01_0021_r1.mtb	WEP_0021	//WP_R_RUN_	エリア間移動
+MOTION	ch015_w01_0031_r1.mtb	WEP_0031	//WP_R_JUM_S	ジャンプ_上昇
+MOTION	ch015_w01_0032_r1.mtb	WEP_0032	//WP_R_FAL_S	ジャンプ_下降開始
+MOTION	ch015_w01_0033_r1.mtb	WEP_0033	//WP_R_FAL_L	ジャンプ_下降
+MOTION	ch015_w01_0034_r1.mtb	WEP_0034	//WP_R_FAL_E	ジャンプ_着地
+MOTION	ch015_w01_0035_r1.mtb	WEP_0035	//WP_R_JUR_	2段ジャンプ_開始
+MOTION	ch015_w01_0051_r1.mtb	WEP_0051	//WP_BS_GUA_L	ガード
+MOTION	ch015_w01_0061_r1.mtb	WEP_0061	//WEP_0061	前後回避
+MOTION	ch015_w01_0062_r1.mtb	WEP_0062	//WEP_0062	右回避
+MOTION	ch015_w01_0063_r1.mtb	WEP_0063	//WEP_0063	左回避
+MOTION	ch015_w01_0155_r1.mtb	WEP_0155	//WP_R_LOAD	【ジャンヌ専用】納刀から旗出し
+MOTION	ch015_w01_0201_r1.mtb	WEP_0201	//WEP_0201	【対戦用勝利】決めポーズまで
+MOTION	ch015_w01_0202_r1.mtb	WEP_0202	//WEP_0202	【対戦用勝利】決めポーズでのループ
+
+//●1000地上攻撃（旗）			
+MOTION	ch015_w01_1001_r1.mtb	WEP_1001	//WP_R_CO1_	【地上】弱攻撃1_A
+MOTION	ch015_w01_1011_r1.mtb	WEP_1011	//WP_R_CO2_	【地上】弱攻撃2_A
+MOTION	ch015_w01_1021_r1.mtb	WEP_1021	//WP_R_CD5_	【地上】弱攻撃3_A
+MOTION	ch015_w01_1031_r1.mtb	WEP_1031	//WP_R_CO5_	【地上】弱攻撃4_A
+MOTION	ch015_w01_1041_r1.mtb	WEP_1041	//WP_R_CO6_	【地上】弱攻撃5_A
+MOTION	ch015_w01_1101_r1.mtb	WEP_1101	//WP_R_RA1_	【地上】強攻撃1_A
+MOTION	ch015_w01_1111_r1.mtb	WEP_1111	//WP_R_CD1_	【地上】強攻撃2_A
+MOTION	ch015_w01_1121_r1.mtb	WEP_1121	//WP_R_CD2_	【地上】強攻撃3_A				
+MOTION	ch015_w01_1141_r1.mtb	WEP_1141	//WP_R_CD4_S	【地上】強攻撃5_A
+MOTION	ch015_w01_1142_r1.mtb	WEP_1142	//WP_R_CD4_L	【地上】強攻撃5_B
+MOTION	ch015_w01_1143_r1.mtb	WEP_1143	//WP_R_CD4_E	【地上】強攻撃5_C
+MOTION	ch015_w01_1201_r1.mtb	WEP_1201	//WP_R_CO7_S	アクティブスキル1_A
+MOTION	ch015_w01_1202_r1.mtb	WEP_1202	//WP_R_CO7_L	アクティブスキル1_B
+MOTION	ch015_w01_1203_r1.mtb	WEP_1203	//WP_R_CO7_E	アクティブスキル1_C
+MOTION	ch015_w01_1211_r1.mtb	WEP_1211	//WP_R_CD6_S	アクティブスキル2_A
+MOTION	ch015_w01_1221_r1.mtb	WEP_1221	//WEP_1221	アクティブスキル3_A
+MOTION	ch015_w01_1222_r1.mtb	WEP_1222	//WEP_1222	アクティブスキル3_B
+MOTION	ch015_w01_1223_r1.mtb	WEP_1223	//WEP_1223	アクティブスキル3_C
+MOTION	ch015_w01_1231_r1.mtb	WEP_1231	//WEP_1231	アクティブスキル4_A
+MOTION	ch015_w01_1232_r1.mtb	WEP_1232	//WEP_1232	アクティブスキル4_B
+MOTION	ch015_w01_1241_r1.mtb	WEP_1241	//WEP_1241	アクティブスキル5_A
+MOTION	ch015_w01_1251_r1.mtb	WEP_1251	//WEP_1251	アクティブスキル6_A
+MOTION	ch015_w01_1261_r1.mtb	WEP_1261	//WEP_1261	アクティブスキル7_A
+MOTION	ch015_w01_1271_r1.mtb	WEP_1271	//WEP_1271	アクティブスキル8_A
+MOTION	ch015_w01_1301_r1.mtb	WEP_1301	//SV_AC_STA_S	宝具発動開始_A
+MOTION	ch015_w01_1302_r1.mtb	WEP_1302	//SV_AC_STA_L	宝具発動開始_B
+
+//●2000空中攻撃（旗）			
+MOTION	ch015_w01_2001_r1.mtb	WEP_2001	//WP_R_AA1_	【空中】弱攻撃1_A
+MOTION	ch015_w01_2011_r1.mtb	WEP_2011	//WP_R_AA2_	【空中】弱攻撃2_A
+MOTION	ch015_w01_2101_r1.mtb	WEP_2101	//WP_R_AA4_S	【空中】強攻撃1_A
+MOTION	ch015_w01_2102_r1.mtb	WEP_2102	//WEP_2102	【空中】強攻撃1_B
+MOTION	ch015_w01_2103_r1.mtb	WEP_2103	//WP_R_AA4_E	【空中】強攻撃1_C
+
+//●3000ダメージ（旗）			
+MOTION	ch015_w01_3001_r1.mtb	WEP_3001	//WP_R_DAB_	小ダメージ前
+MOTION	ch015_w01_3002_r1.mtb	WEP_3002	//WP_R_DAR_	小ダメージ右
+MOTION	ch015_w01_3003_r1.mtb	WEP_3003	//WP_R_DAL_	小ダメージ左
+MOTION	ch015_w01_3011_r1.mtb	WEP_3011	//WP_R_LU1_L	ダメージ上昇
+MOTION	ch015_w01_3012_r1.mtb	WEP_3012	//WP_R_LU1_	ダメージ上昇から下降へ
+MOTION	ch015_w01_3013_r1.mtb	WEP_3013	//WP_R_LD1_L	ダメージ下降
+MOTION	ch015_w01_3014_r1.mtb	WEP_3014	//WP_R_STF_E	ダウン
+MOTION	ch015_w01_3015_r1.mtb	WEP_3015	//WP_R_GUQ_	ダウンから起き上がる（復帰）
+MOTION	ch015_w01_3016_r1.mtb	WEP_3016	//WP_R_BAF_E	空中受け身
+MOTION	ch015_w01_3021_r1.mtb	WEP_3021	//WP_R_STR_L	後方吹き飛び
+MOTION	ch015_w01_3022_r1.mtb	WEP_3022	//WP_R_STR_E	後方吹き飛び_壁ヒット
+MOTION	ch015_w01_3023_r1.mtb	WEP_3023	//WP_R_STF_S	後方吹き飛び_壁ずり落ち_開始
+MOTION	ch015_w01_3041_r1.mtb	WEP_3041	//WP_R_DIE_	死亡
+MOTION	ch015_w01_3051_r1.mtb	WEP_3051	//WP_R_REF_	弾かれ
+
+//●9000バトルフェイシャル（旗）

@@ -1,0 +1,6 @@
+//●0000基本 ムチ左
+MOTION	ch012_w01_0051_l1.mtb	WEP_0051	//WP_L_GUA_L	ガード			
+//●1000地上攻撃 ムチ左			
+MOTION	ch012_w01_1141_l1.mtb	WEP_1141	//WP_L_RA3_	【地上】強攻撃5_A
+MOTION	ch012_w01_1142_l1.mtb	WEP_1142	//WP_L_RA2_	【地上】強攻撃5_B
+MOTION	ch012_w01_1241_l1.mtb	WEP_1241	//WEP_1241	アクティブスキル5_A

@@ -1,0 +1,6 @@
+//エア	ch008_w01_00
+
+//●1000地上攻撃		
+MOTION	ch008_w01_1271_r1.mtb	WEP_1271	//WP_R_CO8_S	アクティブスキル8_A
+MOTION	ch008_w01_1272_r1.mtb	WEP_1272	//WP_R_CO8_L	アクティブスキル8_B
+MOTION	ch008_w01_1273_r1.mtb	WEP_1273	//WP_R_CO8_E	アクティブスキル8_C

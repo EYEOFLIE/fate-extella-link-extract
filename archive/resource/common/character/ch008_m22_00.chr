@@ -1,0 +1,58 @@
+// ChrID : 16 ギルガメッシュ / サーヴァント
+
+MODEL	ch008_m22_00.mdl
+
+MOTION_SKL	ch008_m01_00_skl.skl
+//MOTION_DIFF	SV0000_MDIFF.mdiff
+
+//モーションセット
+MOTION_SET	ch008_motion_set.chr
+BASECAMP_MOTION_SET	ch008_motion_basecamp_set.chr
+GALLERY_MOTION_SET	ch008_motion_gallery_set.chr
+
+// モデルボディ用物理設定
+PHYSICS_SYSTEM	ch008_m01_00_blp.blp
+
+// コリジョン
+COLLISION	1.0	3.0
+//COLLISION_FROM_NODE	Reference	head	0
+
+SCALE	1	1	1
+SC_SCALE	1.0	1.0	1.0
+
+/// SIGHT_CONTROL	見るノード	見られるノード	-X回転限界	+X回転限界	-Y回転限界	+Y回転限界
+SIGHT_CONTROL	Head	Head	-30.0	10.0	-65.0	65.0
+/// SIGHT_NODE	ノード名	X回転Rate	Y回転Rate
+SIGHT_NODE	Head	0.40	0.35
+SIGHT_NODE	Neck	0.20	0.35
+SIGHT_NODE	Spine2	0.30	0.20
+SIGHT_NODE	Spine1	0.10	0.10
+
+// 持っている武器
+
+// 	ID	モデル	ホネ	ROTX	ROTY	ROTZ	traX	traY	traZ	sclX	sclY	sclZ	モーションセット	Ref位置無効化	回転除外(true/false)
+ADD_ITEM	0	ch008_w01_00.mdl	Null_R	0	0	0	0	0	0	1	1	1	ch008_w01_r_motion_set.chr	true	false
+ADD_ITEM	1	ch008_w02_00.mdl	Null_L	0	0	0	0	0	0	1	1	1
+ADD_ITEM	2	ch008_w03_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+ADD_ITEM	3	ch008_w04_00.mdl	Null_R	0	0	0	0	0	0	1	1	1	ch008_w04_r_motion_set.chr	true	false
+ADD_ITEM	4	ch008_w10_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+ADD_ITEM	5	ch008_w16_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+ADD_ITEM	6	ch008_w16_00.mdl	Null_L	0	0	0	0	0	0	1	1	1
+ADD_ITEM	7	ch008_w18_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+ADD_ITEM	8	ch008_w18_00.mdl	Null_L	0	0	0	0	0	0	1	1	1
+ADD_ITEM	9	ch008_w29_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+ADD_ITEM	10	ch008_w34_00.mdl	Reference	0	0	0	0	0	0	1	1	1	ch008_w34_x_motion_set.chr
+ADD_ITEM	11	ch008_w02_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+
+// 飛び道具用キープモデル
+
+SHOT_MODEL	ch008_w32_00.mdl	4
+SHOT_MODEL	ch008_w19_00.mdl	4
+SHOT_MODEL	ch008_w20_00.mdl	4
+SHOT_MODEL	ch008_w21_00.mdl	4
+SHOT_MODEL	ch008_w22_00.mdl	4
+SHOT_MODEL	ch008_w23_00.mdl	4
+SHOT_MODEL	ch008_w33_00.mdl	4
+SHOT_MODEL	ch008_w01_00.mdl	18
+
+SHOT_MODEL	ch008_w34_00.chr	2

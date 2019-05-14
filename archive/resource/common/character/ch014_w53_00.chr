@@ -1,0 +1,23 @@
+//	兵士１
+MODEL	ch014_w53_00.mdl
+MOTION_SET	ch501_motion_set.chr
+
+SCALE	1.5	1.5	1.5
+COLLISION	1.4	3.4
+
+/// SIGHT_CONTROL	見るノード	見られるノード	-X回転限界	+X回転限界	-Y回転限界	+Y回転限界
+SIGHT_CONTROL	Neck	Neck	-50.0	50.0	-90.0	90.0
+/// SIGHT_NODE	ノード名	X回転Rate	Y回転Rate			
+SIGHT_NODE	Neck	0.4	0.4			
+SIGHT_NODE	Spine1	0.4	0.4	
+
+
+// 持っている武器
+
+// 追加アイテム
+// ID = 0 : 右手武器
+//		1 : 左手武器
+//		2 : 指輪
+// 			ID	モデル			ホネ	ROTX	ROTY	ROTZ	traX	traY	traZ	sclX	sclY	sclZ	モーションセット	スケルトンファイル	refかき消すか(true/false)
+//ADD_ITEM	0	                	Null_R	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00
+//ADD_ITEM	1	                	Null_L	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00

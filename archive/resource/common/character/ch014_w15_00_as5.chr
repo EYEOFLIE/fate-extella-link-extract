@@ -1,0 +1,5 @@
+// イスカンダル
+
+MODEL	ch014_w15_00.mdl
+
+MOTION	ch014_w15_1242_x1.mtb	WEP_0000	//WEP_1242	アクティブスキル5_B

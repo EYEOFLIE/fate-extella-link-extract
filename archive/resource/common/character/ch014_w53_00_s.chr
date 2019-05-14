@@ -1,0 +1,7 @@
+// CharaID : イスカンダル AS4 / AS6用 兵士(槍)
+// AS-6用に兵士とモーションを１セットにしたchrを用意しました
+MODEL	ch014_w53_00.mdl
+
+MOTION	ch014_w53_1233_x1.mtb	WEP_0000	// WEP_1233 スキル4 移動ループ
+MOTION	ch014_w53_1251_x1.mtb	WEP_0001	// WEP_1251 スキル6 槍投げ アクティブスキル6_A
+MOTION	ch014_w53_1242_x1.mtb	WEP_0002	// スキル5 カウンター

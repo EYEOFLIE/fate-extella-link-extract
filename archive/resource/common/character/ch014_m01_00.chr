@@ -1,0 +1,56 @@
+// ChrID : 14 イスカンダル / サーヴァント
+
+MODEL	ch014_m01_00.mdl	
+
+MOTION_SKL	ch014_m01_00_skl.skl
+//MOTION_DIFF	SV0000_MDIFF.mdiff
+
+//モーションセット
+MOTION_SET	ch014_motion_set.chr
+BASECAMP_MOTION_SET	ch014_motion_basecamp_set.chr
+GALLERY_MOTION_SET	ch014_motion_gallery_set.chr
+
+/// モデルボディ用物理設定
+PHYSICS_SYSTEM	ch014_m01_blp.blp
+
+
+COLLISION	1.0	3.0
+//COLLISION_FROM_NODE	Reference	head	0
+
+SCALE	1	1	1
+SC_SCALE	1.0	1.0	1.0
+
+/// SIGHT_CONTROL	見るノード	見られるノード	-X回転限界	+X回転限界	-Y回転限界	+Y回転限界
+SIGHT_CONTROL	Head	Head	-30.0	10.0	-65.0	65.0
+/// SIGHT_NODE	ノード名	X回転Rate	Y回転Rate
+SIGHT_NODE	Head	0.40	0.35
+SIGHT_NODE	Neck	0.20	0.35
+SIGHT_NODE	Spine2	0.30	0.20
+SIGHT_NODE	Spine1	0.10	0.10
+
+// 持っている武器
+// 			ID	モデル			ホネ		ROTX	ROTY	ROTZ	traX	traY	traZ	sclX	sclY	sclZ	モーションセット			リファレンスカット
+// 剣
+ADD_ITEM	0	ch014_w01_00.mdl	Null_R	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00
+// 戦車
+ADD_ITEM	1	ch014_w52_00.mdl	Reference	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00	ch014_w52_x_motion_set.chr	true	true
+// うし
+ADD_ITEM	2	ch014_w51_00.mdl	Reference	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00	ch014_w51_x1_motion_set.chr	true	true
+// うし
+ADD_ITEM	3	ch014_w51_00.mdl	Reference	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00	ch014_w51_x2_motion_set.chr	true	true
+// 兵士
+ADD_ITEM	4	ch014_w53_00.mdl	Reference	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00	ch014_w53_x_motion_set.chr	true
+// 兵士
+ADD_ITEM	5	ch014_w53_00.mdl	Reference	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00	ch014_w53_x_motion_set.chr	true
+// 馬
+ADD_ITEM	6	ch014_w50_00.mdl	Reference	0.00	0.00	0.00	0.00	0.00	0.00	1.30	1.30	1.30	ch014_w50_x_motion_set.chr	true
+// 配置骨
+ADD_ITEM	7	ch014_w15_00.mdl	Reference	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00	ch014_w15_x_motion_set.chr
+
+// 弾用の兵士さん(含むモーション)
+SHOT_MODEL	ch014_w53_00_s.chr	8
+
+SHOT_MODEL	ch014_w51_00.mdl	2
+SHOT_MODEL	ch014_w52_00.mdl	1
+
+SHOT_MODEL	ch014_w15_00_as5.chr	1

@@ -1,0 +1,25 @@
+//読み込み都合で、バトルとは別に登録
+//ch007　カルナ
+
+//●6000ベースキャンプ
+MOTION	ch007_m01_6001.mtb	MOT_6001	//MOT_6001	通常待機
+MOTION	ch007_m01_6012.mtb	MOT_6012	//MOT_6012	走りループ（通常）
+MOTION	ch007_m01_6013.mtb	MOT_6013	//MOT_6013	走り終わり
+
+//●9000フェイシャル
+MOTION	ch007_m01_9001.mtb	MOT_9001	//SV_FA_BAS_	通常顔（Ｔスタンス基本）
+MOTION	ch007_m01_9002.mtb	MOT_9002	//SV_FA_SER_	バトル顔（シリアス等）
+MOTION	ch007_m01_9003.mtb	MOT_9003	//SV_FA_DAM	ダメージ顔
+
+MOTION	ch007_m01_9101.amtb	MOT_9101	//SV_AD_EYE_U	【加算】上向き（通常、バトル顔用）
+MOTION	ch007_m01_9102.amtb	MOT_9102	//SV_AD_EYE_D	【加算】下向き（通常、バトル顔用）
+MOTION	ch007_m01_9103.amtb	MOT_9103	//SV_AD_EYE_R	【加算】右向き（通常、バトル顔用）
+MOTION	ch007_m01_9104.amtb	MOT_9104	//SV_AD_EYE_L	【加算】左向き（通常、バトル顔用）
+MOTION	ch007_m01_9105.amtb	MOT_9105	//SV_AD_BLK_	【加算】両瞼を閉じ（通常顔用）
+MOTION	ch007_m01_9106.amtb	MOT_9106	//SV_AD_BLK_R	【加算】右瞼を閉じ（通常顔用）
+MOTION	ch007_m01_9107.amtb	MOT_9107	//SV_AD_BLK_L	【加算】左瞼を閉じ（通常顔用）
+MOTION	ch007_m01_9201.amtb	MOT_9201	//SV_AD_TAL_2	【加算】口パク（ループ）
+MOTION	ch007_m01_9202.amtb	MOT_9202	//SV_AD_MOU_4	【加算】大きめに開く（通常顔用）
+MOTION	ch007_m01_9203.amtb	MOT_9203	//MOT_9203	【加算】大きめに開く（バトル顔用）
+MOTION	ch007_m01_9204.amtb	MOT_9204	//MOT_9204	【加算】小さく開く（通常顔用）
+MOTION	ch007_m01_9205.amtb	MOT_9205	//MOT_9205	【加算】小さく開く（バトル顔用）

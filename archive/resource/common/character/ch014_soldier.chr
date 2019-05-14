@@ -1,0 +1,12 @@
+// CharaID : イスカンダル用 兵士
+
+MODEL	ch014_w53_00.mdl
+
+MOTION	ch014_w53_1242_x1.mtb	WEP_0000	// 移動ループ用
+MOTION	ch014_w53_1251_x1.mtb	WEP_0001	//WEP_1251	アクティブスキル6_A
+
+//MOTION	ZL0000_AC_ATTACK-A--_--_--.mtb	PARTS_SK1_2	
+//MOTION	ZL0000_AC_ATTACK-B--_--_ST.mtb	PARTS_SK1_1
+//MOTION	ZK0000_BS_JUMP------_--_ST.mtb	PARTS_SK1_3
+//MOTION	ZK0000_AC_ATT-B-JUMP_--_ST.mtb	PARTS_SK1_4
+

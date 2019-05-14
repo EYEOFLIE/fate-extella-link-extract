@@ -1,0 +1,40 @@
+// ChrID :12 メドゥーサ / サーヴァント
+
+MODEL	ch012_m22_00.mdl
+
+MOTION_SKL	ch012_m01_00_skl.skl
+//MOTION_DIFF	SV0000_MDIFF.mdiff
+
+//モーションセット
+MOTION_SET	ch012_motion_set.chr
+BASECAMP_MOTION_SET	ch012_motion_basecamp_set.chr
+GALLERY_MOTION_SET	ch012_motion_gallery_set.chr
+
+/// モデルボディ用物理設定
+PHYSICS_SYSTEM	ch012_m01_blp.blp
+
+
+COLLISION	1.0	3.0
+//COLLISION_FROM_NODE	Reference	head	0
+
+SCALE	1	1	1
+SC_SCALE	1.0	1.0	1.0
+
+/// SIGHT_CONTROL	見るノード	見られるノード	-X回転限界	+X回転限界	-Y回転限界	+Y回転限界
+SIGHT_CONTROL	Head	Head	-30.0	10.0	-65.0	65.0
+/// SIGHT_NODE	ノード名	X回転Rate	Y回転Rate
+SIGHT_NODE	Head	0.40	0.35
+SIGHT_NODE	Neck	0.20	0.35
+SIGHT_NODE	Spine2	0.30	0.20
+SIGHT_NODE	Spine1	0.10	0.10
+
+// 追加アイテム
+// 			ID	モデル			ホネ	ROTX	ROTY	ROTZ	traX	traY	traZ	sclX	sclY	sclZ	モーションセット	リファカット
+ADD_ITEM	0	ch012_w01_00.mdl	Null_L	0	0	0	0	0	0	1	1	1	ch012_w01_l_motion_set.chr	true	false
+ADD_ITEM	1	ch012_w01_00.mdl	Null_R	0	0	0	0	0	0	1	1	1	ch012_w01_r_motion_set.chr	true	false
+ADD_ITEM	2	ch012_w10_00.mdl	Null_L	0	0	0	0	0	0	1	1	1
+ADD_ITEM	3	ch012_w10_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+ADD_ITEM	4	ch012_w11_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch012_w11_p_motion_set.chr
+
+//イベント時エフェクトの表示フィルタ名	表示
+EVENT_EFFECT_1	false

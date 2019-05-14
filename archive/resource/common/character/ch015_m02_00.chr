@@ -1,0 +1,38 @@
+// ChrID : 17 ジャンヌ / サーヴァント
+
+MODEL	ch015_m02_00.mdl
+
+MOTION_SKL	ch015_m01_00_skl.skl
+//MOTION_DIFF	SV0000_MDIFF.mdiff
+
+// モーションセット
+MOTION_SET	ch015_motion_set.chr
+BASECAMP_MOTION_SET	ch015_motion_basecamp_set.chr
+GALLERY_MOTION_SET	ch015_motion_gallery_set.chr
+
+// モデルボディ用物理設定
+PHYSICS_SYSTEM	ch015_m01_blp.blp
+
+
+COLLISION	1.0	3.0
+//COLLISION_FROM_NODE	Reference	head	0
+
+SCALE	1	1	1
+SC_SCALE	1.0	1.0	1.0
+
+/// SIGHT_CONTROL	見るノード	見られるノード	-X回転限界	+X回転限界	-Y回転限界	+Y回転限界
+SIGHT_CONTROL	Head	Head	-30.0	10.0	-65.0	65.0
+/// SIGHT_NODE	ノード名	X回転Rate	Y回転Rate
+SIGHT_NODE	Head	0.40	0.35
+SIGHT_NODE	Neck	0.20	0.35
+SIGHT_NODE	Spine2	0.30	0.20
+SIGHT_NODE	Spine1	0.10	0.10
+
+// 武器
+// 			ID	モデル			アタッチ ROTX	ROTY	ROTZ	traX	traY	traZ	sclX	sclY	sclZ
+ADD_ITEM	0	ch015_w01_00.mdl	Null_R	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00	ch015_w01_motion_set.chr
+ADD_ITEM	1	ch015_w02_00.mdl	Null_R	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00
+ADD_ITEM	2	ch015_w01_00.mdl	Reference	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00
+ADD_ITEM	3	ch015_w01_00.mdl	Null_L	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00	ch015_w01_motion_set.chr
+
+//WP_PHYSICS	0	SV17_WP000_BLP.blp
