@@ -1,0 +1,57 @@
+﻿/*
+ *	プロトサーヴァントAI行動
+ */
+//　type行動タイプ：attack攻撃　evade回避　wait待機
+//  base_percent:変動確率受ける前の基本確率
+//  change_percent:選ばれて行動したら基本確率に加算する変動確率、選べなかったら基本確率に戻る
+//  guard_miss_time_min:ガードミスの最小時間（秒）
+//  guard_miss_time_max:ガードミスの最大時間（秒）
+{
+	// 平均モード
+	"normal":
+	[
+		 {"type":"attack", "base_percent":50, "change_percent":-25, "guard_miss_time_min":0.75, "guard_miss_time_max":1}
+		,{"type":"evade", "base_percent":30, "change_percent":-15, "guard_miss_time_min":1.5, "guard_miss_time_max":2.0}
+		,{"type":"wait", "base_percent":20, "change_percent":-10, "guard_miss_time_min":0.75, "guard_miss_time_max":1.0}
+	]
+
+	// 慎重モード
+	,"careful":
+	[
+		 {"type":"attack", "base_percent":10, "change_percent":-10, "guard_miss_time_min":0.3, "guard_miss_time_max":0.7}
+		,{"type":"evade", "base_percent":50, "change_percent":-15, "guard_miss_time_min":1.0, "guard_miss_time_max":1.5}
+		,{"type":"wait", "base_percent":40, "change_percent":-15, "guard_miss_time_min":0, "guard_miss_time_max":0.2}
+	]
+
+	// 発狂モード
+	,"crazy":
+	[
+		 {"type":"attack", "base_percent":75, "change_percent":-5, "guard_miss_time_min":0.3, "guard_miss_time_max":0.7}
+		,{"type":"evade", "base_percent":15, "change_percent":-15, "guard_miss_time_min":0.5, "guard_miss_time_max":1.0}
+		,{"type":"wait", "base_percent":10, "change_percent":-15, "guard_miss_time_min":0.0, "guard_miss_time_max":0.5}
+	]
+
+	// 無防備モード
+	,"defenseless":
+	[
+		 {"type":"attack", "base_percent":20, "change_percent":-20, "guard_miss_time_min":3.0, "guard_miss_time_max":4.0}
+		,{"type":"evade", "base_percent":50, "change_percent":-30, "guard_miss_time_min":2.5, "guard_miss_time_max":3.0}
+		,{"type":"wait", "base_percent":30, "change_percent":-30, "guard_miss_time_min":2.0, "guard_miss_time_max":2.5}
+	]
+
+	// 見かけ倒しモード
+	,"mere_show":
+	[
+		 {"type":"attack", "base_percent":40, "change_percent":-15, "guard_miss_time_min":0.5, "guard_miss_time_max":1}
+		,{"type":"evade", "base_percent":40, "change_percent":-15, "guard_miss_time_min":1.5, "guard_miss_time_max":2}
+		,{"type":"wait", "base_percent":20, "change_percent":-10, "guard_miss_time_min":0, "guard_miss_time_max":0.5}
+	]
+
+	// 特殊モード
+	,"special":
+	[
+		 {"type":"attack", "base_percent":40, "change_percent":-15, "guard_miss_time_min":0.5, "guard_miss_time_max":1}
+		,{"type":"evade", "base_percent":40, "change_percent":-15, "guard_miss_time_min":1.5, "guard_miss_time_max":2}
+		,{"type":"wait", "base_percent":20, "change_percent":-10, "guard_miss_time_min":0, "guard_miss_time_max":0.5}
+	]
+}

@@ -1,0 +1,51 @@
+﻿/*
+ *	プロトサーヴァントAI行動
+ */
+//  percent：発生確率
+//  time:待機時間の最小と最大値
+//  start_dis:待機発動位置と目標との距離の最小と最大値
+//  counter_percent:リアクションの発動確率
+{
+	//  平均モード
+	"normal":
+	[
+		 {"percent":35, "time_min":0.5, "time_max":1.0, "start_dis_min":6, "start_dis_max":20, "counter_percent":100}
+		,{"percent":35, "time_min":1.5, "time_max":2.0, "start_dis_min":6, "start_dis_max":20, "counter_percent":80}
+		,{"percent":30, "time_min":0.0, "time_max":0.5, "start_dis_min":6, "start_dis_max":20, "counter_percent":100}
+	]
+
+	//  慎重モード
+	,"careful":
+	[
+		 {"percent":50, "time_min":0.5, "time_max":1.0, "start_dis_min":8, "start_dis_max":15, "counter_percent":100}
+		,{"percent":50, "time_min":1.5, "time_max":2.0, "start_dis_min":8, "start_dis_max":15, "counter_percent":80}
+	]
+
+	//  発狂モード
+	,"crazy":
+	[
+		 {"percent":50, "time_min":0.5, "time_max":1.0, "start_dis_min":8, "start_dis_max":15, "counter_percent":100}
+		,{"percent":50, "time_min":0.3, "time_max":0.75, "start_dis_min":8, "start_dis_max":15, "counter_percent":100}
+	]
+
+	//  無防備モード
+	,"defenseless":
+	[
+		 {"percent":90, "time_min":1.0, "time_max":1.5, "start_dis_min":4, "start_dis_max":25, "counter_percent":80}
+		,{"percent":10, "time_min":1.5, "time_max":2.0, "start_dis_min":4, "start_dis_max":25, "counter_percent":80}
+	]
+
+	//  見かけ倒しモード
+	,"mere_show":
+	[
+		 {"percent":50, "time_min":0.5, "time_max":1.0, "start_dis_min":8, "start_dis_max":15, "counter_percent":25}
+		,{"percent":50, "time_min":1.5, "time_max":2.0, "start_dis_min":8, "start_dis_max":15, "counter_percent":25}
+	]
+
+	//  特殊モード
+	,"special":
+	[
+		 {"percent":50, "time_min":0.5, "time_max":1.0, "start_dis_min":8, "start_dis_max":15, "counter_percent":25}
+		,{"percent":50, "time_min":1.5, "time_max":2.0, "start_dis_min":8, "start_dis_max":15, "counter_percent":25}
+	]
+}

@@ -1,0 +1,69 @@
+﻿/*
+ *	プロトサーヴァントAI行動
+ */
+//  MAXは12コマンド、必要なら追加可能
+//　A:普通攻撃　B:範囲攻撃　C:スキル攻撃（発動以後攻撃必ず終了）　D:ダッシュ　G:ガード(0.2秒～0.5秒)　J:ジャンプ
+{
+	// 平均モード
+	"normal":
+	[
+		 {"command":["A"], "range":5, "angle":15, "percent":30}
+		,{"command":["J"], "range":10, "angle":50, "percent":10}
+		,{"command":["A","A","A","A"], "range":7, "angle":15, "percent":5}
+		,{"command":["A","A","B"], "range":10, "angle":25, "percent":2}
+		,{"command":["A","A","A","B"], "range":13, "angle":25, "percent":3}
+		,{"command":["C"], "range":10, "angle":60, "percent":5}
+		,{"command":["B","B","B"], "range":10, "angle":60, "percent":2}
+		,{"command":["D","A"], "range":25, "angle":25, "percent":5}
+		,{"command":["J","B"], "range":7, "angle":50, "percent":3}
+	]
+
+	// 慎重モード
+	,"careful":
+	[
+		 {"command":["G","A","A","A"], "range":7, "angle":15, "percent":30}
+		,{"command":["G","G","G"], "range":7, "angle":50, "percent":30}
+	]
+
+	// 発狂モード
+	,"crazy":
+	[
+		 {"command":["A","A","A","A"], "range":7, "angle":15, "percent":20}
+		,{"command":["A","A","B"], "range":10, "angle":25, "percent":10}
+		,{"command":["A","A","A","B"], "range":13, "angle":25, "percent":10}
+		
+		,{"command":["D","A"], "range":25, "angle":25, "percent":5}
+		,{"command":["C"], "range":10, "angle":60, "percent":5}
+		,{"command":["J","B"], "range":7, "angle":50, "percent":5}
+		,{"command":["A","A","C"], "range":7, "angle":25, "percent":5}
+		
+		// 特別コンボテスト
+		,{"command":["D","A","J","B"], "range":25, "angle":25, "percent":5}
+		,{"command":["J","B","D","A"], "range":7, "angle":50, "percent":5}
+		,{"command":["A","A","J","B","A","A","B"], "range":7, "angle":50, "percent":5}
+		,{"command":["A","A","A","J","B","A","C"], "range":7, "angle":50, "percent":5}
+		,{"command":["A","G","G","A","A","B"], "range":6, "angle":20, "percent":5}
+	]
+
+	// 無防備モード
+	,"defenseless":
+	[
+		 {"command":["A"], "range":5, "angle":15, "percent":30}
+		,{"command":["J"], "range":7, "angle":50, "percent":10}
+		,{"command":["G","G","G"], "range":7, "angle":50, "percent":30}
+	]
+
+	// 見かけ倒しモード
+	,"mere_show":
+	[
+		{"command":["G","A","A","A"], "range":7, "angle":15, "percent":30}
+		,{"command":["G","G","G"], "range":7, "angle":50, "percent":30}
+	]
+
+	// 特殊モード
+	,"special":
+	[
+		{"command":["G","A","A","A"], "range":7, "angle":15, "percent":30}
+		,{"command":["G","G","G"], "range":7, "angle":50, "percent":30}
+	]
+}
