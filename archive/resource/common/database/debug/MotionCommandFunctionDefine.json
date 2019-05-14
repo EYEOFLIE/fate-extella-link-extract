@@ -1,0 +1,1173 @@
+{
+    "functions":[
+        // LABEL
+        {
+            "name":"LABEL"
+			,"type":"LABEL"
+			,"params":[
+				{"type":"int", "name":"ラベルID"}
+			]
+        }
+        // MOTION
+        , {
+			"name":"MOTION"
+			,"type":"TIME_LIME"
+			,"params":[
+				{"type":"string", "name":"モーション名(ショートネーム)"}
+				,{"type":"bool", "name":"ループモーションか？"}
+				,{"type":"float", "name":"開始フレーム"}
+				,{"type":"float", "name":"終了フレーム(-1:モーションの持つ最終フレームまで)"}
+			]
+		}
+        // ADDMOTION
+		, {
+			"name":"ADDMOTION"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"string", "name":"モーション名(ショートネーム)"}
+				,{"type":"int", "name":"スロットNo.(0-2)"}
+				,{"type":"bool", "name":"ループモーションか？"}
+				,{"type":"float", "name":"開始フレーム"}
+				,{"type":"float", "name":"終了フレーム(-1:モーションの持つ最終フレームまで)"}
+			]
+		}
+        // PLAYVOICE
+		, {
+			"name":"PLAYVOICE"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"floatf", "name":"frame"}
+				,{"type":"string", "name":"VOICE名"}
+			]
+		}
+        // PLAY3D
+		, {
+			"name":"PLAY3D"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"floatf", "name":"frame"}
+				,{"type":"string", "name":"Bank名"}
+				,{"type":"string", "name":"SE名"}
+			]
+		}
+        // PLAY3D_NODE
+		, {
+			"name":"PLAY3D_NODE"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"floatf", "name":"frame"}
+				,{"type":"int", "name":"id"}
+				,{"type":"string", "name":"ノード名"}
+				,{"type":"string", "name":"Bank名"}
+				,{"type":"string", "name":"SE名"}
+				,{"type":"bool", "name":"ループか?"}
+			]
+		}
+        // STOP3D_NODE
+		, {
+			"name":"STOP3D_NODE"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"floatf", "name":"frame"}
+				,{"type":"int", "name":"id"}
+			]
+		}
+        // PLAY2D
+		, {
+			"name":"PLAY2D"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"floatf", "name":"frame"}
+				,{"type":"string", "name":"Bank名"}
+				,{"type":"string", "name":"SE名"}
+			]
+		}
+        // SE_STOP
+		, {
+			"name":"SE_STOP"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"floatf", "name":"frame"}
+				,{"type":"string", "name":"Bank名"}
+				,{"type":"string", "name":"SE名"}
+			]
+		}
+        // ATTACK_START_1PMODE
+		, {
+			"name":"ATTACK_START_1PMODE"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"floatf", "name":"frame"}
+                ,{"type":"int", "name":"id"}
+                ,{"type":"int", "name":"グループID"}
+                ,{"type":"string", "name":"位置指定用ノード名"}
+                ,{"type":"float", "name":"オフセットX"}
+                ,{"type":"float", "name":"オフセットY"}
+                ,{"type":"float", "name":"オフセットZ"}
+                ,{"type":"float", "name":"コリジョンサイズ"}
+                ,{"type":"float", "name":"コリジョンY軸有効範囲"}
+                ,{"type":"string", "name":"ダメージタイプ名"}
+                ,{"type":"string", "name":"ダメージタイプ名(空中"}
+                ,{"type":"float", "name":"吹っ飛びランダム幅(角度 +-?度"}
+                ,{"type":"float", "name":"吹っ飛びランダム幅(距離, % で指定 (100% だと元数値そのまま 75とすると75%-100%でランダム"}
+                ,{"type":"int", "name":"コンボやられモーションタイプ(0:ランダム -1:右 1:左"}
+                ,{"type":"float", "name":"ヒットストップ時間"}
+                ,{"type":"string", "name":"属性"}
+                ,{"type":"int", "name":"SE用攻撃属性"}
+                ,{"type":"string", "name":"ヒット時カメラシェイク用ラベル名(文字列"}
+			]
+		}
+        // ATTACK_END_1PMODE
+		, {
+			"name":"ATTACK_END_1PMODE"
+			,"type":"MOTION_DEPEND_TIME_LINE_END"
+			,"depend_function":"ATTACK_START_1PMODE"
+			,"params":[
+				{"type":"floatf", "name":"frame"}
+				,{"type":"int", "name":"id"}
+			]
+		}
+        // ATTACK_START
+		, {
+			"name":"ATTACK_START"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"floatf", "name":"frame"}
+                ,{"type":"int", "name":"id"}
+                ,{"type":"int", "name":"グループID"}
+                ,{"type":"string", "name":"位置指定用ノード名"}
+                ,{"type":"float", "name":"オフセットX"}
+                ,{"type":"float", "name":"オフセットY"}
+                ,{"type":"float", "name":"オフセットZ"}
+                ,{"type":"float", "name":"コリジョンサイズ"}
+                ,{"type":"float", "name":"コリジョンY軸有効範囲"}
+                ,{"type":"string", "name":"ダメージタイプ名"}
+                ,{"type":"string", "name":"ダメージタイプ名(空中"}
+                ,{"type":"float", "name":"吹っ飛びランダム幅(角度 +-?度"}
+                ,{"type":"float", "name":"吹っ飛びランダム幅(距離, % で指定 (100% だと元数値そのまま 75とすると75%-100%でランダム"}
+                ,{"type":"int", "name":"コンボやられモーションタイプ(0:ランダム -1:右 1:左"}
+                ,{"type":"float", "name":"ヒットストップ時間"}
+                ,{"type":"string", "name":"属性"}
+                ,{"type":"int", "name":"SE用攻撃属性"}
+                ,{"type":"string", "name":"ヒット時カメラシェイク用ラベル名(文字列"}
+			]
+		}
+        // ATTACK_END
+		, {
+			"name":"ATTACK_END"
+			,"type":"MOTION_DEPEND_TIME_LINE_END"
+			,"depend_function":"ATTACK_START"
+			,"params":[
+				{"type":"floatf", "name":"frame"}
+                ,{"type":"int", "name":"id"}
+			]
+		}
+        // GOTO
+		, {
+			"name":"GOTO"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"int", "name":"ラベルID"}
+			]
+		}
+        // WAIT
+		, {
+			"name":"WAIT"
+			,"type":"WAIT"
+			, "depend_function":"MOTION"
+		}
+        // FLAG_ON
+		, {
+			"name":"FLAG_ON"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"string","name":"フラグ名"}
+			]
+		}
+        // FLAG_OFF
+		, {
+			"name":"FLAG_OFF"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"string","name":"フラグ名"}
+			]
+		}
+        // INVINCIBLE_ON
+		, {
+			"name":"INVINCIBLE_ON"
+			,"type":"EVENT"
+		}
+		// INVINCIBLE_OFF
+		, {
+			"name":"INVINCIBLE_OFF"
+			,"type":"EVENT"
+		}
+        // FRAMEWAIT
+		, {
+			"name":"FRAMEWAIT"
+			,"type":"WAIT"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+			]
+		}
+        // MOVESTART
+		, {
+			"name":"MOVESTART"
+			,"type":"EVENT"
+		}
+        // MOVEEND
+		, {
+			"name":"MOVEEND"
+			,"type":"EVENT"
+		}
+        // CAMERA
+		, {
+			"name":"CAMERA"
+			,"type":"MOTION_DEPEND_EVENT"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"string","name":"カメラ名"}
+				,{"type":"bool","name":"補完"}
+				,{"type":"string","name":"再生条件"}
+			]
+		}
+        // XSCACAMERA
+		, {
+			"name":"XSCACAMERA"
+			,"type":"MOTION_DEPEND_EVENT"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"string","name":"カメラ名"}
+				,{"type":"bool","name":"補完"}
+				,{"type":"string","name":"再生条件"}
+			]
+		}
+        // EFFECT
+		, {
+			"name":"EFFECT"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"string","name":"エフェクト名"}
+				,{"type":"string","name":"グループ名"}
+				,{"type":"int","name":"停止条件ID"}
+			]
+		}
+        // EFFECT2
+		, {
+			"name":"EFFECT2"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"string","name":"エフェクト名"}
+				,{"type":"string","name":"グループ名"}
+				,{"type":"int","name":"停止条件ID"}
+				,{"type":"string","name":"位置指定用ノード名"}
+				,{"type":"float","name":"scale"}
+				,{"type":"float","name":"rotation_x"}
+				,{"type":"float","name":"rotation_y"}
+				,{"type":"float","name":"rotation_z"}
+				,{"type":"float","name":"translation_x"}
+				,{"type":"float","name":"translation_y"}
+				,{"type":"float","name":"translation_z"}
+			]
+		}
+        // EFFECT_PARTS
+		, {
+			"name":"EFFECT_PARTS"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"string","name":"エフェクト名"}
+				,{"type":"string","name":"パーツ名"}
+				,{"type":"string","name":"グループ名"}
+				,{"type":"int","name":"停止条件ID"}
+			]
+		}
+        // EFFECTSTOP
+		, {
+			"name":"EFFECTSTOP"
+			,"type":"MOTION_DEPEND_TIME_LINE_END"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"string","name":"グループ名"}
+				,{"type":"int","name":"消去タイプ(0:即時 1:寿命待ち)"}
+			]
+		}
+        // RIGIDEND
+		, {
+			"name":"RIGIDEND"
+			,"type":"EVENT"
+		}
+		// BUTTON_ENABLE
+		, {
+			"name":"BUTTON_ENABLE"
+			,"type":"EVENT"
+		}
+        // MSPEED
+		, {
+			"name":"MSPEED"
+			,"type":"MOTION_DEPEND_EVENT"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"float","name":"モーションスピード"}
+			]
+		}
+        // MSPEED_RANDOM
+		, {
+			"name":"MSPEED_RANDOM"
+			,"type":"MOTION_DEPEND_EVENT"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"float","name":"スピード(下限)"}
+				,{"type":"float","name":"スピード(上限)"}
+			]
+		}
+        // MOVE
+		, {
+			"name":"MOVE"
+			,"type":"MOTION_DEPEND_EVENT"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"float","name":"速度"}
+				,{"type":"float","name":"移動時間"}
+				,{"type":"float","name":"減速開始時間"}
+				,{"type":"bool","name":"向き固定"}
+			]
+		}
+        // MOVEY
+		, {
+			"name":"MOVEY"
+			,"type":"MOTION_DEPEND_EVENT"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"float","name":"速度"}
+				,{"type":"float","name":"y_rotation"}
+				,{"type":"float","name":"移動時間"}
+				,{"type":"float","name":"減速開始時間"}
+			]
+		}
+        // MOVEDIRECT
+		, {
+			"name":"MOVEDIRECT"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"float","name":"trans_x"}
+				,{"type":"float","name":"trans_y"}
+				,{"type":"float","name":"trans_z"}
+			]
+		}
+        // BLEND
+		, {
+			"name":"BLEND"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"float","name":"補完パラメータ"}
+			]
+		}
+        // PAD
+		, {
+			"name":"PAD"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"bool","name":"操作有効にするか"}
+			]
+		}
+        // TRIGGER
+		, {
+			"name":"TRIGGER"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"bool","name":"2段ジャンプのトリガーを有効にするか"}
+			]
+		}
+        // LANDWAIT
+		, {
+			"name":"LANDWAIT"
+			,"type":"WAIT"
+		}
+        // LANDCANCEL
+		, {
+			"name":"LANDCANCEL"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"string","name":"モーションコマンド名" }
+			]
+		}
+        // LANDCANCEL2
+		, {
+			"name":"LANDCANCEL2"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"string","name":"分岐モーションコマンド名" }
+				,{"type":"string","name":"エフェクト名" }
+			]
+		}
+        // JUMP
+		, {
+			"name":"JUMP"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"float","name":"重力"}
+				,{"type":"float","name":"速度"}
+				,{"type":"float","name":"開始時間"}
+				,{"type":"float","name":"初速度"}
+			]
+		}
+        // JUMP_NG
+		, {
+			"name":"JUMP_NG"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"float","name":"重力(頂点でも重力有効にならない。イベント用)"}
+				,{"type":"float","name":"速度"}
+				,{"type":"float","name":"開始時間"}
+				,{"type":"float","name":"初速"}
+			]
+		}
+        // SHOT
+		, {
+			"name":"SHOT"
+			,"type":"MOTION_DEPEND_EVENT"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"string","name":"発射位置指定用ノード名"}
+				,{"type":"string","name":"ショット名"}
+                ,{"type":"int","name":"消去タイプ(0:即時 1:寿命待ち)"}
+			]
+		}
+        // STOP
+		, {
+			"name":"STOP"
+			,"type":"EVENT"
+		}
+        // PLAYMC
+		, {
+			"name":"PLAYMC"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"string","name":"モーションコマンド名"}
+			]
+		}
+        // DISPON
+		, {
+			"name":"DISPON"
+			,"type":"EVENT"
+		}
+		// DISPOFF
+		, {
+			"name":"DISPOFF"
+			,"type":"EVENT"
+		}
+        // CAMERAEND
+		, {
+			"name":"CAMERAEND"
+			,"type":"MOTION_DEPEND_EVENT"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"bool","name":"補完"}
+				,{"type":"float","name":"補完時間"}
+			]
+		}
+        // COMBO_NEXT
+		, {
+			"name":"COMBO_NEXT"
+			,"type":"EVENT"
+		}
+        // COMBO_LOOP
+		, {
+			"name":"COMBO_LOOP"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"int","name":"ラベルID"}
+			]
+		}
+        // COMBO_LOOP_START
+		, {
+			"name":"COMBO_LOOP_START"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"int","name":"ラベルID"}
+				,{"type":"int","name":"ループ数"}
+			]
+		}
+        // HITBRANCHSET
+		, {
+			"name":"HITBRANCHSET"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"string","name":"モーションコマンド名"}
+				,{"type":"int","name":"分岐タイプ(0:全部 1:中ボスのみ)"}
+			]
+		}
+        // HITBRANCHSET2
+		, {
+			"name":"HITBRANCHSET2"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"string","name":"モーションコマンド名"}
+				,{"type":"int","name":"分岐タイプ(0:全部 1:中ボスのみ)"}
+			]
+		}
+        // ENEMYCULLINGSTOP
+		, {
+			"name":"ENEMYCULLINGSTOP"
+			,"type":"EVENT"
+		}
+		// ENEMYCULLINGSTART
+		, {
+			"name":"ENEMYCULLINGSTART"
+			,"type":"EVENT"
+		}
+        // CAMERA_RANDOM
+		, {
+			"name":"CAMERA_RANDOM"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"bool","name":"補完"}
+				,{"type":"string","name":"タイプ"}
+				,{"type":"string","name":"カメラ名1"}
+				,{"type":"string","name":"カメラ名2"}
+				,{"type":"string","name":"カメラ名3"}
+				,{"type":"string","name":"カメラ名4"}
+				,{"type":"string","name":"カメラ名5"}
+				,{"type":"string","name":"カメラ名6"}
+				,{"type":"string","name":"カメラ名7"}
+				,{"type":"string","name":"カメラ名8"}
+			]
+		}
+        // GRAVITYSW
+		, {
+			"name":"GRAVITYSW"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"bool","name":"重力有効/無効"}
+			]
+		}
+        // PADHOLD
+		, {
+			"name":"PADHOLD"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"string","name":"PAD_A(通常攻撃) / PAD_B(範囲攻撃)"}
+				,{"type":"string","name":"モーションコマンド名"}
+			]
+		}
+        // CAMERA_RESET
+		, {
+			"name":"CAMERA_RESET"
+			,"type":"EVENT"
+		}
+        // CAMERA_NORMAL
+		, {
+			"name":"CAMERA_NORMAL"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"float","name":"戻る補完時間"}
+			]
+		}
+        // REFERENCE_CUT
+		, {
+			"name":"REFERENCE_CUT"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"bool","name":"モーションの持つリファレンス移動を切る"}
+			]
+		}
+        // LOOPLABEL
+		, {
+			"name":"LOOPLABEL"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"int","name":"ラベルID"}
+				,{"type":"int","name":"ループ数"}
+			]
+		}
+        // PADSENSE
+		, {
+			"name":"PADSENSE"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"float","name":"前後移動感度"}
+				,{"type":"float","name":"回転感度"}
+			]
+		}
+        // ENEMYSTOP
+		, {
+			"name":"ENEMYSTOP"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"bool","name":"敵動作停止"}
+			]
+		}
+        // COMMENT
+		, {
+			"name":"COMMENT"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"string","name":"コメント(実行時影響なし)"}
+			]
+		}
+        // EFFECTSPEED
+		, {
+			"name":"EFFECTSPEED"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"string","name":"グループ名"}
+				,{"type":"float","name":"速度"}
+			]
+		}
+		// EFFECTSKIP
+		, {
+			"name":"EFFECTSKIP"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"string","name":"グループ名"}
+				,{"type":"float","name":"フレーム"}
+			]
+		}
+        // DAMAGELEVEL
+		, {
+			"name":"DAMAGELEVEL"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"int","name":"ダメージレベル(0-2)"}
+			]
+		}
+        // HOLDJUMP
+		, {
+			"name":"HOLDJUMP"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"int", "name":"ラベルID"}
+				,{"type":"string","name":"PAD_A(通常攻撃) / PAD_B(範囲攻撃)"}
+				,{"type":"bool","name":"押しっぱなしで分岐"}
+			]
+		}
+        // DRAWPARTS
+		, {
+			"name":"DRAWPARTS"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"string", "name":"パーツ名(MAIN_WEAPON / SUB_WEAPON)"}
+				,{"type":"bool","name":"表示"}
+			]
+		}
+        // COMBO_CANCELTYPE
+		, {
+			"name":"COMBO_CANCELTYPE"
+			,"type":"EVENT"
+			,"params":[
+				 {"type":"bool", "name":"ガードでキャンセル可能"}
+				,{"type":"bool", "name":"ダッシュでキャンセル可能"}
+				,{"type":"bool", "name":"ジャンプでキャンセル可能"}
+			]
+		}
+        // ROTATE
+		, {
+			"name":"ROTATE"
+			,"type":"EVENT"
+			,"params":[
+				 {"type":"float","name":"相対回転角度(Degree)"}
+			]
+		}
+        // GRAVITY_RATE
+		, {
+			"name":"GRAVITY_RATE"
+			,"type":"EVENT"
+			,"params":[
+				 {"type":"float","name":"重力にかかる倍率"}
+			]
+		}
+        // MOTION_PARTS
+		, {
+			"name":"MOTION_PARTS"
+			,"type":"TIME_LIME"
+			,"params":[
+				 {"type":"string", "name":"パーツ名(MAIN_WEAPON/SUB_WEAPON/...)"}
+				,{"type":"string", "name":"モーション名(ショートネーム)"}
+				,{"type":"bool", "name":"ループモーションか？"}
+				,{"type":"float", "name":"開始フレーム"}
+				,{"type":"float", "name":"終了フレーム(-1:モーションの持つ最終フレームまで)"}
+				,{"type":"float", "name":"再生速度"}
+				,{"type":"float", "name":"補間速度"}
+			]
+		}
+       // MOTION_PARTS_SPEED
+		, {
+			"name":"MOTION_PARTS_SPEED"
+			,"type":"EVENT"
+			,"params":[
+				 {"type":"string", "name":"パーツ名(MAIN_WEAPON/SUB_WEAPON/...)"}
+				,{"type":"float", "name":"再生速度"}
+			]
+		}
+        // CALLBACK
+		, {
+			"name":"CALLBACK"
+			,"type":"MOTION_DEPEND_EVENT"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"string","name":"コールバック名"}
+			]
+		}
+        // CALLBACK_I
+		, {
+			"name":"CALLBACK_I"
+			,"type":"MOTION_DEPEND_EVENT"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"string","name":"コールバック名"}
+				,{"type":"int","name":"パラメータ(整数)"}
+			]
+		}
+        // CALLBACK_F
+		, {
+			"name":"CALLBACK_F"
+			,"type":"MOTION_DEPEND_EVENT"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"string","name":"コールバック名"}
+				,{"type":"float","name":"パラメータ(実数)"}
+			]
+		}
+        // CALLBACK_S
+		, {
+			"name":"CALLBACK_S"
+			,"type":"MOTION_DEPEND_EVENT"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"string","name":"コールバック名"}
+				,{"type":"string","name":"パラメータ(文字列)"}
+			]
+		}
+        // FACE
+		, {
+			"name":"FACE"
+			,"type":"EVENT"
+			,"params":[
+				 {"type":"string","name":"顔の種類"}
+			]
+		}
+        // FACE_EYE
+		, {
+			"name":"FACE_EYE"
+			,"type":"EVENT"
+			,"params":[
+				 {"type":"string","name":"目/動きの種類"}
+			]
+		}
+        // FACE_MOUTH
+		, {
+			"name":"FACE_MOUTH"
+			,"type":"EVENT"
+			,"params":[
+				 {"type":"string","name":"口/動きの種類"}
+			]
+		}
+        // ATK_START
+		, {
+			"name":"ATK_START"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"int", "name":"id"}
+				,{"type":"floatf", "name":"frame"}
+			]
+		}
+        // ATK_START2
+		, {
+			"name":"ATK_START2"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"int", "name":"id"}
+				,{"type":"floatf", "name":"frame"}
+			]
+		}
+        // CAMERA_SHAKE
+		, {
+			"name":"CAMERA_SHAKE"
+			,"type":"EVENT"
+			,"params":[
+				 {"type":"float","name":"継続時間"}
+				,{"type":"float","name":"揺れ速度"}
+				,{"type":"float","name":"揺れ幅"}
+			]
+		}
+        // ADDMOTION_STOP
+		, {
+			"name":"ADDMOTION_STOP"
+			,"type":"EVENT"
+			,"params":[
+				 {"type":"int", "name":"スロットNo."}
+			]
+		}
+        // ADDMOTION_SPEED
+		, {
+			"name":"ADDMOTION_SPEED"
+			,"type":"EVENT"
+			,"params":[
+				  {"type":"int", "name":"スロットNo."}
+				 ,{"type":"float", "name":"モーションスピード"}
+			]
+		}
+        // HOLDJUMP_INSTANT
+		, {
+			"name":"HOLDJUMP_INSTANT"
+			,"type":"EVENT"
+			,"params":[
+				 {"type":"string","name":"PAD_A(通常攻撃) / PAD_B(範囲攻撃)"}
+				,{"type":"bool","name":"押しっぱなしで分岐"}
+				,{"type":"string","name":"モーションコマンド名"}
+			]
+		}
+        // HOLDJUMP_INSTANT_END
+		, {
+			"name":"HOLDJUMP_INSTANT_END"
+			,"type":"EVENT"
+		}
+        // RAY_EFFECT
+		, {
+			"name":"RAYEFFECT"
+			,"type":"EVENT"
+			,"params":[
+				 {"type":"string",	"name":"エフェクト名"}
+				,{"type":"string",	"name":"グループ名"}
+				,{"type":"float",	"name":"チェック長"}
+			]
+		}
+        // RANDOM_SE
+		, {
+			"name":"RANDOM_SE"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				 {"type":"floatf",	"name":"frame"}
+				,{"type":"string",	"name":"ラベル名"}
+			]
+		}
+        // BODYPARTS
+		, {
+			"name":"BODYPARTS"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				 {"type":"floatf",	"name":"frame"}
+				,{"type":"string",	"name":"パーツ名"}
+				,{"type":"bool",	"name":"表示/非表示"}
+			]
+		}
+        // JUMP_RESET
+		, {
+			"name":"JUMP_RESET"
+			,"type":"EVENT"
+		}
+        // GROUP_RESET
+		, {
+			"name":"GROUP_RESET"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"int", "name":"グループID(1-15)"}
+			]
+		}
+        // BREAK
+		, {
+			"name":"BREAK"
+			,"type":"EVENT"
+		}
+        // GAP
+		, {
+			"name":"GAP"
+			,"type":"EVENT"
+		}
+        // EFFECTCUT
+		, {
+			"name":"EFFECTCUT"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"string","name":"グループ名"}
+				,{"type":"int","name":"マスク"}
+			]
+		}
+        // COMBO_SKIP
+		, {
+			"name":"COMBO_SKIP"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"bool","name":"コンボ分岐時の攻撃トリガ無効ON/OFF"}
+			]
+		}
+        // WEAPON_BODYPARTS
+		, {
+			"name":"WEAPON_BODYPARTS"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"string","name":"武器パーツ名"}
+				,{"type":"string","name":"表示コントロール部位名"}
+				,{"type":"bool","name":"表示ON/OFF"}
+			]
+		}
+        // INTERPOLATE_SKIP
+		, {
+			"name":"INTERPOLATE_SKIP"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"bool","name":"モーション補間無効"}
+			]
+		}
+        // PAD_VIBRATION
+		, {
+			"name":"PAD_VIBRATION"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"string","name":"振動ID(vibration.xlsm)"}
+			]
+		}
+        // CAMERA_EFFECT
+		, {
+			"name":"CAMERA_EFFECT"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"floatf","name":"frame"}
+				,{"type":"string","name":"エフェクト名"}
+				,{"type":"string","name":"グループ名"}
+			]
+		}
+        // RADIAL_BLUR
+		, {
+			"name":"RADIAL_BLUR"
+			,"type":"EVENT"
+			,"params":[
+				 { "type":"float","name":"位置X"		}
+				,{ "type":"float","name":"位置Y"		}
+				,{ "type":"float","name":"MaxPower"		}
+				,{ "type":"float","name":"StopMagTime"	}
+				,{ "type":"float","name":"StartMinTime"	}
+				,{ "type":"float","name":"StopMinTime"	}
+			]
+		}
+        // PARTS_FORCE_DRAW
+		, {
+			"name":"PARTS_FORCE_DRAW"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"bool","name":"パーツ強制表示有効/無効(イベント用)"}
+			]
+		}
+        // ATK_EXTENSION
+		, {
+			"name":"ATK_EXTENSION"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"string","name":"攻撃属性おまけ効果"}
+			]
+		}
+        // BLEND_RATE_ANIM_STOP
+		, {
+			"name":"BLEND_RATE_ANIM_STOP"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"int", "name":"スロットNo.(0-2)"}
+				,{"type":"float", "name":"ブレンド率(-1:今のブレンド率)"}
+			]
+		}
+        // BLEND_RATE_ANIM
+		, {
+			"name":"BLEND_RATE_ANIM"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+			,"params":[
+				{"type":"int", "name":"スロットNo.(0-2)"}
+				,{"type":"float", "name":"開始ブレンド率(0-1)"}
+				,{"type":"float", "name":"終了ブレンド率(0-1)"}
+				,{"type":"float", "name":"速度(1.0 = 1秒でブレンド率1)"}
+			]
+		}
+        // COLLISION_ON
+		, {
+			"name":"COLLISION_ON"
+			,"type":"EVENT"
+		}
+		// COLLISION_OFF
+		, {
+			"name":"COLLISION_OFF"
+			,"type":"EVENT"
+		}
+        // NO_HITBRANCH
+		, {
+			"name":"NO_HITBRANCH"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"string", "name":"モーションコマンド名"}
+			]
+		}
+        // CAMERA_SHAKE_START
+        ,{
+            "name":"CAMERA_SHAKE_START"
+			,"type":"EVENT"
+            ,"params":[
+				{"type":"string", "name":"カメラシェイク用ラベル名(文字列"}
+			]
+        }
+        // CAMERA_SHAKE_STOP
+		, {
+			"name":"CAMERA_SHAKE_STOP"
+			,"type":"EVENT"
+		}
+		// COMBO_CORRECT_CUT
+		, {
+			"name":"COMBO_CORRECT_CUT"
+			,"type":"EVENT"
+			,"params":[
+				{"type":"bool", "name":"コンボ中の敵へ向く補正をカット（※ActiveSkillのみ有効）"}
+			]
+		}
+        // END
+		, {
+			"name":"END"
+			,"type":"END"
+		}
+        // ATTACK_FAKE_START
+        , {
+            "name":"ATTACK_FAKE_START"
+			,"type":"MOTION_DEPEND_TIME_LINE"
+            ,"params":[
+				{"type":"floatf", "name":"frame"}
+                ,{"type":"int", "name":"id"}
+                ,{"type":"int", "name":"グループID"}
+                ,{"type":"string", "name":"位置指定用ノード名"}
+                ,{"type":"float", "name":"オフセットX"}
+                ,{"type":"float", "name":"オフセットY"}
+                ,{"type":"float", "name":"オフセットZ"}
+                ,{"type":"float", "name":"コリジョンサイズ"}
+                ,{"type":"float", "name":"コリジョンY軸有効範囲"}
+                ,{"type":"string", "name":"ダメージタイプ名"}
+                ,{"type":"string", "name":"ダメージタイプ名(空中"}
+                ,{"type":"float", "name":"吹っ飛びランダム幅(角度 +-?度"}
+                ,{"type":"float", "name":"吹っ飛びランダム幅(距離, % で指定 (100% だと元数値そのまま 75とすると75%-100%でランダム"}
+                ,{"type":"int", "name":"コンボやられモーションタイプ(0:ランダム -1:右 1:左"}
+                ,{"type":"float", "name":"ヒットストップ時間"}
+                ,{"type":"string", "name":"属性"}
+                ,{"type":"int", "name":"SE用攻撃属性"}
+                ,{"type":"string", "name":"ヒット時カメラシェイク用ラベル名(文字列"}
+			]
+        }
+        // POSITION_PARTS
+		, {
+			"name":"POSITION_PARTS"
+			,"type":"EVENT"
+            ,"params":[
+                 {"type":"string", "name":"パーツ名"}
+                ,{"type":"string", "name":"シート内ID"}
+			]
+		}
+        // CAMERA_POSITION
+		, {
+			"name":"CAMERA_POSITION"
+			,"type":"MOTION_DEPEND_EVENT"
+			,"params":[
+				 {"type":"float","name":"到達時間"}
+				,{"type":"string","name":"再生条件"}
+				,{"type":"float","name":"終了時の補間時間"}
+				,{"type":"bool","name":"開始位置によって左右反転を行うか"}
+				,{"type":"float","name":"X 位置(キャラ相対)"}
+				,{"type":"float","name":"Y 位置(キャラ相対)"}
+				,{"type":"float","name":"Z 位置(キャラ相対)"}
+				,{"type":"float","name":"目標 X ベクトル"}
+				,{"type":"float","name":"目標 Y ベクトル"}
+				,{"type":"float","name":"目標 Z ベクトル"}
+			]
+		}
+        // CAMERA_END
+		, {
+			"name":"CAMERA_END"
+			,"type":"EVENT"
+		}
+        // ATTACK_PARTS_SET
+		, {
+			"name":"ATTACK_PARTS_SET"
+			,"type":"EVENT"
+			,"params":[
+                 {"type":"string", "name":"パーツ名"}
+                ,{"type":"int", "name":"id(無効?)"}
+                ,{"type":"int", "name":"グループID(無効?)"}
+                ,{"type":"string", "name":"位置指定用ノード名"}
+                ,{"type":"float", "name":"オフセットX"}
+                ,{"type":"float", "name":"オフセットY"}
+                ,{"type":"float", "name":"オフセットZ"}
+                ,{"type":"float", "name":"コリジョンサイズ"}
+                ,{"type":"float", "name":"コリジョンY軸有効範囲"}
+                ,{"type":"string", "name":"ダメージタイプ名"}
+                ,{"type":"string", "name":"ダメージタイプ名(空中"}
+                ,{"type":"float", "name":"吹っ飛びランダム幅(角度 +-?度"}
+                ,{"type":"float", "name":"吹っ飛びランダム幅(距離, % で指定 (100% だと元数値そのまま 75とすると75%-100%でランダム"}
+                ,{"type":"int", "name":"コンボやられモーションタイプ(0:ランダム -1:右 1:左"}
+                ,{"type":"float", "name":"ヒットストップ時間"}
+                ,{"type":"string", "name":"属性"}
+                ,{"type":"int", "name":"SE用攻撃属性"}
+                ,{"type":"string", "name":"ヒット時カメラシェイク用ラベル名(文字列"}
+                ,{"type":"float", "name":"開始フレーム"}
+                ,{"type":"float", "name":"エンドフレーム"}
+			]
+		}
+        // CAMERA_FOV
+		, {
+			"name":"CAMERA_FOV"
+			,"type":"EVENT"
+			,"params":[
+				 {"type":"float","name":"到達時間"}
+				,{"type":"string","name":"再生条件"}
+				,{"type":"float","name":"終了時の補間時間"}
+				,{"type":"float","name":"画角"}
+			]
+		}
+        // CAMERA_ZROT
+		, {
+			"name":"CAMERA_ZROT"
+			,"type":"EVENT"
+			,"params":[
+				 {"type":"float","name":"到達時間"}
+				,{"type":"string","name":"再生条件"}
+				,{"type":"float","name":"終了時の補間時間"}
+				,{"type":"float","name":"回転角"}
+			]
+		}
+        // CAMERA_DISTANCE_OFFSET
+		, {
+			"name":"CAMERA_DISTANCE_OFFSET"
+			,"type":"EVENT"
+			,"params":[
+				 {"type":"float","name":"到達時間"}
+				,{"type":"string","name":"再生条件"}
+				,{"type":"float","name":"終了時の補間時間"}
+				,{"type":"float","name":"視点<>注視点距離に足されるオフセット(m)"}
+			]
+		}
+        // CAMERA_CONTINUE
+		, {
+			"name":"CAMERA_CONTINUE"
+			,"type":"EVENT"
+			,"params":[
+				 {"type":"string","name":"継続するモーションコマンド名"}
+			]
+		}
+        // RUSH_CAMERA_SHAKE
+        ,{
+            "name":"RUSH_CAMERA_SHAKE"
+			,"type":"EVENT"
+            ,"params":[
+				{"type":"string", "name":"ラッシュ時のカメラシェイク用ラベル名(文字列"}
+			]
+        }
+        // CAMERA_3D_SHAKE
+        ,{
+            "name":"CAMERA_3D_SHAKE"
+			,"type":"EVENT"
+            ,"params":[
+				 {"type":"string", "name":"カメラシェイク用ラベル名(文字列"}
+				,{"type":"string", "name":"振動元の指定ノード名(文字列"}
+			]
+        }
+
+	]
+}
+

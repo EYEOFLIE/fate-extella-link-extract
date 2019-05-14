@@ -1,0 +1,26 @@
+{
+
+// 増やしてもOK / mindows からは 番号で指定します。上から0,1,2,...
+//
+// FOV : 画角 (degree)
+// LENGTH : ターゲットからカメラまでの距離
+// OFFSETY : ターゲットの注視点のリファレンス（足元）からの高さ
+//
+
+"presets" : [
+
+	  { "FOV" : 43, "LENGTH" : 5.9, "OFFSETY" : 1.45, "RESETXANGLE" : -9.5 }	// プリセット 0 / COSMOSの
+	, { "FOV" : 43, "LENGTH" : 4.7, "OFFSETY" : 1.3, "RESETXANGLE" : -9.0 }	// プリセット 1 / ネロ（150ｃｍ）
+	, { "FOV" : 43, "LENGTH" : 5.2, "OFFSETY" : 1.2, "RESETXANGLE" : -3.5 }	// プリセット 2 / ネロ（150ｃｍ）
+	, { "FOV" : 43, "LENGTH" : 5.2, "OFFSETY" : 1.5, "RESETXANGLE" : -3.5 }	// プリセット 3 / ネロ（150ｃｍ）
+	, { "FOV" : 43, "LENGTH" : 5.2, "OFFSETY" : 1.9, "RESETXANGLE" : -3.5 }	// プリセット 4 / ネロ（150ｃｍ）
+	, { "FOV" : 43, "LENGTH" : 9.5, "OFFSETY" : 2.0, "RESETXANGLE" : -15.0 }	// プリセット 5 / 対戦用
+	, { "FOV" : 43, "LENGTH" : 4.7, "OFFSETY" : 1.3, "RESETXANGLE" : -9.0 }	// プリセット 6 / メドゥーサ（172ｃｍ）
+	, { "FOV" : 43, "LENGTH" : 5.2, "OFFSETY" : 1.6, "RESETXANGLE" : -9.5 }	// プリセット 7 / エミヤ（187ｃｍ）
+	, { "FOV" : 43, "LENGTH" : 6.0, "OFFSETY" : 1.7, "RESETXANGLE" : -9.5 }	// プリセット 8 / 呂布（225ｃｍ）
+	, { "FOV" : 43, "LENGTH" : 6.0, "OFFSETY" : 1.7, "RESETXANGLE" : -9.5 }	// プリセット 9 / カルナ（178ｃｍ）
+	, { "FOV" : 43, "LENGTH" : 6.0, "OFFSETY" : 1.7, "RESETXANGLE" : -0.0 }	// プリセット 10 / ダミー
+		
+]
+
+}
