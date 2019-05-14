@@ -1,0 +1,5 @@
+";頭に"";""をつけるとコメント扱いになります",,,,,,,,
+;以下外字アイコンタグ登録用　コンフィグ,,,,,,,,
+,アイコン名,d2bファイル名,d2aのwidth,d2aのheight,中心位置,中心位置,再生セクション名,再生速度
+;icon,btn_circle,test_com_keyhelp,32,32,0,0,circle,1
+;icon,btn_cross,test_com_keyhelp,32,32,0,0,cross,1
