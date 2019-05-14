@@ -1,0 +1,48 @@
+﻿/*
+ *	プロトサーヴァントAI行動
+ */
+//  MAXは12コマンド、必要なら追加可能
+//　A:普通攻撃　B:範囲攻撃　C:スキル攻撃（発動以後攻撃必ず終了）　D:ダッシュ　G:ガード(0.2秒～0.5秒)　J:ジャンプ
+//　※Cの後に数値を付けることで、スキルの種類を指定できるようになりました。
+//　　C0:スロット上側のスキル　C1:スロット下側のスキル　C2:スロット左側のスキル　C3:スロット右側のスキル
+{
+	//  平均モード
+	"normal":
+	[
+		 {"command":["G","G"], "range":25, "angle":50, "percent":100}
+	]
+
+	//　慎重モード
+	,"careful":
+	[
+		{"command":["G","A","A","A"], "range":7, "angle":15, "percent":30}
+		,{"command":["G","G","G"], "range":7, "angle":50, "percent":30}
+	]
+
+	//　発狂モード
+	,"crazy":
+	[
+		 {"command":["G","G"], "range":25, "angle":50, "percent":100}
+	]
+
+	//　無防備モード
+	,"defenseless":
+	[
+		 {"command":["D"], "range":25, "angle":50, "percent":100}
+		,{"command":["G"], "range":7, "angle":50, "percent":10}
+	]
+
+	//　見かけ倒しモード
+	,"mere_show":
+	[
+		{"command":["G","A","A","A"], "range":7, "angle":15, "percent":30}
+		,{"command":["G","G","G"], "range":7, "angle":50, "percent":30}
+	]
+
+	//　特殊モード
+	,"special":
+	[
+		{"command":["G","A","A","A"], "range":7, "angle":15, "percent":30}
+		,{"command":["G","G","G"], "range":7, "angle":50, "percent":30}
+	]
+}
