@@ -1,0 +1,43 @@
+// ChrID : 10 ランサー(カルナ) / サーヴァント
+
+MODEL	ch007_m22_00.mdl
+
+MOTION_SKL	ch007_m01_00_skl.skl
+//MOTION_DIFF	SV0000_MDIFF.mdiff
+
+//モーションセット
+MOTION_SET	ch007_motion_set.chr
+BASECAMP_MOTION_SET	ch007_motion_basecamp_set.chr
+GALLERY_MOTION_SET	ch007_motion_gallery_set.chr
+
+/// モデルボディ用物理設定
+PHYSICS_SYSTEM	ch007_m01_blp.blp
+
+
+COLLISION	1.0	3.0
+//COLLISION_FROM_NODE	Reference	head	0
+
+SCALE	1	1	1
+SC_SCALE	1.0	1.0	1.0
+
+/// SIGHT_CONTROL	見るノード	見られるノード	-X回転限界	+X回転限界	-Y回転限界	+Y回転限界
+SIGHT_CONTROL	Head	Head	-30.0	10.0	-65.0	65.0
+/// SIGHT_NODE	ノード名	X回転Rate	Y回転Rate
+SIGHT_NODE	Head	0.40	0.35
+SIGHT_NODE	Neck	0.20	0.35
+SIGHT_NODE	Spine2	0.30	0.10
+SIGHT_NODE	Spine1	0.10	0.00
+
+// 追加アイテム																
+																
+// 	ID	モデル	ホネ	ROTX	ROTY	ROTZ	traX	traY	traZ	sclX	sclY	sclZ	モーションセット	スケルトンファイル	Ref位置無効化	回転除外(true/false)
+//ADD_ITEM	0	ch007_w01_00.mdl	Null_R	0	0	0	0	0	0	1	1	1	ch007_w01_motion_set.chr			
+
+// 			ID	モデル		ホネ			ROTX	ROTY	ROTZ	traX	traY	traZ	sclX	sclY	sclZ
+ADD_ITEM	0	ch007_w01_00.mdl	Null_R	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00	ch007_w01_motion_set.chr
+
+SHOT_MODEL	ch007_w01_00.mdl	4
+
+
+//イベント時エフェクトの表示フィルタ名	表示
+EVENT_EFFECT_2	false

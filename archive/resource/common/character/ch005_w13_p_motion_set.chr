@@ -1,0 +1,8 @@
+//w13武器（天秤）
+//地上攻撃
+MOTION	ch005_w13_1201_p1.mtb	WEP_1201	//WP_R_CD2_S	アクティブスキル1_A
+MOTION	ch005_w13_1202_p1.mtb	WEP_1202	//WP_R_CD2_L	アクティブスキル1_B
+MOTION	ch005_w13_1203_p1.mtb	WEP_1203	//WP_R_CD2_E	アクティブスキル1_C
+MOTION	ch005_w13_1261_p1.mtb	WEP_1261	//WEP_1261	アクティブスキル7_A
+MOTION	ch005_w13_1262_p1.mtb	WEP_1262	//WEP_1262	アクティブスキル7_B
+MOTION	ch005_w13_1263_p1.mtb	WEP_1263	//WEP_1263	アクティブスキル7_C

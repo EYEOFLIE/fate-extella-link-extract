@@ -1,0 +1,47 @@
+// ChrID : 8 エリザベート / サーヴァント
+
+MODEL	ch004_m01_00.mdl
+
+MOTION_SKL	ch004_m01_00_skl.skl
+//MOTION_DIFF	SV0000_MDIFF.mdiff
+
+//モーションセット
+MOTION_SET	ch004_motion_set.chr
+BASECAMP_MOTION_SET	ch004_motion_basecamp_set.chr
+GALLERY_MOTION_SET	ch004_motion_gallery_set.chr
+
+/// モデルボディ用物理設定
+PHYSICS_SYSTEM	ch004_m01_blp.blp
+
+
+COLLISION	1.0	3.0
+//COLLISION_FROM_NODE	Reference	head	0
+
+SCALE	1.0	1.0	1.0
+SC_SCALE	1.0	1.0	1.0
+
+/// SIGHT_CONTROL	見るノード	見られるノード	-X回転限界	+X回転限界	-Y回転限界	+Y回転限界
+SIGHT_CONTROL	Head	Head	-30.0	10.0	-65.0	25.0
+/// SIGHT_NODE	ノード名	X回転Rate	Y回転Rate
+SIGHT_NODE	Head	0.40	0.35
+SIGHT_NODE	Neck	0.20	0.35
+SIGHT_NODE	Spine2	0.30	0.20
+SIGHT_NODE	Spine1	0.10	0.10
+
+// 追加アイテム
+
+// 			ID	モデル		ホネ			ROTX	ROTY	ROTZ	traX	traY	traZ	sclX	sclY	sclZ
+// 槍
+ADD_ITEM	0	ch004_w01_00.mdl	Null_R	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00
+// マイク
+ADD_ITEM	1	ch004_w11_00.mdl	Null_R	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00
+// アイアンメイデン
+ADD_ITEM	2	ch004_w10_00.mdl	Poscenter	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00	ch004_w10_x_motion_set.chr
+// スピーカー 右 / 左
+ADD_ITEM	3	ch004_w12_00.mdl	Poscenter	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00	ch004_w12_p_motion_set.chr
+ADD_ITEM	4	ch004_w12_00.mdl	Poscenter	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00	ch004_w12_p_motion_set.chr
+// 槍(イベント用)
+ADD_ITEM	5	ch004_w13_00.mdl	Null_R	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00
+
+
+SHOT_MODEL	ch004_w01_00.mdl	1

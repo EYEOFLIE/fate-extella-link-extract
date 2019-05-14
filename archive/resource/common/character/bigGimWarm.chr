@@ -1,0 +1,5 @@
+MODEL	GIM_WARM_02.mdl
+MOTION_SET	gimWarm_motion_set.chr
+
+SCALE	0.8	0.8	0.8
+COLLISION	0.333	1.4			

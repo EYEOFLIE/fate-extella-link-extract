@@ -1,0 +1,5 @@
+//w02武器（歯車４枚１セット）（右グループ③）
+//空中攻撃
+MOTION	ch005_w02_2101_p3.mtb	WEP_2101	//WP_R_AA5_S	【空中】強攻撃1_A
+MOTION	ch005_w02_2102_p3.mtb	WEP_2102	//WP_R_AA5_L	【空中】強攻撃1_B
+MOTION	ch005_w02_2103_p3.mtb	WEP_2013	//WP_R_AA5_E	【空中】強攻撃1_C

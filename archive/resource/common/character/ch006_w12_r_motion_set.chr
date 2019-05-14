@@ -1,0 +1,16 @@
+//●0000基本
+//●1000地上攻撃
+MOTION	ch006_w12_1141_r1.mtb	WEP_1141	//WP_R_RA1_	【地上】強攻撃5_A
+MOTION	ch006_w12_1142_r1.mtb	WEP_1142	//WP_R_RA2_	【地上】強攻撃5_B
+MOTION	ch006_w12_1201_r1.mtb	WEP_1201	//WP_R_CD1_S	アクティブスキル1_A
+MOTION	ch006_w12_1202_r1.mtb	WEP_1202	//WP_R_CD1_E	アクティブスキル1_B
+MOTION	ch006_w12_1221_r1.mtb	WEP_1221	//WP_R_CD4_S	アクティブスキル3_A
+MOTION	ch006_w12_1222_r1.mtb	WEP_1222	//WP_R_CD4_L	アクティブスキル3_B
+MOTION	ch006_w12_1223_r1.mtb	WEP_1223	//WP_R_CD4_L	アクティブスキル3_C
+MOTION	ch006_w12_1231_r1.mtb	WEP_1231	//WP_R_CD2_S	アクティブスキル4_A
+MOTION	ch006_w12_1232_r1.mtb	WEP_1232	//WP_R_CD2_L	アクティブスキル4_B
+MOTION	ch006_w12_1233_r1.mtb	WEP_1233	//WP_R_CD2_E	アクティブスキル4_C
+//●2000空中攻撃
+//●3000ダメージ
+//●4000宝具イベント
+//●9000バトルフェイシャル

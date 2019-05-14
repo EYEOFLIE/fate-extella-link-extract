@@ -1,0 +1,84 @@
+//ch002タマモ
+
+//●0000基本
+MOTION	ch002_m01_0001.mtb	MOT_0001	//SV_BS_IDL_	戦闘待機
+MOTION	ch002_m01_0002.mtb	MOT_0002	//SV_BS_IDL_BLK	戦闘待機おかず
+MOTION	ch002_m01_0011.mtb	MOT_0011	//SV_BS_WAL_	走り
+MOTION	ch002_m01_0021.mtb	MOT_0021	//SV_BS_RUN_	エリア間移動
+MOTION	ch002_m01_0031.mtb	MOT_0031	//SV_BS_JUM_L	ジャンプ_上昇
+MOTION	ch002_m01_0032.mtb	MOT_0032	//SV_BS_FAL_S	ジャンプ_下降開始
+MOTION	ch002_m01_0033.mtb	MOT_0033	//SV_BS_FAL_L	ジャンプ_下降
+MOTION	ch002_m01_0034.mtb	MOT_0034	//SV_BS_FAL_E	ジャンプ_着地
+MOTION	ch002_m01_0035.mtb	MOT_0035	//SV_BS_JUR_	2段ジャンプ_開始
+MOTION	ch002_m01_0051.mtb	MOT_0051	//SV_BS_GUA_L	ガード
+MOTION	ch002_m01_0061.mtb	MOT_0061	//MOT_0061	前後回避
+MOTION	ch002_m01_0062.mtb	MOT_0062	//MOT_0062	右回避
+MOTION	ch002_m01_0063.mtb	MOT_0063	//MOT_0063	左回避
+MOTION	ch002_m01_0201.mtb	MOT_0201	//MOT_0201	【対戦用勝利】決めポーズまで
+MOTION	ch002_m01_0202.mtb	MOT_0202	//MOT_0202	【対戦用勝利】決めポーズでのループ
+
+//●1000地上攻撃
+MOTION	ch002_m01_1001.mtb	MOT_1001	//SV_AC_CO4_	【地上】弱攻撃1_A
+MOTION	ch002_m01_1011.mtb	MOT_1011	//SV_AC_CO2_	【地上】弱攻撃2_A
+MOTION	ch002_m01_1021.mtb	MOT_1021	//SV_AC_CO6_	【地上】弱攻撃3_A
+MOTION	ch002_m01_1031.mtb	MOT_1031	//SV_AC_CO5_	【地上】弱攻撃4_A
+MOTION	ch002_m01_1101.mtb	MOT_1101	//SV_AC_RA1_	【地上】強攻撃1_A
+MOTION	ch002_m01_1111.mtb	MOT_1111	//SV_AC_CD1_L	【地上】強攻撃2_A
+MOTION	ch002_m01_1112.mtb	MOT_1112	//SV_AC_CD1_E	【地上】強攻撃2_B
+MOTION	ch002_m01_1121.mtb	MOT_1121	//SV_AC_RA2_	【地上】強攻撃3_A
+MOTION	ch002_m01_1131.mtb	MOT_1131	//SV_AC_CD4_	【地上】強攻撃4_A
+MOTION	ch002_m01_1201.mtb	MOT_1201	//SV_AC_CD2_1	アクティブスキル1_A
+MOTION	ch002_m01_1211.mtb	MOT_1211	//SV_AC_CD3_	アクティブスキル2_A
+MOTION	ch002_m01_1221.mtb	MOT_1221	//SV_AC_CD6_	アクティブスキル3_A
+MOTION	ch002_m01_1231.mtb	MOT_1231	//SV_AC_CD5_S	アクティブスキル4_A
+MOTION	ch002_m01_1232.mtb	MOT_1232	//SV_AC_CD5_L	アクティブスキル4_B
+MOTION	ch002_m01_1233.mtb	MOT_1233	//SV_AC_CD5_1	アクティブスキル4_C
+MOTION	ch002_m01_1234.mtb	MOT_1234	//SV_AC_CD5_2	アクティブスキル4_D
+MOTION	ch002_m01_1241.mtb	MOT_1241	//MOT_1241	アクティブスキル5_A
+MOTION	ch002_m01_1251.mtb	MOT_1251	//MOT_1251	アクティブスキル6_A
+MOTION	ch002_m01_1252.mtb	MOT_1252	//MOT_1252	アクティブスキル6_B
+MOTION	ch002_m01_1261.mtb	MOT_1261	//MOT_1261	アクティブスキル7_A
+MOTION	ch002_m01_1271.mtb	MOT_1271	//MOT_1271	第一宝具(アクティブスキル8)
+MOTION	ch002_m01_1301.mtb	MOT_1301	//SV_EV_AC12_	宝具発動開始_A
+
+//●2000空中攻撃
+MOTION	ch002_m01_2001.mtb	MOT_2001	//SV_AC_AA1_	【空中】弱攻撃1_A
+MOTION	ch002_m01_2011.mtb	MOT_2011	//SV_AC_AA2_	【空中】弱攻撃2_A
+MOTION	ch002_m01_2101.mtb	MOT_2101	//SV_AC_CO8_	【空中】強攻撃1_A
+MOTION	ch002_m01_2102.mtb	MOT_2102	//SV_AC_CO8_	【空中】強攻撃1_B
+MOTION	ch002_m01_2103.mtb	MOT_2103	//SV_AC_CO9_	【空中】強攻撃1_C
+
+//●3000ダメージ
+MOTION	ch002_m01_3001.mtb	MOT_3001	//SV_RC_DAB_	小ダメージ前
+MOTION	ch002_m01_3002.mtb	MOT_3002	//SV_RC_DAR_	小ダメージ右
+MOTION	ch002_m01_3003.mtb	MOT_3003	//SV_RC_DAL_	小ダメージ左
+MOTION	ch002_m01_3011.mtb	MOT_3011	//SV_RC_LU1_L	ダメージ上昇
+MOTION	ch002_m01_3012.mtb	MOT_3012	//SV_RC_LU1_	ダメージ上昇から下降へ
+MOTION	ch002_m01_3013.mtb	MOT_3013	//SV_RC_LD1_L	ダメージ下降
+MOTION	ch002_m01_3014.mtb	MOT_3014	//SV_RC_STF_E	ダウン
+MOTION	ch002_m01_3015.mtb	MOT_3015	//SV_RC_GUQ_	ダウンから起き上がる（復帰）
+MOTION	ch002_m01_3016.mtb	MOT_3016	//SV_RC_BAF_E	空中受け身
+MOTION	ch002_m01_3021.mtb	MOT_3021	//SV_RC_STR_L	後方吹き飛び
+MOTION	ch002_m01_3022.mtb	MOT_3022	//SV_RC_STR_E	後方吹き飛び_壁ヒット
+MOTION	ch002_m01_3023.mtb	MOT_3023	//SV_RC_STF_S	後方吹き飛び_壁ずり落ち_開始
+MOTION	ch002_m01_3041.mtb	MOT_3041	//SV_RC_DIE_	死亡
+MOTION	ch002_m01_3051.mtb	MOT_3051	//SV_RC_REF_	弾かれ
+MOTION	ch002_m01_3201.amtb	MOT_3201	//SV_AD_002_	ダメージ上昇360度回転加算
+
+//●9000バトルフェイシャル
+MOTION	ch002_m01_9001.mtb	MOT_9001	//SV_FA_BAS_	通常顔（Ｔスタンス基本）
+MOTION	ch002_m01_9002.mtb	MOT_9002	//SV_FA_SER_	バトル顔（シリアス等）
+MOTION	ch002_m01_9003.mtb	MOT_9003	//SV_FA_DAM	ダメージ顔
+
+MOTION	ch002_m01_9101.amtb	MOT_9101	//SV_AD_EYE_U	【加算】上向き（通常、バトル顔用）
+MOTION	ch002_m01_9102.amtb	MOT_9102	//SV_AD_EYE_D	【加算】下向き（通常、バトル顔用）
+MOTION	ch002_m01_9103.amtb	MOT_9103	//SV_AD_EYE_R	【加算】右向き（通常、バトル顔用）
+MOTION	ch002_m01_9104.amtb	MOT_9104	//SV_AD_EYE_L	【加算】左向き（通常、バトル顔用）
+MOTION	ch002_m01_9105.amtb	MOT_9105	//SV_AD_BLK_	【加算】両瞼を閉じ（通常顔用）
+MOTION	ch002_m01_9106.amtb	MOT_9106	//SV_AD_BLK_R	【加算】右瞼を閉じ（通常顔用）
+MOTION	ch002_m01_9107.amtb	MOT_9107	//SV_AD_BLK_L	【加算】左瞼を閉じ（通常顔用）
+MOTION	ch002_m01_9201.amtb	MOT_9201	//SV_AD_TAL_2	【加算】口パク（ループ）
+MOTION	ch002_m01_9202.amtb	MOT_9202	//SV_AD_MOU_4	【加算】大きめに開く（通常顔用）
+MOTION	ch002_m01_9203.amtb	MOT_9203	//MOT_9203	【加算】大きめに開く（バトル顔用）
+MOTION	ch002_m01_9204.amtb	MOT_9204	//MOT_9204	【加算】小さく開く（通常顔用）
+MOTION	ch002_m01_9205.amtb	MOT_9205	//MOT_9205	【加算】小さく開く（バトル顔用）

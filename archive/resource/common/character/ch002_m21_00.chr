@@ -1,0 +1,47 @@
+// ChrID : 1 玉藻 / サーヴァント
+
+MODEL	ch002_m21_00.mdl
+
+
+MOTION_SKL	ch002_m01_00_skl.skl
+//MOTION_DIFF	SV0000_MDIFF.mdiff
+
+//モーションセット
+MOTION_SET	ch002_motion_set.chr
+BASECAMP_MOTION_SET	ch002_motion_basecamp_set.chr
+GALLERY_MOTION_SET	ch002_motion_gallery_set.chr
+
+/// モデルボディ用物理設定
+PHYSICS_SYSTEM	ch002_m01_00_blp.blp
+
+
+COLLISION	1.0	3.0
+//COLLISION_FROM_NODE	Reference	head	0
+
+SCALE	1	1	1
+SC_SCALE	1.0	1.0	1.0
+
+/// SIGHT_CONTROL	見るノード	見られるノード	-X回転限界	+X回転限界	-Y回転限界	+Y回転限界
+SIGHT_CONTROL	Head	Head	-30.0	10.0	-65.0	65.0
+/// SIGHT_NODE	ノード名	X回転Rate	Y回転Rate
+SIGHT_NODE	Head	0.40	0.35
+SIGHT_NODE	Neck	0.20	0.35
+SIGHT_NODE	Spine2	0.30	0.20
+SIGHT_NODE	Spine1	0.10	0.10
+
+// 追加アイテム
+
+// 			ID	モデル		ホネ			ROTX	ROTY	ROTZ	traX	traY	traZ	sclX	sclY	sclZ
+// 鏡
+ADD_ITEM	0	ch002_w01_00.mdl	Null_R	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00
+// 御札1枚
+ADD_ITEM	1	ch002_w10_00.mdl	Null_R	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00
+// 御札6枚
+ADD_ITEM	2	ch002_w11_00.mdl	Poscenter	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00
+// 御札3枚
+ADD_ITEM	3	ch002_w12_00.mdl	Null_R	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00
+
+// 以下オミット
+//ADD_ITEM	3	ch002_w02_00.mdl	LeftForeArm	0.55	100.00	0.00	0.10	0.10	-0.01	1.00	1.00	1.00
+//ADD_ITEM	4	OB1010.mdl	LeftFinger4_1	-90.00	0.00	90.00	0.016	0.00	0.001	0.88	0.88	0.88
+//ADD_ITEM	7	ch002_w12_00.mdl	Null_L	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00

@@ -1,0 +1,6 @@
+//●0000基本
+MOTION	ch001_w01_0001_r1.mtb	WEP_0001	//WEP_0001	戦闘待機
+MOTION	ch001_w01_0002_r1.mtb	WEP_0002	//WEP_0002	戦闘待機おかず
+//●1000地上攻撃
+MOTION	ch001_w01_1001_r1.mtb	WEP_1001	//WEP_1001	【地上】弱攻撃1_A
+MOTION	ch001_w01_1251_r1.mtb	WEP_1251	//WEP_1251	アクティブスキル6_A

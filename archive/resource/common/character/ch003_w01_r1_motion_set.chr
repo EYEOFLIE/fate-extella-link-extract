@@ -1,0 +1,43 @@
+//●0000基本
+MOTION	ch003_w01_0001_r1.mtb	WEP_0001	//WP_R_IDL_	戦闘待機
+MOTION	ch003_w01_0031_r1.mtb	WEP_0031	//WP_R_JUM_S	ジャンプ_上昇
+MOTION	ch003_w01_0032_r1.mtb	WEP_0032	//WP_R_FAL_S	ジャンプ_下降開始
+MOTION	ch003_w01_0033_r1.mtb	WEP_0033	//WP_R_FAL_L	ジャンプ_下降
+MOTION	ch003_w01_0034_r1.mtb	WEP_0034	//WP_R_FAL_E	ジャンプ_着地
+//●1000地上攻撃
+MOTION	ch003_w01_1001_r1.mtb	WEP_1001	//WP_R_CO1_	【地上】弱攻撃1_A
+MOTION	ch003_w01_1011_r1.mtb	WEP_1011	//WP_R_CO2_	【地上】弱攻撃2_A
+MOTION	ch003_w01_1021_r1.mtb	WEP_1021	//WP_R_CO3_	【地上】弱攻撃3_A
+MOTION	ch003_w01_1031_r1.mtb	WEP_1031	//WP_R_CO4_	【地上】弱攻撃4_A
+MOTION	ch003_w01_1041_r1.mtb	WEP_1041	//WP_R_CO7_	【地上】弱攻撃5_A
+MOTION	ch003_w01_1042_r1.mtb	WEP_1042	//WP_R_CO8_S	【地上】弱攻撃5_B
+MOTION	ch003_w01_1043_r1.mtb	WEP_1043	//WP_R_CO8_L	【地上】弱攻撃5_C
+MOTION	ch003_w01_1044_r1.mtb	WEP_1044	//WP_R_CO8_E	【地上】弱攻撃5_D
+MOTION	ch003_w01_1101_r1.mtb	WEP_1101	//WP_R_RA1_	【地上】強攻撃1_A
+MOTION	ch003_w01_1111_r1.mtb	WEP_1111	//WP_R_CO7_	【地上】強攻撃2_A
+MOTION	ch003_w01_1121_r1.mtb	WEP_1121	//WP_R_DA2_	【地上】強攻撃3_A
+MOTION	ch003_w01_1131_r1.mtb	WEP_1131	//WP_R_DA1_	【地上】強攻撃4_A
+MOTION	ch003_w01_1141_r1.mtb	WEP_1141	//WP_R_CD3_	【地上】強攻撃5_A
+MOTION	ch003_w01_1201_r1.mtb	WEP_1201	//WP_R_CD2_	アクティブスキル1_A
+MOTION	ch003_w01_1211_r1.mtb	WEP_1211	//WP_R_CD4_S	アクティブスキル2_A
+MOTION	ch003_w01_1212_r1.mtb	WEP_1212	//WP_R_CD4_E	アクティブスキル2_B
+MOTION	ch003_w01_1221_r1.mtb	WEP_1221	//WP_R_CO6_	アクティブスキル3_A
+MOTION	ch003_w01_1231_r1.mtb	WEP_1231	//WP_R_STA_S	アクティブスキル4_A
+MOTION	ch003_w01_1232_r1.mtb	WEP_1232	//WP_R_STA_L	アクティブスキル4_B
+MOTION	ch003_w01_1233_r1.mtb	WEP_1233	//WP_R_STA_E	アクティブスキル4_C
+MOTION	ch003_w01_1241_r1.mtb	WEP_1241	//WEP_1241	アクティブスキル5_A
+MOTION	ch003_w01_1251_r1.mtb	WEP_1251	//WEP_1251	アクティブスキル6_A
+MOTION	ch003_w01_1261_r1.mtb	WEP_1261	//WEP_1261	アクティブスキル7_A
+MOTION	ch003_w01_1271_r1.mtb	WEP_1271	//WEP_1271	アクティブスキル8_A
+//●2000空中攻撃
+MOTION	ch003_w01_2001_r1.mtb	WEP_2001	//WP_R_AA1_	【空中】弱攻撃1_A
+MOTION	ch003_w01_2011_r1.mtb	WEP_2011	//WP_R_AA2_	【空中】弱攻撃2_A
+MOTION	ch003_w01_2101_r1.mtb	WEP_2101	//WP_R_AA4_S	【空中】強攻撃1_A
+MOTION	ch003_w01_2102_r1.mtb	WEP_2102	//WP_R_AA4_L	【空中】強攻撃1_B
+MOTION	ch003_w01_2103_r1.mtb	WEP_2103	//WP_R_AA4_E	【空中】強攻撃1_C
+//●3000ダメージ
+MOTION	ch003_w01_3015_r1.mtb	WEP_3015	//WP_R_GUQ_	ダウンから起き上がる（復帰）
+MOTION	ch003_w01_3041_r1.mtb	WEP_3041	//WP_R_DIE_	死亡
+MOTION	ch003_w01_3051_r1.mtb	WEP_3051	//WP_R_REF_	弾かれ
+//●4000宝具イベント
+//●9000バトルフェイシャル

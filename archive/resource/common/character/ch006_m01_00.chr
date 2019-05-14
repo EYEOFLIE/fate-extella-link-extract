@@ -1,0 +1,63 @@
+// ChrID : 6 無銘 / サーヴァント
+
+MODEL	ch006_m01_00.mdl
+
+MOTION_SKL	ch006_m01_00_skl.skl
+//MOTION_DIFF	SV0000_MDIFF.mdiff
+
+//モーションセット
+MOTION_SET	ch006_motion_set.chr
+BASECAMP_MOTION_SET	ch006_motion_basecamp_set.chr
+GALLERY_MOTION_SET	ch006_motion_gallery_set.chr
+
+/// モデルボディ用物理設定
+PHYSICS_SYSTEM	ch006_m01_blp.blp
+
+
+COLLISION	1.0	3.0
+//COLLISION_FROM_NODE	Reference	head	0
+
+SCALE	1	1	1
+SC_SCALE	1.0	1.0	1.0
+
+/// SIGHT_CONTROL	見るノード	見られるノード	-X回転限界	+X回転限界	-Y回転限界	+Y回転限界
+SIGHT_CONTROL	Head	Head	-30.0	10.0	-65.0	65.0
+/// SIGHT_NODE	ノード名	X回転Rate	Y回転Rate
+SIGHT_NODE	Head	0.40	0.35
+SIGHT_NODE	Neck	0.20	0.35
+SIGHT_NODE	Spine2	0.30	0.20
+SIGHT_NODE	Spine1	0.10	0.10
+
+// 持っている武器
+
+// 追加アイテム
+// ID = 0 : ソフト管理
+// 			ID	モデル			ホネ	ROTX	ROTY	ROTZ	traX	traY	traZ	sclX	sclY	sclZ	モーションセット				リファレンスカット
+ADD_ITEM	0	ch006_w01_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+ADD_ITEM	1	ch006_w02_00.mdl	Null_L	0	0	0	0	0	0	1	1	1
+ADD_ITEM	2	ch006_w03_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+ADD_ITEM	3	ch006_w04_00.mdl	Null_L	0	0	0	0	0	0	1	1	1
+ADD_ITEM	4	ch006_w10_00.mdl	Null_L	0	0	0	0	0	0	1	1	1	ch006_w10_l_motion_set.chr	true
+ADD_ITEM	5	ch006_w11_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+ADD_ITEM	6	ch006_w12_00.mdl	Null_R	0	0	0	0	0	0	1	1	1	ch006_w12_r_motion_set.chr	true
+ADD_ITEM	7	ch006_w14_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+ADD_ITEM	8	ch006_w13_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch006_w13_p_motion_set.chr	true
+// エクスカリバー
+ADD_ITEM	9	ch016_w01_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+ADD_ITEM	10	ch006_w14_00.mdl	Null_L	0	0	0	0	0	0	1	1	1
+
+ADD_ITEM	11	ch008_w16_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+ADD_ITEM	12	ch024_w01_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+ADD_ITEM	13	ch001_w01_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+
+// 後で追加? ショットor武器はあとで考える
+// デュランダル		CH008_W16_00
+// ジュワユース		CH024_W01_00
+// 原初の火			ch001_w01_00
+
+SHOT_MODEL	ch006_w01_00.mdl	8
+SHOT_MODEL	ch006_w02_00.mdl	8
+SHOT_MODEL	ch006_w03_00.mdl	8
+SHOT_MODEL	ch006_w04_00.mdl	8
+SHOT_MODEL	ch006_w11_00.mdl	27
+SHOT_MODEL	ch006_w12_00.mdl	6

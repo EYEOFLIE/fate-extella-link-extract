@@ -1,0 +1,7 @@
+// CharaID : アルキメデス アクティブスキル7用 天秤セット
+
+MODEL	ch005_w13_00.mdl
+
+MOTION	ch005_w13_1261_p1.mtb	WEP_0000	//WEP_1261	アクティブスキル7_A 出現
+MOTION	ch005_w13_1262_p1.mtb	WEP_0001	//WEP_1262	アクティブスキル7_B ループ
+MOTION	ch005_w13_1263_p1.mtb	WEP_0002	//WEP_1263	アクティブスキル7_C 消滅

@@ -1,0 +1,35 @@
+// ChrID : 2 アルテラ / サーヴァント
+
+MODEL	ch003_m99_00.mdl	
+
+MOTION_SKL	ch000_m99_00_skl.skl
+// MOTION_DIFF	ch003_MDIFF.mdiff
+
+//モーションセット
+MOTION_SET	ch003_m99_motion_set.chr
+BASECAMP_MOTION_SET	ch003_m99_motion_basecamp_set.chr
+GALLERY_MOTION_SET	ch003_m99_motion_gallery_set.chr
+
+/// モデルボディ用物理設定
+//PHYSICS_SYSTEM	ch003_m01_blp.blp
+
+
+COLLISION	1.0	3.0
+//COLLISION_FROM_NODE	Reference	head	0
+
+SCALE	1	1	1
+SC_SCALE	1.0	1.0	1.0
+
+/// SIGHT_CONTROL	見るノード	見られるノード	-X回転限界	+X回転限界	-Y回転限界	+Y回転限界
+SIGHT_CONTROL	Head	Head	-30.0	10.0	-45.0	65.0
+/// SIGHT_NODE	ノード名	X回転Rate	Y回転Rate
+SIGHT_NODE	Head	0.40	0.35
+SIGHT_NODE	Neck	0.20	0.35
+SIGHT_NODE	Spine2	0.30	0.20
+SIGHT_NODE	Spine1	0.10	0.10
+
+// 追加アイテム
+
+// 			ID	モデル		ホネ	ROTX	ROTY	ROTZ	traX	traY	traZ	sclX	sclY	sclZ	motion
+ADD_ITEM	0	ch003_w01_00.mdl	Null_R	0.00	0.00	0.00	0.00	0.00	0.00	1.00	1.00	1.00	ch003_w01_r1_motion_set.chr
+//ADD_ITEM	1	OB1020.mdl	LeftFinger4_1	-90.00	0.00	90.00	0.012	0.000	0.001	1.00	1.00	1.00

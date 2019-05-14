@@ -1,0 +1,35 @@
+// ChrID : 0 ネロ / サーヴァント																
+																
+MODEL	ch001_m11_00.mdl															
+																
+MOTION_SKL	ch001_m01_00_skl.skl															
+																
+//モーションセット																
+MOTION_SET	ch001_motion_set.chr															
+BASECAMP_MOTION_SET	ch001_motion_basecamp_set.chr
+GALLERY_MOTION_SET	ch001_motion_gallery_set.chr
+																
+/// モデルボディ用物理設定																
+PHYSICS_SYSTEM	ch001_m01_blp.blp															
+																
+																
+COLLISION	1	3														
+COLLISION_FROM_NODE	Reference	head	0													
+																
+SCALE	1	1	1													
+SC_SCALE	1	1	1													
+																
+/// SIGHT_CONTROL	見るノード	見られるノード	#NAME?	#NAME?	#NAME?	#NAME?										
+SIGHT_CONTROL	Head	Head	-40	10	-65	65										
+/// SIGHT_NODE	ノード名	X回転Rate	Y回転Rate													
+SIGHT_NODE	Head	0.4	0.35													
+SIGHT_NODE	Neck	0.2	0.2													
+SIGHT_NODE	Spine2	0.15	0.2													
+SIGHT_NODE	Spine1	0.1	0.1													
+																
+// 持っている武器																
+// 	ID	モデル	ホネ	ROTX	ROTY	ROTZ	traX	traY	traZ	sclX	sclY	sclZ	モーションセット	スケルトンファイル	refかき消すか(true/false)	
+ADD_ITEM	0	ch001_w01_00.mdl	Null_R	0	0	0	0	0	0	1	1	1	ch001_w01_r_motion_set.chr
+ADD_ITEM	1	ch001_w91_00.mdl	Null_L	0	0	0	0	0	0	1	1	1	ch001_w91_l_motion_set.chr
+ADD_ITEM	2	ch001_w10_00.mdl	Null_L	0	0	0	0	0	0	1	1	1	ch001_w10_x_motion_set.chr
+ADD_ITEM	3	ch001_w10_00.mdl	Null_R	0	0	0	0	0	0	1	1	1	ch001_w10_x_motion_set.chr

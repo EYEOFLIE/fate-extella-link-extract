@@ -1,0 +1,16 @@
+//w02武器（歯車４枚１セット）（左グループ①）
+//0000基本
+MOTION	ch005_w02_0051_p4.mtb	WEP_0051	//WP_R_GUA_E	ガード(左１セットのみ表示)
+//地上攻撃
+MOTION	ch005_w02_1031_p4.mtb	WEP_1031	//WP_R_CO5_	【地上】弱攻撃4_A
+MOTION	ch005_w02_1101_p4.mtb	WEP_1101	//WP_R_CO7_S	【地上】強攻撃1_A
+MOTION	ch005_w02_1102_p4.mtb	WEP_1102	//WP_R_CO7_L	【地上】強攻撃1_B
+MOTION	ch005_w02_1103_p4.mtb	WEP_1103	//WP_R_CO7_E	【地上】強攻撃1_C
+MOTION	ch005_w02_1141_p4.mtb	WEP_1141	//WP_R_CO6_	【地上】強攻撃5_A
+MOTION	ch005_w02_1221_p4.mtb	WEP_1221	//WP_AC_CD3_S	アクティブスキル3_A
+MOTION	ch005_w02_1222_p4.mtb	WEP_1222	//WP_AC_CD3_L	アクティブスキル3_B
+MOTION	ch005_w02_1251_p4.mtb	WEP_1251	//WEP_1251	アクティブスキル6_A（こっち必要？）
+//空中攻撃
+MOTION	ch005_w02_2101_p4.mtb	WEP_2101	//WP_R_AA5_S	【空中】強攻撃1_A
+MOTION	ch005_w02_2102_p4.mtb	WEP_2102	//WP_R_AA5_L	【空中】強攻撃1_B
+MOTION	ch005_w02_2103_p4.mtb	WEP_2013	//WP_R_AA5_E	【空中】強攻撃1_C

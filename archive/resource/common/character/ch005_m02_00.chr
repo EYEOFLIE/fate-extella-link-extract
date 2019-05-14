@@ -1,0 +1,60 @@
+// ChrID :13 アルキメデス / サーヴァント
+
+MODEL	ch005_m02_00.mdl
+
+MOTION_SKL	ch005_m01_00_skl.skl
+//MOTION_DIFF	ch005_m01_MDIFF.mdiff
+
+// モーションセット
+MOTION_SET	ch005_motion_set.chr
+BASECAMP_MOTION_SET	ch005_motion_basecamp_set.chr
+GALLERY_MOTION_SET	ch005_motion_gallery_set.chr
+
+// モデルボディ用物理設定
+PHYSICS_SYSTEM	ch005_m01_blp.blp
+
+COLLISION	1.0	3.0
+//COLLISION_FROM_NODE	Reference	head	0
+
+SCALE	1	1	1
+SC_SCALE	1.0	1.0	1.0
+
+// SIGHT_CONTROL	見るノード	見られるノード	-X回転限界	+X回転限界	-Y回転限界	+Y回転限界
+SIGHT_CONTROL	Head	Head	-30.0	10.0	-65.0	65.0
+// SIGHT_NODE	ノード名	X回転Rate	Y回転Rate
+SIGHT_NODE	Head	0.40	0.35
+SIGHT_NODE	Neck	0.20	0.35
+SIGHT_NODE	Spine2	0.30	0.20
+SIGHT_NODE	Spine1	0.10	0.10
+
+// 追加アイテム
+
+// 	ID	モデル	ホネ	ROTX	ROTY	ROTZ	traX	traY	traZ	sclX	sclY	sclZ	モーションセット	スケルトンファイル	位置除外(true/false)	回転除外(true/false)	
+ADD_ITEM	0	ch005_w01_00.mdl	Null_R	0	0	0	0	0	0	1	1	1					//歯車単体（右）
+ADD_ITEM	1	ch005_w01_00.mdl	Null_L	0	0	0	0	0	0	1	1	1					//歯車単体（左）
+ADD_ITEM	2	ch005_w02_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch005_w02_p1_motion_set.chr				//歯車4つ1セット、最大左右で3つずつの計6つ（Rグループ1）
+ADD_ITEM	3	ch005_w02_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch005_w02_p2_motion_set.chr				//歯車4つ1セット、最大左右で3つずつの計6つ（Rグループ2）
+ADD_ITEM	4	ch005_w02_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch005_w02_p3_motion_set.chr				//歯車4つ1セット、最大左右で3つずつの計6つ（Rグループ3）
+ADD_ITEM	5	ch005_w02_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch005_w02_p4_motion_set.chr				//歯車4つ1セット、最大左右で3つずつの計6つ（Lグループ1）
+ADD_ITEM	6	ch005_w02_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch005_w02_p5_motion_set.chr				//歯車4つ1セット、最大左右で3つずつの計6つ（Lグループ2）
+ADD_ITEM	7	ch005_w02_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch005_w02_p6_motion_set.chr				//歯車4つ1セット、最大左右で3つずつの計6つ（Lグループ3）
+ADD_ITEM	8	ch005_w10_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch005_w10_p_motion_set.chr				// クレーン2本セット（グループ① cosmos互換）
+ADD_ITEM	9	ch005_w11_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch005_w11_p_motion_set.chr				// ドリル（右）
+ADD_ITEM	10	ch005_w12_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch005_w12_p_motion_set.chr				// ドリル（左）（テクスチャー違い）
+ADD_ITEM	11	ch005_w13_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch005_w13_p_motion_set.chr				// 天秤
+ADD_ITEM	12	ch005_w14_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1												// 鏡1枚(単体)
+ADD_ITEM	13	ch005_w15_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch005_w15_p_motion_set.chr				// 鏡3枚1セット
+ADD_ITEM	14	ch005_w16_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch005_w16_p_motion_set.chr				// 天球儀
+ADD_ITEM	15	ch005_w17_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch005_w17_p_motion_set.chr				// 鏡9枚1セット
+// 以下ソフトで水増し
+ADD_ITEM	16	ch005_w01_00.mdl	Null_R	0	0	0	0	0	0	1	1	1												// 歯車 くっつき用 ?
+ADD_ITEM	17	ch005_w01_00.mdl	Null_L	0	0	0	0	0	0	1	1	1												// 歯車
+ADD_ITEM	18	ch005_w18_00.mdl	Reference	0	0	0	0	0	0	1	1	1	ch005_w18_x_motion_set.chr				// クレーン1本（アクティブスキル４専用）
+ADD_ITEM	19	ch005_w18_00.mdl	Reference	0	0	0	0	0	0	1	1	1	ch005_w18_x_motion_set.chr				// クレーン1本（アクティブスキル４専用）
+ADD_ITEM	20	ch005_w18_00.mdl	Reference	0	0	0	0	0	0	1	1	1	ch005_w18_x_motion_set.chr				// クレーン1本（アクティブスキル４専用）
+ADD_ITEM	21	ch005_w18_00.mdl	Reference	0	0	0	0	0	0	1	1	1	ch005_w18_x_motion_set.chr				// クレーン1本（アクティブスキル４専用）
+
+
+SHOT_MODEL	ch005_w01_00.mdl	8
+// 天秤
+SHOT_MODEL	ch005_w13_00.chr	2
