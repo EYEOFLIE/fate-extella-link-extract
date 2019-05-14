@@ -1,0 +1,49 @@
+// ChrID : 0 フランシス・ドレイク / サーヴァント
+
+MODEL	ch022_m02_00.mdl
+
+MOTION_SKL	ch022_m01_00_skl.skl
+
+//モーションセット
+MOTION_SET	ch022_motion_set.chr
+BASECAMP_MOTION_SET	ch022_motion_basecamp_set.chr
+GALLERY_MOTION_SET	ch022_motion_gallery_set.chr
+
+/// モデルボディ用物理設定
+PHYSICS_SYSTEM	ch022_m01_blp.blp
+
+
+COLLISION	1.0	3.0
+COLLISION_FROM_NODE	Reference	head	0
+
+SCALE	1	1	1
+SC_SCALE	1.0	1.0	1.0
+
+/// SIGHT_CONTROL	見るノード	見られるノード	-X回転限界	+X回転限界	-Y回転限界	+Y回転限界
+SIGHT_CONTROL	Head	Head	-40.0	10.0	-65.0	65.0
+/// SIGHT_NODE	ノード名	X回転Rate	Y回転Rate
+SIGHT_NODE	Head	0.40	0.35
+SIGHT_NODE	Neck	0.20	0.20
+SIGHT_NODE	Spine2	0.15	0.20
+SIGHT_NODE	Spine1	0.10	0.10
+
+// 持っている武器																
+// 	ID	モデル	ホネ	ROTX	ROTY	ROTZ	traX	traY	traZ	sclX	sclY	sclZ	モーションセット	スケルトンファイル	Ref位置無効化	回転除外(true/false)
+//カトラス（剣）																
+ADD_ITEM	0	ch022_w01_00.mdl	Null_R	0	0	0	0	0	0	1	1	1				
+//二丁拳銃 （金）																
+ADD_ITEM	1	ch022_w02_00.mdl	Null_R	0	0	0	0	0	0	1	1	1	ch022_w02_motion_set.chr			
+//二丁拳銃 （銀）																
+ADD_ITEM	2	ch022_w03_00.mdl	Null_L	0	0	0	0	0	0	1	1	1	ch022_w03_motion_set.chr			
+//カルバリン砲																
+ADD_ITEM	3	ch022_w10_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch022_w10_motion_set.chr			
+//カルバリン砲（小４機）																
+ADD_ITEM	4	ch022_w11_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch022_w11_x1_motion_set.chr			
+//カルバリン砲（小４機）																
+ADD_ITEM	5	ch022_w11_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch022_w11_x2_motion_set.chr			
+//小型ボート																
+ADD_ITEM	6	ch022_w13_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1		
+
+SHOT_MODEL	ch022_w10_00.chr	2
+// 錨(強攻撃(1つ) + AS(3つx2))
+SHOT_MODEL	ch022_w16_00.mdl	7

@@ -1,0 +1,79 @@
+// ChrID : 24 シャルルマーニュ / サーヴァント
+
+MODEL	ch024_m01_00.mdl	
+
+MOTION_SKL	ch024_m01_00_skl.skl
+
+//モーションセット
+MOTION_SET	ch024_motion_set.chr
+BASECAMP_MOTION_SET	ch024_motion_basecamp_set.chr
+GALLERY_MOTION_SET	ch024_motion_gallery_set.chr
+
+/// モデルボディ用物理設定
+PHYSICS_SYSTEM	ch024_m01_blp.blp
+
+
+COLLISION	1.0	3.0
+COLLISION_FROM_NODE	Reference	head	0
+
+SCALE	1	1	1
+SC_SCALE	1.0	1.0	1.0
+
+/// SIGHT_CONTROL	見るノード	見られるノード	-X回転限界	+X回転限界	-Y回転限界	+Y回転限界
+SIGHT_CONTROL	Head	Head	-40.0	10.0	-65.0	65.0
+/// SIGHT_NODE	ノード名	X回転Rate	Y回転Rate
+SIGHT_NODE	Head	0.40	0.35
+SIGHT_NODE	Neck	0.20	0.20
+SIGHT_NODE	Spine2	0.15	0.20
+SIGHT_NODE	Spine1	0.10	0.10
+
+// 持っている武器																
+// 	ID	モデル	ホネ	ROTX	ROTY	ROTZ	traX	traY	traZ	sclX	sclY	sclZ	モーションセット	スケルトンファイル	位置除外(true/false)	回転除外(true/false)
+//ジョワユーズ（デフォルト）
+ADD_ITEM	0	ch024_w01_00.mdl	Null_R	0	0	0	0	0	0	1	1	1	
+//ジョワユーズ（デフォルト）鞘込み
+ADD_ITEM	1	ch024_w02_00.mdl	atc1	0	0	0	0	0	0	1	1	1
+//ビット剣（配置用）骨1２本
+ADD_ITEM	2	ch024_w12_00.mdl	Poscenter	0	0	0	0	0	0	1	1	1	ch024_w12_p_motion_set.chr
+//ビット剣（青白）
+ADD_ITEM	3	ch024_w10_00.mdl	weapon01	0	0	0	0	0	0	1	1	1	ch024_w10_x1_motion_set.chr
+//ビット剣（青白）
+ADD_ITEM	4	ch024_w10_00.mdl	weapon02	0	0	0	0	0	0	1	1	1	ch024_w10_x2_motion_set.chr
+//ビット剣（青白）																
+ADD_ITEM	5	ch024_w10_00.mdl	weapon03	0	0	0	0	0	0	1	1	1	ch024_w10_x3_motion_set.chr
+//ビット剣（青白）																
+ADD_ITEM	6	ch024_w10_00.mdl	weapon04	0	0	0	0	0	0	1	1	1	ch024_w10_x4_motion_set.chr
+//ビット剣（青白）																
+ADD_ITEM	7	ch024_w10_00.mdl	weapon05	0	0	0	0	0	0	1	1	1	ch024_w10_x5_motion_set.chr
+//ビット剣（青白）																
+ADD_ITEM	8	ch024_w10_00.mdl	weapon06	0	0	0	0	0	0	1	1	1	ch024_w10_x6_motion_set.chr
+//ビット剣（赤黒）																
+ADD_ITEM	9	ch024_w11_00.mdl	weapon07	0	0	0	0	0	0	1	1	1	ch024_w11_x1_motion_set.chr
+//ビット剣（赤黒）																
+ADD_ITEM	10	ch024_w11_00.mdl	weapon08	0	0	0	0	0	0	1	1	1	ch024_w11_x2_motion_set.chr
+//ビット剣（赤黒）																
+ADD_ITEM	11	ch024_w11_00.mdl	weapon09	0	0	0	0	0	0	1	1	1	ch024_w11_x3_motion_set.chr
+//ビット剣（赤黒）																
+ADD_ITEM	12	ch024_w11_00.mdl	weapon010	0	0	0	0	0	0	1	1	1	ch024_w11_x4_motion_set.chr
+//ビット剣（赤黒）																
+ADD_ITEM	13	ch024_w11_00.mdl	weapon011	0	0	0	0	0	0	1	1	1	ch024_w11_x5_motion_set.chr
+//ビット剣（赤黒）																
+ADD_ITEM	14	ch024_w11_00.mdl	weapon012	0	0	0	0	0	0	1	1	1	ch024_w11_x6_motion_set.chr
+//ブロードソード（氷剣）																
+ADD_ITEM	15	ch024_w13_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+//ハルバート（斧）
+ADD_ITEM	16	ch024_w14_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+//メイス
+ADD_ITEM	17	ch024_w15_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+//アストルフォランス（槍）
+ADD_ITEM	18	ch024_w16_00.mdl	Null_R	0	0	0	0	0	0	1	1	1
+
+// 背中のビット群(別に分けて用意することにしました。モーションもそれだけのセットにしています）
+//ビット剣（青白）
+ADD_ITEM	19	ch024_w10_00.mdl	weapon01	0	0	0	0	0	0	1	1	1	ch024_w10_x1_bit_motion_set.chr
+//ビット剣（青白）
+ADD_ITEM	20	ch024_w10_00.mdl	weapon02	0	0	0	0	0	0	1	1	1	ch024_w10_x1_bit_motion_set.chr
+//ビット剣（赤黒）																
+ADD_ITEM	21	ch024_w11_00.mdl	weapon07	0	0	0	0	0	0	1	1	1	ch024_w11_x1_bit_motion_set.chr
+//ビット剣（赤黒）																
+ADD_ITEM	22	ch024_w11_00.mdl	weapon08	0	0	0	0	0	0	1	1	1	ch024_w11_x1_bit_motion_set.chr

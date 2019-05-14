@@ -1,0 +1,35 @@
+//●0000基本
+MOTION	ch021_w01_0001_x1.mtb	WEP_0001	//WEP_0001	戦闘待機
+
+//●1000地上攻撃
+MOTION	ch021_w01_1021_x1.mtb	WEP_1021	//WEP_1021	【地上】弱攻撃3_A			
+MOTION	ch021_w01_1041_x1.mtb	WEP_1041	//WEP_1041	【地上】弱攻撃5_A
+MOTION	ch021_w01_1121_x1.mtb	WEP_1121	//WEP_1121	【地上】強攻撃3_A
+MOTION	ch021_w01_1131_x1.mtb	WEP_1131	//WEP_1131	【地上】強攻撃4_A
+MOTION	ch021_w01_1132_x1.mtb	WEP_1132	//WEP_1132	【地上】強攻撃4_B
+MOTION	ch021_w01_1133_x1.mtb	WEP_1133	//WEP_1133	【地上】強攻撃4_C
+MOTION	ch021_w01_1141_x1.mtb	WEP_1141	//WEP_1141	【地上】強攻撃5_A
+MOTION	ch021_w01_1201_x1.mtb	WEP_1201	//WEP_1201	アクティブスキル1_A
+MOTION	ch021_w01_1221_x1.mtb	WEP_1221	//WEP_1221	アクティブスキル3_A
+MOTION	ch021_w01_1231_x1.mtb	WEP_1231	//WEP_1231	アクティブスキル4_A
+MOTION	ch021_w01_1241_x1.mtb	WEP_1241	//WEP_1241	アクティブスキル5_A
+MOTION	ch021_w01_1242_x1.mtb	WEP_1242	//WEP_1242	アクティブスキル5_B
+MOTION	ch021_w01_1243_x1.mtb	WEP_1243	//WEP_1243	アクティブスキル5_C
+MOTION	ch021_w01_1244_x1.mtb	WEP_1244	//WEP_1244	アクティブスキル5_D
+MOTION	ch021_w01_1245_x1.mtb	WEP_1245	//WEP_1245	アクティブスキル5_E
+MOTION	ch021_w01_1251_x1.mtb	WEP_1251	//WEP_1251	アクティブスキル6_A			
+MOTION	ch021_w01_1273_x1.mtb	WEP_1273	//WEP_1273	アクティブスキル8_C
+
+//●2000空中攻撃
+MOTION	ch021_w01_2001_x1.mtb	WEP_2001	//WEP_2001	【空中】弱攻撃1_A
+MOTION	ch021_w01_2011_x1.mtb	WEP_2011	//WEP_2011	【空中】弱攻撃2_A
+
+//●3000ダメージ
+
+//●4000宝具イベント
+
+//●6000ベースキャンプ
+MOTION	ch021_w01_6003_x1.mtb	WEP_6003	//WEP_6003	待機バリエーション1
+MOTION	ch021_w01_6004_x1.mtb	WEP_6004	//WEP_6004	待機バリエーション2
+
+//●9000バトルフェイシャル

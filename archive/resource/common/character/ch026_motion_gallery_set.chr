@@ -1,0 +1,38 @@
+//ch026　アルジュナ
+
+MOTION	ch026_m01_0001.mtb	MOT_0001	// 戦闘待機
+MOTION	ch026_m01_0002.mtb	MOT_0002	// 戦闘待機おかず
+MOTION	ch026_m01_0011.mtb	MOT_0011	// 走り
+MOTION	ch026_m01_0031.mtb	MOT_0031	// ジャンプ_上昇
+MOTION	ch026_m01_0032.mtb	MOT_0032	// ジャンプ_下降開始
+MOTION	ch026_m01_0034.mtb	MOT_0034	// ジャンプ_着地
+MOTION	ch026_m01_0051.mtb	MOT_0051	// ガード
+MOTION	ch026_m01_0201.mtb	MOT_0201	// 勝利決めポーズ
+MOTION	ch026_m01_0202.mtb	MOT_0202	// 決めポーズループ
+MOTION	ch026_m01_1001.mtb	MOT_1001	// 【地上】弱攻撃1_A
+MOTION	ch026_m01_1011.mtb	MOT_1011	// 【地上】弱攻撃2_A
+MOTION	ch026_m01_1021.mtb	MOT_1021	// 【地上】弱攻撃3_A
+MOTION	ch026_m01_2101.mtb	MOT_2101	// 【空中】強攻撃1_A
+MOTION	ch026_m01_2102.mtb	MOT_2102	// 【空中】強攻撃1_B
+MOTION	ch026_m01_2103.mtb	MOT_2103	// 【空中】強攻撃1_C
+
+MOTION	ch026_m01_6001.mtb	MOT_6001	// 通常待機
+MOTION	ch026_m01_6012.mtb	MOT_6012	// 走りループ（通常）
+
+//●9000フェイシャル
+MOTION	ch026_m01_9001.mtb	MOT_9001	//SV_FA_BAS_	通常顔（Ｔスタンス基本）
+MOTION	ch026_m01_9002.mtb	MOT_9002	//SV_FA_SER_	バトル顔（シリアス等）
+MOTION	ch026_m01_9003.mtb	MOT_9003	//SV_FA_DAM	ダメージ顔
+
+MOTION	ch026_m01_9101.amtb	MOT_9101	//SV_AD_EYE_U	【加算】上向き（通常、バトル顔用）
+MOTION	ch026_m01_9102.amtb	MOT_9102	//SV_AD_EYE_D	【加算】下向き（通常、バトル顔用）
+MOTION	ch026_m01_9103.amtb	MOT_9103	//SV_AD_EYE_R	【加算】右向き（通常、バトル顔用）
+MOTION	ch026_m01_9104.amtb	MOT_9104	//SV_AD_EYE_L	【加算】左向き（通常、バトル顔用）
+MOTION	ch026_m01_9105.amtb	MOT_9105	//SV_AD_BLK_	【加算】両瞼を閉じ（通常顔用）
+MOTION	ch026_m01_9106.amtb	MOT_9106	//SV_AD_BLK_R	【加算】右瞼を閉じ（通常顔用）
+MOTION	ch026_m01_9107.amtb	MOT_9107	//SV_AD_BLK_L	【加算】左瞼を閉じ（通常顔用）
+MOTION	ch026_m01_9201.amtb	MOT_9201	//SV_AD_TAL_2	【加算】口パク（ループ）
+MOTION	ch026_m01_9202.amtb	MOT_9202	//SV_AD_MOU_4	【加算】大きめに開く（通常顔用）
+MOTION	ch026_m01_9203.amtb	MOT_9203	//MOT_9203	【加算】大きめに開く（バトル顔用）
+MOTION	ch026_m01_9204.amtb	MOT_9204	//MOT_9204	【加算】小さく開く（通常顔用）
+MOTION	ch026_m01_9205.amtb	MOT_9205	//MOT_9205	【加算】小さく開く（バトル顔用）

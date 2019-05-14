@@ -1,0 +1,20 @@
+//ch025　スカサハ
+
+MOTION	ch025_m99_0001.mtb	MOT_0001	// 戦闘待機
+MOTION	ch025_m99_0002.mtb	MOT_0002	// 戦闘待機おかず
+MOTION	ch025_m99_0011.mtb	MOT_0011	// 走り
+MOTION	ch025_m99_0031.mtb	MOT_0031	// ジャンプ_上昇
+MOTION	ch025_m99_0032.mtb	MOT_0032	// ジャンプ_下降開始
+MOTION	ch025_m99_0034.mtb	MOT_0034	// ジャンプ_着地
+MOTION	ch025_m99_0051.mtb	MOT_0051	// ガード
+MOTION	ch025_m99_0201.mtb	MOT_0201	// 勝利決めポーズ
+MOTION	ch025_m99_0202.mtb	MOT_0202	// 決めポーズループ
+MOTION	ch025_m99_1001.mtb	MOT_1001	// 【地上】弱攻撃1_A
+MOTION	ch025_m99_1011.mtb	MOT_1011	// 【地上】弱攻撃2_A
+MOTION	ch025_m99_1021.mtb	MOT_1021	// 【地上】弱攻撃3_A
+MOTION	ch025_m99_2101.mtb	MOT_2101	// 【空中】強攻撃1_A
+MOTION	ch025_m99_2102.mtb	MOT_2102	// 【空中】強攻撃1_B
+MOTION	ch025_m99_2103.mtb	MOT_2103	// 【空中】強攻撃1_C
+
+MOTION	ch025_m99_6001.mtb	MOT_6001	// 通常待機
+MOTION	ch025_m99_6012.mtb	MOT_6012	// 走りループ（通常）

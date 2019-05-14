@@ -1,0 +1,9 @@
+//●0000基本
+//●1000地上攻撃			
+MOTION	ch023_w12_1201_r1.mtb	WEP_1201	//WEP_1201	アクティブスキル1_A
+MOTION	ch023_w12_1202_r1.mtb	WEP_1202	//WEP_1202	アクティブスキル1_B
+MOTION	ch023_w12_1203_r1.mtb	WEP_1203	//WEP_1203	アクティブスキル1_C
+MOTION	ch023_w12_1241_r1.mtb	WEP_1241	NO_LERP	//WEP_1241	アクティブスキル5_A
+MOTION	ch023_w12_1242_r1.mtb	WEP_1242	NO_LERP	//WEP_1242	アクティブスキル5_B
+//●2000空中攻撃
+//●3000ダメージ

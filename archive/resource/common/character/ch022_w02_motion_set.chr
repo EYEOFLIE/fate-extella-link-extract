@@ -1,0 +1,25 @@
+//●0000基本
+
+//●1000地上攻撃			
+MOTION	ch022_w02_1021_r1.mtb	WEP_1021	//WEP_1021	【地上】弱攻撃3_A
+MOTION	ch022_w02_1031_r1.mtb	WEP_1031	//WEP_1031	【地上】弱攻撃4_A
+MOTION	ch022_w02_1041_r1.mtb	WEP_1041	//WEP_1041	【地上】弱攻撃5_A
+MOTION	ch022_w02_1121_r1.mtb	WEP_1121	//WEP_1121	【地上】強攻撃3_A
+MOTION	ch022_w02_1131_r1.mtb	WEP_1131	//WEP_1131	【地上】強攻撃4_A
+MOTION	ch022_w02_1201_r1.mtb	WEP_1201	//WEP_1201	アクティブスキル1_A
+MOTION	ch022_w02_1202_r1.mtb	WEP_1202	//WEP_1202	アクティブスキル1_B
+MOTION	ch022_w02_1203_r1.mtb	WEP_1203	//WEP_1203	アクティブスキル1_C
+MOTION	ch022_w02_1261_r1.mtb	WEP_1261	//WEP_1261	アクティブスキル7_A
+MOTION	ch022_w02_1262_r1.mtb	WEP_1262	//WEP_1262	アクティブスキル7_B
+MOTION	ch022_w02_1263_r1.mtb	WEP_1263	//WEP_1263	アクティブスキル7_C
+
+//●2000空中攻撃
+MOTION	ch022_w02_2001_r1.mtb	WEP_2001	//WEP_2001	【空中】弱攻撃1_A
+MOTION	ch022_w02_2011_r1.mtb	WEP_2011	//WEP_2011	【空中】弱攻撃2_A
+MOTION	ch022_w02_2101_r1.mtb	WEP_2101	//WEP_2101	【空中】強攻撃1_A
+MOTION	ch022_w02_2102_r1.mtb	WEP_2102	//WEP_2102	【空中】強攻撃1_B
+MOTION	ch022_w02_2103_r1.mtb	WEP_2103	//WEP_2103	【空中】強攻撃1_C
+
+//●3000ダメージ
+
+//●9000バトルフェイシャル
