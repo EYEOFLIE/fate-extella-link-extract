@@ -1,0 +1,26 @@
+﻿/*
+ *	プロトサーヴァントAI行動
+ */
+//  percent：発生確率
+//  time:待機時間の最小と最大値
+//  start_dis:待機発動位置と目標との距離の最小と最大値
+//  counter_percent:リアクションの発動確率
+{
+	//  平均モード
+	"normal":
+	[
+		 {"percent":100, "time_min":1.0, "time_max":1.5, "start_dis_min":5, "start_dis_max":7, "counter_percent":50}
+	]
+	
+	//  暴走１モード
+	,"rampage1":
+	[
+		 {"percent":100, "time_min":0.5, "time_max":1.0, "start_dis_min":5, "start_dis_max":7, "counter_percent":50}
+	]
+
+	//  暴走２モード
+	,"rampage2":
+	[
+		 {"percent":100, "time_min":0.0, "time_max":0.1, "start_dis_min":5, "start_dis_max":7, "counter_percent":50}
+	]
+}

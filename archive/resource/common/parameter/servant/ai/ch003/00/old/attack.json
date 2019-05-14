@@ -1,0 +1,41 @@
+﻿/*
+ *	プロトサーヴァントAI行動
+ */
+//  MAXは12コマンド、必要なら追加可能
+//　A:普通攻撃　B:範囲攻撃　D:ダッシュ　G:ガード(0.2秒～0.5秒)　J:ジャンプ
+//　range:攻撃が発動する距離　angle:攻撃が発動する角度　percent:そのコマンドが選ばれる確率　moment:攻撃直前の待機時間
+{
+	// 平均モード
+	"normal":
+	[
+		{"command":["A","A","B"], "range":5, "angle":60, "percent":40, "moment":0.8}
+		,{"command":["B"], "range":5, "angle":60, "percent":40, "moment":0.8}
+		,{"command":["D","B"], "range":16, "angle":60, "percent":20, "moment":0.8}
+	]
+
+	// 暴走１モード
+	,"rampage1":
+	[
+		{"command":["A","A","A"], "range":5, "angle":60, "percent":30, "moment":0.8}
+		,{"command":["A","A","A","A"], "range":5, "angle":60, "percent":30, "moment":0.8}
+		,{"command":["A","A","A","A","A"], "range":5, "angle":60, "percent":10, "moment":0.8}
+		,{"command":["A","A","A","A","B","B"], "range":5, "angle":60, "percent":5, "moment":0.8}
+		,{"command":["A","A","A","B","B"], "range":5, "angle":60, "percent":10, "moment":0.8}
+		,{"command":["A","A","B","B"], "range":5, "angle":60, "percent":10, "moment":0.8}
+		,{"command":["A","B","B"], "range":5, "angle":60, "percent":10, "moment":0.8}
+		,{"command":["B"], "range":5, "angle":60, "percent":20, "moment":0.8}
+		,{"command":["J","A","A","A"], "range":14, "angle":60, "percent":3, "moment":1.0}
+		,{"command":["J","B"], "range":14, "angle":60, "percent":3, "moment":1.0}
+	]
+
+	// 暴走２モード
+	,"rampage2":
+	[
+		{"command":["D","B"], "range":16, "angle":60, "percent":10, "moment":0.0}
+		,{"command":["A","A","A","A"], "range":5, "angle":60, "percent":20, "moment":0.0}
+		,{"command":["J","B"], "range":5, "angle":60, "percent":15, "moment":0.5}
+		,{"command":["A","A","B"], "range":3.5, "angle":60, "percent":20, "moment":0.0}
+		,{"command":["A","A","A","B","B"], "range":5, "angle":60, "percent":30, "moment":0.0}
+		,{"command":["D","A","A","A","B","B"], "range":18, "angle":60, "percent":20, "moment":0.0}
+	]
+}

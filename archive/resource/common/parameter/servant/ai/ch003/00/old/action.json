@@ -1,0 +1,29 @@
+﻿/*
+ *	プロトサーヴァントAI行動
+ */
+//　type行動タイプ：attack攻撃　evade回避　wait待機
+//  base_percent:変動確率受ける前の基本確率
+//  change_percent:選ばれて行動したら基本確率に加算する変動確率、選べなかったら基本確率に戻る
+//  guard_percent:ガードを発動させる確率（百分率）
+{
+	// 平均モード
+	// 道中逃走AIの呂布はガードをしない
+	"normal":
+	[
+		 {"type":"attack", "base_percent":100, "change_percent":-5, "guard_percent":0.0}
+	]
+	
+	// 暴走１モード
+	,"rampage1":
+	[
+		 {"type":"attack", "base_percent":70, "change_percent":-15, "guard_percent":50.0}
+		 ,{"type":"wait", "base_percent":30, "change_percent":-15, "guard_percent":0.0}
+	]
+
+	// 暴走２モード
+	,"rampage2":
+	[
+		 {"type":"attack", "base_percent":100, "change_percent":0, "guard_percent":0.0}
+		 ,{"type":"evade", "base_percent":30, "change_percent":0, "guard_percent":0.0}
+	]
+}
