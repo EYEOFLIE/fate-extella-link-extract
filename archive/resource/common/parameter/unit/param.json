@@ -1,0 +1,760 @@
+﻿/*
+ *	地上ユニットパラメータ
+ 
+ 	"SHIFT_ATTACK_INTERVAL": //	攻撃モードになるかどうかのチェック間隔 ここを変えると条件が整い次第すぐに攻撃に移行する
+ 								数値を大きくすると反応が鈍くなり、攻撃してこない印象になる
+ 								数値を小さくすると反応が過敏になり、積極的に攻撃してくる印象になる
+ 
+ 	"PLAYER_MIN_RANGE": 	//	プレイヤーを取り囲む最も近い距離 数値を小さくするほどプレイヤーに接近する
+ 						最も遠い距離はユニットの半径と同じになる
+ 
+ 
+ 
+ */
+[
+	//---------------------------------------------
+	// enemy_A1：ソルジャー（剣・斧）
+	{
+		"index": 0						// パラメータインデックス(easy)
+		
+		// FLAT_MAP_2で調整する際は、ここをいじる
+		,"RADIUS_PS4": {"min":2.0, "max":20.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":6.0, "max":10.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.25				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 2.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":18.0, "max":30.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":8.0, "max":12.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+	,{
+		"index": 1000						// パラメータインデックス(normal)
+		
+		,"RADIUS_PS4": {"min":6.0, "max":20.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":6.0, "max":10.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.25				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 3.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":2.0, "max":7.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":60.0, "max":60.1}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+	,{
+		"index": 2000						// パラメータインデックス(hard)
+		
+		,"RADIUS_PS4": {"min":6.0, "max":20.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":6.0, "max":10.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.25				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 0.5					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":2.0, "max":7.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":8.0, "max":12.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+	,{
+		"index": 3000						// パラメータインデックス(super hard)
+		
+		,"RADIUS_PS4": {"min":6.0, "max":20.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":6.0, "max":10.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.25				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 0.1					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":0.0, "max":5.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":8.0, "max":12.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+
+	//---------------------------------------------
+	// enemy_A1：コマンダー（剣）
+	,{
+		"index": 1						// パラメータインデックス(easy)
+		
+		,"RADIUS_PS4": {"min":2.0, "max":6.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":2.0, "max":6.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.25				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":12.0, "max":20.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":8.0, "max":12.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+	,{
+		"index": 1001						// パラメータインデックス(normal)
+		
+		,"RADIUS_PS4": {"min":2.0, "max":6.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":2.0, "max":6.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.25				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":2.0, "max":5.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":8.0, "max":12.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+	,{
+		"index": 2001						// パラメータインデックス(hard)
+		
+		,"RADIUS_PS4": {"min":2.0, "max":6.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":2.0, "max":6.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.25				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":1.0, "max":4.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":8.0, "max":12.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+	,{
+		"index": 3001						// パラメータインデックス(super hard)
+		
+		,"RADIUS_PS4": {"min":2.0, "max":6.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":2.0, "max":6.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.25				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":0.0, "max":1.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":8.0, "max":12.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+
+	//---------------------------------------------
+	// enemy_A2：ソルジャー（槍）
+	,{
+		"index": 10						// パラメータインデックス(easy)
+		
+		,"RADIUS_PS4": {"min":7.0, "max":14.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":7.0, "max":14.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.5				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 3.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":10.0, "max":12.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":10.0, "max":15.0}	// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+	,{
+		"index": 1010						// パラメータインデックス(normal)
+		
+		,"RADIUS_PS4": {"min":7.0, "max":14.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":7.0, "max":14.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.5				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 3.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":3.0, "max":6.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":10.0, "max":15.0}	// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+	,{
+		"index": 2010						// パラメータインデックス(hard)
+		
+		,"RADIUS_PS4": {"min":7.0, "max":14.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":7.0, "max":14.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.5				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 3.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":1.0, "max":4.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":10.0, "max":15.0}	// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+	,{
+		"index": 3010						// パラメータインデックス(super hard)
+		
+		,"RADIUS_PS4": {"min":7.0, "max":14.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":7.0, "max":14.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.5				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":0.0, "max":3.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":8.0, "max":10.0}	// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+
+	//---------------------------------------------
+	// enemy_A3：ソルジャー（斧投げ・爆弾投げ）
+	,{
+		"index": 20						// パラメータインデックス(easy)
+		
+		,"RADIUS_PS4": {"min":15.0, "max":18.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":15.0, "max":18.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.5				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":15.0, "max":20.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":5.0, "max":10.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0, 105.0, 110.0, 120.0]	// エネミーの移動速度（%）
+	}
+	,{
+		"index": 1020						// パラメータインデックス(normal)
+		
+		,"RADIUS_PS4": {"min":15.0, "max":18.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":15.0, "max":18.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.5				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":6.0, "max":8.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":5.0, "max":10.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0, 105.0, 110.0, 120.0]	// エネミーの移動速度（%）
+	}
+	,{
+		"index": 2020						// パラメータインデックス(hard)
+		
+		,"RADIUS_PS4": {"min":15.0, "max":18.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":15.0, "max":18.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.5				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":3.0, "max":7.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":5.0, "max":10.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0, 105.0, 110.0, 120.0]	// エネミーの移動速度（%）
+	}
+	,{
+		"index": 3020						// パラメータインデックス(super hard)
+		
+		,"RADIUS_PS4": {"min":15.0, "max":18.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":15.0, "max":18.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.5				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":0.0, "max":2.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":5.0, "max":10.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0, 105.0, 110.0, 120.0]	// エネミーの移動速度（%）
+	}
+	// enemy_A3：ソルジャー（爆弾投げ専用、ロングレンジ）
+	,{
+		"index": 21						// パラメータインデックス(easy)
+		
+		,"RADIUS_PS4": {"min":15.0, "max":18.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":15.0, "max":18.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.5				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 2.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":15.0, "max":20.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":5.0, "max":10.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0, 105.0, 110.0, 120.0]	// エネミーの移動速度（%）
+	}
+	,{
+		"index": 1021						// パラメータインデックス(normal)
+		
+		,"RADIUS_PS4": {"min":15.0, "max":18.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":15.0, "max":18.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.5				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 2.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":6.0, "max":8.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":5.0, "max":10.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0, 105.0, 110.0, 120.0]	// エネミーの移動速度（%）
+	}
+	,{
+		"index": 2021						// パラメータインデックス(hard)
+		
+		,"RADIUS_PS4": {"min":15.0, "max":18.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":15.0, "max":18.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.5				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 2.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":3.0, "max":7.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":5.0, "max":10.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0, 105.0, 110.0, 120.0]	// エネミーの移動速度（%）
+	}
+	,{
+		"index": 3021						// パラメータインデックス(super hard)
+		
+		,"RADIUS_PS4": {"min":15.0, "max":18.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":15.0, "max":18.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.5				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 2.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":0.0, "max":2.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":5.0, "max":10.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0, 105.0, 110.0, 120.0]	// エネミーの移動速度（%）
+	}
+
+	//---------------------------------------------
+	// enemy_B1：ジェネラル（斧・ハンマー）
+	,{
+		"index": 30						// パラメータインデックス(easy)
+		
+		,"RADIUS_PS4": {"min":2.0, "max":6.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":2.0, "max":6.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 3.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":5.0, "max":8.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":3.0, "max":6.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+	,{
+		"index": 1030						// パラメータインデックス(normal)
+		
+		,"RADIUS_PS4": {"min":2.0, "max":6.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":2.0, "max":6.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":0.5, "max":2.5}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":3.0, "max":6.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+	,{
+		"index": 2030						// パラメータインデックス(hard)
+		
+		,"RADIUS_PS4": {"min":2.0, "max":6.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":2.0, "max":6.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":0.0, "max":1.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":3.0, "max":6.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+	,{
+		"index": 3030						// パラメータインデックス(super hard)
+		
+		,"RADIUS_PS4": {"min":2.0, "max":6.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":2.0, "max":6.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":0.0, "max":1.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":3.0, "max":6.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+
+	//---------------------------------------------
+	// enemy_C1：ドローン
+	,{
+		"index": 40						// パラメータインデックス(easy)
+		
+		,"RADIUS_PS4": {"min":1.0, "max":3.5}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":1.0, "max":3.5}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL":2.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":4.0, "max":8.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":{"min":30.0, "max":30.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 2					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0, 100.0, 100.0, 100.0]	// エネミーの移動速度（%）
+		,"AIR_WAIT_TIME_RANGE": {"min":3.0, "max":5.0}		// 飛行以後の待機時間（秒）
+		,"AIR_HEIGHT_RANGE": {"min":3.0, "max":3.0}			// 待機時の地面からの高さ（メートル）
+	}
+	,{
+		"index": 1040						// パラメータインデックス(normal)
+		
+		,"RADIUS_PS4": {"min":1.0, "max":3.5}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":1.0, "max":3.5}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":3.0, "max":5.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":30.0, "max":30.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 2					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[120.0, 120.0, 120.0, 120.0]	// エネミーの移動速度（%）
+		,"AIR_WAIT_TIME_RANGE": {"min":2.0, "max":3.0}		// 飛行以後の待機時間（秒）
+		,"AIR_HEIGHT_RANGE": {"min":3.0, "max":3.0}			// 待機時の地面からの高さ（メートル）
+	}
+	,{
+		"index": 2040						// パラメータインデックス(hard)
+		
+		,"RADIUS_PS4": {"min":1.0, "max":4.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":1.0, "max":4.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 0.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":1.0, "max":3.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":30.0, "max":30.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 3					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[120.0, 120.0, 120.0, 120.0]	// エネミーの移動速度（%）
+		,"AIR_WAIT_TIME_RANGE": {"min":1.0, "max":2.0}		// 飛行以後の待機時間（秒）
+		,"AIR_HEIGHT_RANGE": {"min":3.0, "max":3.0}			// 待機時の地面からの高さ（メートル）
+	}
+	,{
+		"index": 3040						// パラメータインデックス(super hard)
+		
+		,"RADIUS_PS4": {"min":1.0, "max":4.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":1.0, "max":4.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 0.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":1.0, "max":1.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":60.0, "max":60.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 5					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[140.0, 140.0, 140.0, 140.0]	// エネミーの移動速度（%）
+		,"AIR_WAIT_TIME_RANGE": {"min":0.0, "max":1.0}		// 飛行以後の待機時間（秒）
+		,"AIR_HEIGHT_RANGE": {"min":3.0, "max":3.0}			// 待機時の地面からの高さ（メートル）
+	}
+	
+	//---------------------------------------------
+	// enemy_D1：ゲートキーパー
+	,{
+		"index": 50						// パラメータインデックス(easy)
+		
+		,"RADIUS_PS4": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 2.5					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":2.0, "max":6.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":15.0, "max":20.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 2					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+		,"FLOAT_WAIT_TIME": {"min":1.0, "max":1.0}		// 飛行以後の待機時間
+	}
+	,{
+		"index": 1050						// パラメータインデックス(normal)
+		
+		,"RADIUS_PS4": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 2.5					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":0.5, "max":2.5}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":15.0, "max":20.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 2					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+		,"FLOAT_WAIT_TIME": {"min":1.0, "max":1.0}		// 飛行以後の待機時間
+	}
+	,{
+		"index": 2050						// パラメータインデックス(hard)
+		
+		,"RADIUS_PS4": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 2.5					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":0.0, "max":2.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":15.0, "max":20.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 2					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+		,"FLOAT_WAIT_TIME": {"min":1.0, "max":1.0}		// 飛行以後の待機時間
+	}
+	,{
+		"index": 3050						// パラメータインデックス(super hard)
+		
+		,"RADIUS_PS4": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 2.5					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":0.0, "max":1.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":15.0, "max":20.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 2					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+		,"FLOAT_WAIT_TIME": {"min":1.0, "max":1.0}		// 飛行以後の待機時間
+	}
+	
+	//---------------------------------------------
+	// enemy_F1：スナイパー（通常・毒）
+	,{
+		"index": 60						// パラメータインデックス(easy)
+		
+		,"RADIUS_PS4": {"min":2.0, "max":7.5}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":2.0, "max":7.5}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 1.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":12.0, "max":15.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":5.0, "max":10.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+		,"CHARGE_ST_TIME":0.5					// スナイパーの充填エフェクト開始時間
+		,"SHOT_TIME":5.0						// スナイパーの射撃開始時間
+		,"CHARGE_ROT_SPEED":30					// スナイパー射撃時の回転速度
+	}
+	,{
+		"index": 1060						// パラメータインデックス(normal)
+		
+		,"RADIUS_PS4": {"min":2.0, "max":7.5}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":2.0, "max":7.5}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 1.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":8.0, "max":12.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":5.0, "max":10.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 5					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+		,"CHARGE_ST_TIME":0.5					// スナイパーの充填エフェクト開始時間
+		,"SHOT_TIME":4.0						// スナイパーの射撃開始時間
+		,"CHARGE_ROT_SPEED":60					// スナイパー射撃時の回転速度
+	}
+	,{
+		"index": 2060						// パラメータインデックス(hard)
+		
+		,"RADIUS_PS4": {"min":2.0, "max":7.5}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":2.0, "max":7.5}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 1.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":6.0, "max":8.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":5.0, "max":10.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+		,"CHARGE_ST_TIME":0.5					// スナイパーの充填エフェクト開始時間
+		,"SHOT_TIME":3.5						// スナイパーの射撃開始時間
+		,"CHARGE_ROT_SPEED":90					// スナイパー射撃時の回転速度
+	}
+	,{
+		"index": 3060						// パラメータインデックス(super hard)
+		
+		,"RADIUS_PS4": {"min":2.0, "max":7.5}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":2.0, "max":7.5}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 1.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":3.0, "max":5.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":5.0, "max":10.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+		,"CHARGE_ST_TIME":0.5					// スナイパーの充填エフェクト開始時間
+		,"SHOT_TIME":3.0						// スナイパーの射撃開始時間
+		,"CHARGE_ROT_SPEED":120					// スナイパー射撃時の回転速度
+	}
+
+	//---------------------------------------------
+	// enemy_SS：ソウルソード
+	,{
+		"index": 70						// パラメータインデックス(easy)
+		
+		,"RADIUS_PS4": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":3.0, "max":5.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":15.0, "max":20.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 2					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+		,"FLOAT_WAIT_TIME": {"min":1.0, "max":1.0}		// 飛行以後の待機時間
+	}
+	,{
+		"index": 1070						// パラメータインデックス(normal)
+		
+		,"RADIUS_PS4": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":1.0, "max":3.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":15.0, "max":20.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 2					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+		,"FLOAT_WAIT_TIME": {"min":1.0, "max":1.0}		// 飛行以後の待機時間
+	}
+	,{
+		"index": 2070						// パラメータインデックス(hard)
+		
+		,"RADIUS_PS4": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":0.5, "max":1.5}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":15.0, "max":20.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 2					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+		,"FLOAT_WAIT_TIME": {"min":1.0, "max":1.0}		// 飛行以後の待機時間
+	}
+	,{
+		"index": 3070						// パラメータインデックス(super hard)
+		
+		,"RADIUS_PS4": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":0.0, "max":1.5}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":15.0, "max":20.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 2					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+		,"FLOAT_WAIT_TIME": {"min":1.0, "max":1.0}		// 飛行以後の待機時間
+	}
+
+	//---------------------------------------------
+	// enemy_C3：ジェネレーター
+	,{
+		"index": 80						// パラメータインデックス(easy)
+		
+		,"RADIUS_PS4": {"min":1.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":1.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":1.0, "max":2.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":1.0, "max":1.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 2					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0, 100.0, 100.0, 100.0]	// エネミーの移動速度（%）
+		
+		//	地上フェイズパラメータ
+		,"GROUND_FAR_AWAY_RANGE": {"min":20.0, "max":35.0}	// プレイヤーから離れる距離範囲（メートル）
+		,"GROUND_WAIT_TIME_RANGE": {"min":2.0, "max":5.0}	// 待機する時間範囲（秒）
+		,"GROUND_MOVE_TIME_RANGE": {"min":3.0, "max":5.5}	// 移動する時間範囲（秒）
+		
+		//	空中フェイズパラメータ
+		,"AIR_FAR_AWAY_RANGE": {"min":10.0, "max":15.0}		// プレイヤーから離れる距離範囲（メートル）
+		,"AIR_WAIT_TIME_RANGE": {"min":3.0, "max":6.0}		// 待機する時間範囲（秒）
+		,"AIR_MOVE_TIME_RANGE": {"min":2.0, "max":5.0}		// 移動する時間範囲（秒）
+		,"AIR_HEIGHT_RANGE": {"min":3.0, "max":3.5}		// 移動高度範囲（メートル）
+		,"AIR_STOP_TIME_RANGE": {"min":30.0, "max":40.0}	// フェイズ終了時間範囲（秒）
+		,"AIR_DOWN_TIME_RANGE": {"min":20.0, "max":25.0}		// 落下ダウン時間範囲（秒）
+		,"AIR_DOWN_DEF_PERCENT": 50.0							// 落下中の防御力パーセント（％）
+		
+		//	復帰フェイズパラメータ
+		,"RETURN_FAR_AWAY_RANGE": {"min":50.0, "max":60.0}	// プレイヤーから離れる距離範囲（メートル）
+		,"RETURN_STOP_TIME_RANGE": {"min":4.0, "max":5.0}	// フェイズ終了時間範囲（秒）
+	}
+	,{
+		"index": 1080						// パラメータインデックス(normal)
+		
+		,"RADIUS_PS4": {"min":1.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":1.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":1.0, "max":2.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":1.0, "max":1.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 2					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0, 100.0, 100.0, 100.0]	// エネミーの移動速度（%）
+		
+		//	地上フェイズパラメータ
+		,"GROUND_FAR_AWAY_RANGE": {"min":20.0, "max":35.0}	// プレイヤーから離れる距離範囲（メートル）
+		,"GROUND_WAIT_TIME_RANGE": {"min":2.0, "max":5.0}	// 待機する時間範囲（秒）
+		,"GROUND_MOVE_TIME_RANGE": {"min":3.0, "max":5.5}	// 移動する時間範囲（秒）
+		
+		//	空中フェイズパラメータ
+		,"AIR_FAR_AWAY_RANGE": {"min":10.0, "max":15.0}		// プレイヤーから離れる距離範囲（メートル）
+		,"AIR_WAIT_TIME_RANGE": {"min":3.0, "max":6.0}		// 待機する時間範囲（秒）
+		,"AIR_MOVE_TIME_RANGE": {"min":2.0, "max":5.0}		// 移動する時間範囲（秒）
+		,"AIR_HEIGHT_RANGE": {"min":3.0, "max":3.5}		// 移動高度範囲（メートル）
+		,"AIR_STOP_TIME_RANGE": {"min":20.0, "max":30.0}	// フェイズ終了時間範囲（秒）
+		,"AIR_DOWN_TIME_RANGE": {"min":15.0, "max":20.0}		// 落下ダウン時間範囲（秒）
+		,"AIR_DOWN_DEF_PERCENT": 50.0						// 落下中の防御力パーセント（％）
+		
+		//	復帰フェイズパラメータ
+		,"RETURN_FAR_AWAY_RANGE": {"min":50.0, "max":60.0}	// プレイヤーから離れる距離範囲（メートル）
+		,"RETURN_STOP_TIME_RANGE": {"min":4.0, "max":5.0}	// フェイズ終了時間範囲（秒）
+	}
+	,{
+		"index": 2080						// パラメータインデックス(hard)
+		
+		,"RADIUS_PS4": {"min":1.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":1.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":1.0, "max":2.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":1.0, "max":1.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 2					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0, 100.0, 100.0, 100.0]	// エネミーの移動速度（%）
+		
+		//	地上フェイズパラメータ
+		,"GROUND_FAR_AWAY_RANGE": {"min":20.0, "max":35.0}	// プレイヤーから離れる距離範囲（メートル）
+		,"GROUND_WAIT_TIME_RANGE": {"min":2.0, "max":5.0}	// 待機する時間範囲（秒）
+		,"GROUND_MOVE_TIME_RANGE": {"min":3.0, "max":5.5}	// 移動する時間範囲（秒）
+		
+		//	空中フェイズパラメータ
+		,"AIR_FAR_AWAY_RANGE": {"min":10.0, "max":15.0}		// プレイヤーから離れる距離範囲（メートル）
+		,"AIR_WAIT_TIME_RANGE": {"min":3.0, "max":6.0}		// 待機する時間範囲（秒）
+		,"AIR_MOVE_TIME_RANGE": {"min":2.0, "max":5.0}		// 移動する時間範囲（秒）
+		,"AIR_HEIGHT_RANGE": {"min":3.0, "max":3.5}		// 移動高度範囲（メートル）
+		,"AIR_STOP_TIME_RANGE": {"min":15.0, "max":20.0}	// フェイズ終了時間範囲（秒）
+		,"AIR_DOWN_TIME_RANGE": {"min":10.0, "max":12.0}		// 落下ダウン時間範囲（秒）
+		,"AIR_DOWN_DEF_PERCENT": 50.0							// 落下中の防御力パーセント（％）
+		
+		//	復帰フェイズパラメータ
+		,"RETURN_FAR_AWAY_RANGE": {"min":50.0, "max":60.0}	// プレイヤーから離れる距離範囲（メートル）
+		,"RETURN_STOP_TIME_RANGE": {"min":4.0, "max":5.0}	// フェイズ終了時間範囲（秒）
+	}
+	,{
+		"index": 3080						// パラメータインデックス(super hard)
+		
+		,"RADIUS_PS4": {"min":1.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":1.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 1.0					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":1.0, "max":2.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":1.0, "max":1.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 2					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0, 100.0, 100.0, 100.0]	// エネミーの移動速度（%）
+		
+		//	地上フェイズパラメータ
+		,"GROUND_FAR_AWAY_RANGE": {"min":20.0, "max":35.0}	// プレイヤーから離れる距離範囲（メートル）
+		,"GROUND_WAIT_TIME_RANGE": {"min":2.0, "max":5.0}	// 待機する時間範囲（秒）
+		,"GROUND_MOVE_TIME_RANGE": {"min":3.0, "max":5.5}	// 移動する時間範囲（秒）
+		
+		//	空中フェイズパラメータ
+		,"AIR_FAR_AWAY_RANGE": {"min":10.0, "max":15.0}		// プレイヤーから離れる距離範囲（メートル）
+		,"AIR_WAIT_TIME_RANGE": {"min":3.0, "max":6.0}		// 待機する時間範囲（秒）
+		,"AIR_MOVE_TIME_RANGE": {"min":2.0, "max":5.0}		// 移動する時間範囲（秒）
+		,"AIR_HEIGHT_RANGE": {"min":3.0, "max":3.5}		// 移動高度範囲（メートル）
+		,"AIR_STOP_TIME_RANGE": {"min":15.0, "max":20.0}	// フェイズ終了時間範囲（秒）
+		,"AIR_DOWN_TIME_RANGE": {"min":10.0, "max":12.0}		// 落下ダウン時間範囲（秒）
+		,"AIR_DOWN_DEF_PERCENT": 50.0						// 落下中の防御力パーセント（％）
+		
+		//	復帰フェイズパラメータ
+		,"RETURN_FAR_AWAY_RANGE": {"min":50.0, "max":60.0}	// プレイヤーから離れる距離範囲（メートル）
+		,"RETURN_STOP_TIME_RANGE": {"min":4.0, "max":5.0}	// フェイズ終了時間範囲（秒）
+	}
+
+	//---------------------------------------------
+	// enemy:巨神アルテラ
+	,{
+		"index": 90						// パラメータインデックス(easy)
+		
+		,"RADIUS_PS4": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 0.2					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":1.0, "max":2.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":0.1, "max":0.1}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 3					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+		,"FLOAT_WAIT_TIME": {"min":1.0, "max":1.0}		// 飛行以後の待機時間
+	}	
+	//---------------------------------------------
+	// enemy:ラスボス触手
+	,{
+		"index": 100						// パラメータインデックス(easy)
+		
+		,"RADIUS_PS4": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 2.5					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":2.0, "max":10.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":2.0, "max":4.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 2					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+		,"APPEAR_FEELER_COUNT": 500			// 出現可能触手数
+	}	
+	//---------------------------------------------
+	// enemy:ラスボス触手大型
+	,{
+		"index": 110						// パラメータインデックス(easy)
+		
+		,"RADIUS_PS4": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":0.0, "max":3.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.0				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 2.5					// 攻撃移行間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":2.0, "max":10.0}	// 攻撃モードになるまでの時間 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":2.0, "max":4.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 2					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+		,"APPEAR_FEELER_COUNT": 550			// 出現可能触手数（この数値は小型触手のより多くないと大型は出現出来ない）
+	}
+	//---------------------------------------------
+	// enemy_A1：味方制圧兵
+	,{
+		"index": 120						// パラメータインデックス(easy)
+		
+		,"RADIUS_PS4": {"min":1.0, "max":7.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":1.0, "max":7.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.1				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 2.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":5.0, "max":10.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":8.0, "max":12.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+	// enemy_A1：味方制圧兵の護衛兵
+	,{
+		"index": 121						// パラメータインデックス(easy)
+		
+		,"RADIUS_PS4": {"min":1.0, "max":10.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":1.0, "max":10.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.1				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 2.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":2.5, "max":2.5}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":8.0, "max":12.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+	// enemy_A1：プレイヤーの護衛兵
+	,{
+		"index": 122						// パラメータインデックス(easy)
+		
+		,"RADIUS_PS4": {"min":1.0, "max":30.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RADIUS_VITA": {"min":1.0, "max":30.0}	// ユニットのプレイヤー囲む最小範囲(MIN)と半径(MAX)
+		,"RAND_SPAWN_RADIUS_RATE": 0.1				// ザコのランダムスポーン範囲の倍率（半径ｘ倍率）
+		,"ATTACK_INTERVAL": 2.0					// 1ユニットから連続して攻撃する場合、メンバー間の攻撃間隔
+		,"SHIFT_ATTACK_INTERVAL": {"min":1.0, "max":1.0}	// 攻撃モードになるかどうかのチェック間隔 MIN:MAX
+		,"SHIFT_WAIT_INTERVAL":	{"min":8.0, "max":12.0}		// 待機モードになるまでの時間 MIN:MAX
+		,"ONCE_ATTACK_COUNT": 1					// 攻撃モード移行時にエネミー一体が攻撃できる回数
+		,"ENEMY_MOVE_SPEED_RATE":[100.0]			// エネミーの移動速度（%）
+	}
+]
